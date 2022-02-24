@@ -5,7 +5,7 @@
 }
 
 html{
-    /* fonction qui permet d'adoucir la transition smooth */
+   scroll-behavior: smooth; /* fonction qui permet d'adoucir la transition smooth */
 }
 
 body{
@@ -18,86 +18,300 @@ body{
 /* -----------------------navbar----------------------- */
 
 nav{
-    position:fixed;
-    width: 100%;
-    margin: 0 auto;
     height: 70px;
-    background-color: #294062;
-}
-.container-nav{
-    /* background: pink; */
-    display: flex;
-   
-    /* align-items: center;
-    flex-direction: row; */
-}
-.logo{
-    display: flex;
-    position: absolute;
-    top:0px;
-    height: 70px;
-    margin-left: 100px;
-  align-items: center;
-  justify-content: center;
+    background: #294062;
+    background: pink;
 }
 
-.onglets-navbar{
-    position:relative;
-    display: flex;
-    width:100%;
-    min-width: 500px;
-    align-items: center;
-    margin: 0 35px 0 400px;
-    flex-direction: row;
-    justify-content: space-around;
-    line-height: 70px;
-    /* background: pink; */
-    padding-left: 40px;
-      text-transform: uppercase ;
-   color:white;
-   
-}
+/* -----------------------accueil----------------------- */
 
-
-#skills{
-    width: auto;
-}
-
-.onglets-navbar a, #skills{
-    text-decoration: none;
-  
+.section-accueil{
+    background-image: url(../ressources/images/BG-accueil.png);
+    height: calc(100vh - 70px);
+    background-position: center;
+    background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
  
-    /* background: #000; */
+}
+.box-5competences{
+padding:10px;
+    border: none;
     display: flex;
-    
-    justify-content: center;
-    align-items: center;
-
-    
+flex-direction: row;
+align-items: flex-end;
 }
 
-.item-onglets-navbar{
+.icone-accueil-competences {
+    display:flex;
+    flex-direction: row;
+    
+    position: relative;
+    width: 100%;
+    padding:5px;
+    
+}
+.icone-accueil-competences img{
+    border-radius: 50%;
+}
+
+.container-title-accueil{
+   height:calc(90vh - 100px);
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.box-modjo{
     display: flex;
-    width:100%;
-    /* background: #000; */
-    
+    text-align: center;
+    flex-direction: column;
 }
 
-.liste-skills{
-    display: none;
-    position: absolute;
-    top: 70px;
-text-decoration: none;
-    color: #294062;
-    list-style-type: none;
+.title-incarner{
+    color:#294062;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 2rem;
     
-    background: #f1f1f1;
-    color: #294062;
 }
-
-#skills:hover > .liste-skills{
+.title-modjo{
+    color:grey;
+    font-size: 0.5rem;
+    line-height: 0.5rem;
+    padding-bottom:30px;
+    letter-spacing: 0.12rem;
+    margin-top: 0px;
+    padding-top:0;
+}
+.box-logo-alpha{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
+}
+.box-logo-alpha h1{
+  
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #294062;
+}
+
+/* mediaquery section accueil */
+
+@media screen and (max-width:764px) {
+    .icone-accueil-competences p{
+    position: relative;
+    font-weight: 600;
+    display: none;
+}
+
+.icone-accueil-competences:nth-child(1) p{
+    color:red;
+   
+}
+.icone-accueil-competences:nth-child(2) p{
+    color:blue;
+  
+}
+.icone-accueil-competences:nth-child(3) p{
+    color:#f1f1f1;
+}
+.icone-accueil-competences:nth-child(4) p{
+    color:green;
+}
+.icone-accueil-competences:nth-child(5) p{
+    color:#891B0B;
+}
+}
+
+
+/*-----------------mission------------------ */
+
+
+.section-mission{
+    background: #294062;
+    height: calc(100vh - 70px);    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title-mission{
+font-size: 1rem;
+}
+.subtitle-mission{
+    font-size:2.1rem;
+}
+.subtitle-mission span{
+   
+    font-style: italic;
+    font-size: 3rem;
 
 }
+.section-mission:hover{
+    color: #294062;
+    background: #f1f1f1;
+}
+
+/*-----------------formation------------------ */
+.section-formation{
+    background: linear-gradient(to bottom, #ffffff , #5C7590 50% , #375577);
+    height: calc(100vh - 70px);    
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-formation h3{
+text-transform: uppercase;
+text-align: center;
+padding: 3rem 0;
+font-size: 2rem;
+color: #294062
+}
+
+.box-formation-droite{
+    display: none;
+}
+.box-formation-gauche{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.line-formation{
+    display:flex;
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    height: 100%;
+}
+.line-formation img{
+    padding: 0.2rem;
+    width: 4rem;
+}
+.line-formation p{
+
+}
+/*-----------------pedagogie------------------ */
+.section-pedagogie{
+    background: linear-gradient(to bottom,#375577, #2A4161);
+    height: calc(100vh - 70px);    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title-pedagogie{
+    text-align: center;
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+    color: #f1f1f1;
+}
+
+.carousel-caption {
+    background: rgba(255,255, 255, 0.5);
+    color: #294062;
+    border-radius: 5px;
+}
+
+
+/*-----------------compétences------------------ */
+.section-competences{
+    background: linear-gradient(to bottom, #2A4161 , #375577);
+    height: calc(100vh - 70px);    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title-competences h3{
+    color:#f1f1f1;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: rgba(255, 255, 255, 0.3) 0px 5px 10px;
+}
+.title-competences p{
+    color:rgb(64, 97, 139);
+    text-shadow: rgba(255, 255, 255, 0.3) 0px 2px 0px;
+    font-weight: 900;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.box2-5competences{
+    padding:10px;
+        border: none;
+        display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    }
+
+    .box2-5competences div{
+        width: 100%;
+    }
+    .box2-5competences div img{
+        width: 100%;
+    }
+    .box2-5competences div p{
+        font-size: 0.5rem;
+        text-align: center;
+        /* background: #000; */
+    }
+    /*-----------------doctrine------------------ */
+    .section-doctrine{
+        background: linear-gradient(to bottom, #375577, #2A4161 );
+        height: calc(100vh - 70px);    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-doctrine-gauche{
+        width:50%;
+    }
+    .container-doctrine-droite{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container-doctrine-droite h3{
+        color:#f1f1f1;
+        text-align: center;
+        font-size: 2rem;
+        margin: 30px 0;
+
+    }
+    .container-imgs-doctrine{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .container-img-doctrine{
+    margin-left: 10px;
+    }
+    /*-----------------doctrine------------------ */
+    .section-parcours{
+        background-image: url(../ressources/images/bg_parcours.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: calc(500vh - 70px);    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
