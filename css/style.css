@@ -326,14 +326,140 @@ color: #294062
     margin-left: 10px;
     }
     /*-----------------parcours------------------ */
-    .section-parcours{
-        background-image: url(../ressources/images/bg-parcours.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: calc(500vh - 70px);    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+.section-parcours{
+    background-image: url(../ressources/images/bg-parcours.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(500vh - 70px);    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid darkblue;
+}
+
+
+.container-parcours-competences{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.title-parcours{
+position: relative;
+text-transform: uppercase;
+color:#f1f1f1
     }
+.img-competence img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-left: 20px;
+}
+
+.parcours-title-competence{
+    margin-left: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+
+.container-competence-commander{
+    display: flex;
+    width: 100%;
+    /* height: calc(20% - 70px- 4%); */
+}
+.title-commander{
+    color: #294062;
+}
+.title-commander p:nth-child(2){
+    font-size: 0.7rem;
+}
+.title-commander p:nth-child(3){
+    font-size: 0.7rem;
+    text-transform: none;
+    font-weight: 100;
+}
+
+
+
+.container-competence-seSituer{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    /* height: calc(20% - 70px- 4%); */
+}
+.title-seSituer{
+    color: #1A4A28;
+}
+.title-seSituer p:nth-child(2){
+    font-size: 0.7rem;
+}
+.title-seSituer p:nth-child(3){
+    font-size: 0.7rem;
+    text-transform: none;
+    font-weight: 100;
+}
+
+
+
+.container-competence-instruire{
+    display: flex;
+    width: 100%;
+    /* height: calc(20% - 70px- 4%); */
+}
+.title-instruire{
+    color: #891B0B;
+}
+.title-instruire p:nth-child(2){
+    font-size: 0.7rem;
+}
+.title-instruire p:nth-child(3){
+    font-size: 0.7rem;
+    text-transform: none;
+    font-weight: 100;
+}
+
+
+.container-competence-eduquer{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    /* height: calc(20% - 70px- 4%); */
+}
+.title-eduquer{
+    color: #8D943F;
+}
+.title-eduquer p:nth-child(2){
+    font-size: 0.7rem;
+}
+.title-eduquer p:nth-child(3){
+    font-size: 0.7rem;
+    text-transform: none;
+    font-weight: 100;
+}
+
+.container-competence-communiquer{
+    display: flex;
+    width: 100%;
+    /* height: calc(20% - 70px- 4%); */
+}
+.title-communiquer{
+    color: #734693;
+}
+.title-communiquer p:nth-child(2){
+    font-size: 0.7rem;
+}
+.title-communiquer p:nth-child(3){
+    font-size: 0.7rem;
+    text-transform: none;
+    font-weight: 100;
+}
