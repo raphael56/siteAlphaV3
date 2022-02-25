@@ -20,10 +20,17 @@ body{
 .navbar{
     height: 70px;
     background: #294062;
+    text-transform:uppercase;
+    
 }
 
 .navbar-brand img{
     height: 50px;
+}
+.bg-collapse{
+    background: #294062;
+    width: 100%;
+    text-align: center;
 }
 
 /* -----------------------accueil----------------------- */
