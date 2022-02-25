@@ -4,6 +4,18 @@
     padding: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 html{
    scroll-behavior: smooth; /* fonction qui permet d'adoucir la transition smooth */
 }
@@ -37,7 +49,7 @@ body{
 
 .section-accueil{
     background-image: url(../ressources/images/BG-accueil.png);
-    height: calc(100vh - 70px);
+    height: calc(100vh);
     background-position: center;
     background-repeat: no-repeat;
        background-attachment: fixed;
@@ -313,9 +325,9 @@ color: #294062
     .container-img-doctrine{
     margin-left: 10px;
     }
-    /*-----------------doctrine------------------ */
+    /*-----------------parcours------------------ */
     .section-parcours{
-        background-image: url(../ressources/images/bg_parcours.svg);
+        background-image: url(../ressources/images/bg-parcours.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
