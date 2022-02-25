@@ -17,10 +17,13 @@ body{
 
 /* -----------------------navbar----------------------- */
 
-nav{
+.navbar{
     height: 70px;
     background: #294062;
-    background: pink;
+}
+
+.navbar-brand img{
+    height: 50px;
 }
 
 /* -----------------------accueil----------------------- */
