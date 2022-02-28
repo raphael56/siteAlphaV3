@@ -65,48 +65,47 @@ body{
 
 .section-accueil{
     background-image: url(../ressources/images/BG-accueil.png);
-    height: calc(100vh);
+    height:100vh ;
     background-position: center;
     background-repeat: no-repeat;
-       background-attachment: fixed;
-       background-size: cover;
- 
+    background-attachment: fixed;
+    background-size: cover;
 }
 .box-5competences{
-padding:10px;
     border: none;
     display: flex;
-flex-direction: row;
-align-items: flex-end;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    text-transform: uppercase;
+}
+
+.container-text-competences{
+    display: flex;
+    flex-direction: column;
+transform: rotate(-90deg);
+font-size: 1.9rem;
+justify-content: space-between;
+
+
+align-items: center;
+position: absolute;
+top: 49vh;
 }
 
 .icone-accueil-competences {
     display:flex;
     flex-direction: row;
-    
     position: relative;
     width: 100%;
-    padding:5px;
-    
-}
-.icone-accueil-competences img{
-    border-radius: 50%;
+   
+    align-items: flex-end;
+    margin-top: 5rem;
 }
 
-.container-text-competences p:nth-child(1){
-    color: #294062;
-}
-.container-text-competences p:nth-child(2){
-    color: #734693;
-}
-.container-text-competences p:nth-child(3){
-    color: #1A4A28;
-}
-.container-text-competences p:nth-child(4){
-    color: #8D943F;
-}
-.container-text-competences p:nth-child(5){
-    color: #891B0B;
+.icone-accueil-competences img{
+    border-radius: 50%;
 }
 
 .container-title-accueil{
@@ -149,7 +148,6 @@ align-items: flex-end;
     
 }
 .box-logo-alpha h1{
-  
     text-transform: uppercase;
     text-align: center;
     font-size: 0.7rem;
@@ -159,52 +157,30 @@ align-items: flex-end;
 /* mediaquery section accueil */
 
 @media screen and (max-width:764px) {
-    .container-text-competences{
-        position: absolute;
+    /* .container-text-competences{
+        position: relative;
         font-weight: 600;
+        width: 70%;
         display: flex;
-        justify-content: flex-start;
-     
-        align-items: flex-start;
         flex-direction: column;
-        
         transform: rotate(-90deg);
-        
     }
     .container-text-competences p{
-line-height: calc(100vw / 5.2);
+line-height: calc(100vw / 7);
+opacity: 0.5;
 margin: 0 auto;
-font-size: 2rem;
+font-size: 1.4rem;
 letter-spacing: 8px;
 font-weight: 600;
 text-align: start;
 display: flex;
 align-items: flex-end;
 justify-content: flex-start;
+flex-wrap: nowrap;
 text-transform: uppercase;
-
-width:  60%;
-    }
-
-.icone-accueil-competences:nth-child(1) p{
-    color:red;
-   
+width:  60%; */
+    
 }
-.icone-accueil-competences:nth-child(2) p{
-    color:blue;
-  
-}
-.icone-accueil-competences:nth-child(3) p{
-    color:#f1f1f1;
-}
-.icone-accueil-competences:nth-child(4) p{
-    color:green;
-}
-.icone-accueil-competences:nth-child(5) p{
-    color:#891B0B;
-}
-}
-
 
 /*-----------------mission------------------ */
 
@@ -287,6 +263,7 @@ color: #294062
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .title-pedagogie{
     text-align: center;
@@ -310,6 +287,7 @@ color: #294062
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .title-competences h3{
     color:#f1f1f1;
@@ -347,61 +325,38 @@ color: #294062
         /* background: #000; */
     }
 
-    .container-competences-couleur p:nth-child(1){
-       
+    .container-competences-couleur p{
         display: none;
+        position: absolute;
+        bottom: 20%;
+        transform: translatex(-5%);
     }
-    .container-competences-couleur p:nth-child(2){
-     
-        display: none;
-    }
-    .container-competences-couleur p:nth-child(3){
-       
-        display: none;
-    }
-    .container-competences-couleur p:nth-child(4){
-        display: none;
-    }
-    .container-competences-couleur p:nth-child(5){
-       
-        display: none;
-    }
+    
     .container-competences-couleur p.active:nth-child(1){
         color: #33425a;
         display: block;
-        position: absolute;
-        text-align: center;
+  
     }
     .container-competences-couleur p.active:nth-child(2){
         color: #71c58c;
         display: block;
-        position: absolute;
-        text-align: center;
+   
     }
     .container-competences-couleur p.active:nth-child(3){
         color: #c8ce93;
         display: block;
-        position: absolute;
-        text-align: center;
+   
     }
     .container-competences-couleur p.active:nth-child(4){
         color: #fcfcfc;
         display: block;
-        position: absolute;
-        text-align: center;
+  
     }
     .container-competences-couleur p.active:nth-child(5){
         color: #957aa8;
         display: block;
-        position: absolute;
-        text-align: center;
+
     }
-
-
-
-
-
-
 
 
 
@@ -409,9 +364,10 @@ color: #294062
         text-align: center;
         width: 100%;
         text-transform: uppercase;
-        font-size: 400%;
+        font-size: 2rem;
+        font-weight: 900;
     }
-/* mediaquery section accueil */
+/* mediaquery section competence */
 
 @media screen and (max-width:764px) {
 .box2-5competences div:nth-child(1):hover +.container-competences-couleur p:nth-child(1){
@@ -428,6 +384,7 @@ display: block;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
     .container-doctrine-gauche{
         width:50%;
@@ -458,7 +415,7 @@ display: block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(500vh - 70px);    
+    /* height: calc(500vh - 70px);     */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -522,27 +479,19 @@ color:#f1f1f1
     margin-bottom: 50px;
 }
 
-
-
-
-
-
-
-
 .title-aptitude {
     
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 900;
     position: absolute;
-    top:50%;
-    left: -150px;
-   
+    top:51%;
+   left: -420px;
     transform: rotate(-90deg);
     text-transform: uppercase;
     text-align: center;
-  border-radius: 9999px;
-   background: rgba(255, 255, 255, 0.2);
-    width: 300px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 1000px;
 
 }
 .box-fil{
