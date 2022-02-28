@@ -4,7 +4,23 @@
     padding: 0;
 }
 
+/* définition des couleurs par compétences */
+.color-situer{
+    color: #1A4A28;
+}
 
+.color-commander{
+    color: #294062;
+}
+.color-eduquer{
+    color: #8D943F;
+}
+.color-instruire{
+    color: #891B0B;
+}
+.color-communiquer{
+    color: #734693;
+}
 
 
 
@@ -77,6 +93,22 @@ align-items: flex-end;
     border-radius: 50%;
 }
 
+.container-text-competences p:nth-child(1){
+    color: #294062;
+}
+.container-text-competences p:nth-child(2){
+    color: #734693;
+}
+.container-text-competences p:nth-child(3){
+    color: #1A4A28;
+}
+.container-text-competences p:nth-child(4){
+    color: #8D943F;
+}
+.container-text-competences p:nth-child(5){
+    color: #891B0B;
+}
+
 .container-title-accueil{
    height:calc(90vh - 100px);
    position: relative;
@@ -127,11 +159,32 @@ align-items: flex-end;
 /* mediaquery section accueil */
 
 @media screen and (max-width:764px) {
-    .icone-accueil-competences p{
-    position: relative;
-    font-weight: 600;
-    display: none;
-}
+    .container-text-competences{
+        position: absolute;
+        font-weight: 600;
+        display: flex;
+        justify-content: flex-start;
+     
+        align-items: flex-start;
+        flex-direction: column;
+        
+        transform: rotate(-90deg);
+        
+    }
+    .container-text-competences p{
+line-height: calc(100vw / 5.2);
+margin: 0 auto;
+font-size: 2rem;
+letter-spacing: 8px;
+font-weight: 600;
+text-align: start;
+display: flex;
+align-items: flex-end;
+justify-content: flex-start;
+text-transform: uppercase;
+
+width:  60%;
+    }
 
 .icone-accueil-competences:nth-child(1) p{
     color:red;
@@ -251,7 +304,7 @@ color: #294062
 
 /*-----------------compétences------------------ */
 .section-competences{
-    background: linear-gradient(to bottom, #2A4161 , #375577);
+    background-color: #375577;
     height: calc(100vh - 70px);    
     display: flex;
     flex-direction: column;
@@ -279,7 +332,7 @@ color: #294062
         border: none;
         display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     }
 
     .box2-5competences div{
@@ -289,10 +342,84 @@ color: #294062
         width: 100%;
     }
     .box2-5competences div p{
-        font-size: 0.5rem;
+        font-size: 0.9rem;
         text-align: center;
         /* background: #000; */
     }
+
+    .container-competences-couleur p:nth-child(1){
+       
+        display: none;
+    }
+    .container-competences-couleur p:nth-child(2){
+     
+        display: none;
+    }
+    .container-competences-couleur p:nth-child(3){
+       
+        display: none;
+    }
+    .container-competences-couleur p:nth-child(4){
+        display: none;
+    }
+    .container-competences-couleur p:nth-child(5){
+       
+        display: none;
+    }
+    .container-competences-couleur p.active:nth-child(1){
+        color: #33425a;
+        display: block;
+        position: absolute;
+        text-align: center;
+    }
+    .container-competences-couleur p.active:nth-child(2){
+        color: #71c58c;
+        display: block;
+        position: absolute;
+        text-align: center;
+    }
+    .container-competences-couleur p.active:nth-child(3){
+        color: #c8ce93;
+        display: block;
+        position: absolute;
+        text-align: center;
+    }
+    .container-competences-couleur p.active:nth-child(4){
+        color: #fcfcfc;
+        display: block;
+        position: absolute;
+        text-align: center;
+    }
+    .container-competences-couleur p.active:nth-child(5){
+        color: #957aa8;
+        display: block;
+        position: absolute;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+    .container-competences-couleur p{
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 400%;
+    }
+/* mediaquery section accueil */
+
+@media screen and (max-width:764px) {
+.box2-5competences div:nth-child(1):hover +.container-competences-couleur p:nth-child(1){
+display: block;
+}
+
+}
+
     /*-----------------doctrine------------------ */
     .section-doctrine{
         background: linear-gradient(to bottom, #375577, #2A4161 );
@@ -337,7 +464,7 @@ color: #294062
     align-items: center;
     justify-content: center;
     position: relative;
-    border-bottom: 1px solid darkblue;
+    /* border-bottom: 1px solid darkblue; */
 }
 
 
@@ -389,32 +516,59 @@ color:#f1f1f1
     font-weight: 100;
 }
 
-.container-fil-commander{
+.container-fil-commander, .container-fil-situer, .container-fil-instruire, .container-fil-eduquer, .container-fil-communiquer{
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
 }
-.title-aptitude{
+
+
+
+
+
+
+
+
+.title-aptitude {
     
     font-size: 2rem;
-    color:#294062;
     font-weight: 900;
     position: absolute;
-    /* top: 50%;
-    left: 0%; */
-    transform: rotate(-90deg)translate(-50%,-50%);
+    top:50%;
+    left: -150px;
+   
+    transform: rotate(-90deg);
     text-transform: uppercase;
+    text-align: center;
+  border-radius: 9999px;
+   background: rgba(255, 255, 255, 0.2);
+    width: 300px;
 
 }
 .box-fil{
-    background: #000;
+    display: flex;
+    position: relative;
+    /* background: blue; */
+}
+.fil-competence div p{
+    /* background: blue; */
 }
 .fil-competence img{
-width:100px;
+    width:100px;
+    position: relative;
+    z-index: 10;
+    
 }
 .container-box-description-aptitude{
     display: flex;
     flex-direction: column;
+    /* background: pink; */
+    height: 1000px;
+    justify-content: space-around;
+    align-items: center;
 }
+
+
 .box-description-aptitude{
     display: flex;
     flex-direction:row;
@@ -423,7 +577,8 @@ width:100px;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    background: #000;
+    
+    
 }
 
 .box-description-aptitude img{
@@ -431,11 +586,24 @@ width:100px;
     border-radius: 50%;
     margin-right: 10px;
     margin-top: 5px;
+    
 }
 
 
-
-
+.line-container{
+    position: relative;
+    
+}
+.line{
+    height: 1000px;
+    width: 5px;
+    border-left: 5px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    border-radius: 9999px;
+    top: 20px;
+    left: 45px;
+   
+}
 
 
 
