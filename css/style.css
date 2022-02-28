@@ -128,17 +128,9 @@ align-items: flex-end;
 
 @media screen and (max-width:764px) {
     .icone-accueil-competences p{
-    position: absolute;
+    position: relative;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(-90deg);
-    top: -200px;
-    font-size: 1.5rem;
-    background: #000;
-    flex-wrap: nowrap;
-    
+    display: none;
 }
 
 .icone-accueil-competences:nth-child(1) p{
@@ -150,7 +142,7 @@ align-items: flex-end;
   
 }
 .icone-accueil-competences:nth-child(3) p{
-    color:grey;
+    color:#f1f1f1;
 }
 .icone-accueil-competences:nth-child(4) p{
     color:green;
@@ -411,6 +403,7 @@ color:#f1f1f1
     left: 0%; */
     transform: rotate(-90deg)translate(-50%,-50%);
     text-transform: uppercase;
+
 }
 .box-fil{
     background: #000;
