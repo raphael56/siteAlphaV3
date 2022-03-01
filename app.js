@@ -33,9 +33,9 @@ t1
     .to(iconeInstuireAccueil, {y:10, ease: "bounce"})
     .from(logoAlphaAccueil, { scale: 0.1, duration: 3 }, "<-3")
     .to(iconeCommanderAccueil, { rotation: 0, y: 10, ease: "bounce" })
-    .from(incarnation, {y:700, duration: 3, ease:"rought"}, "<-2")
+    .from(incarnation, {y:700, duration: 3, opacity:0,ease:"rought"}, "<-2")
     .from(commanderAccueil, { rotation: 0, duration: 1, ease: "bounce" })
-    .from(modjo, {x:-600, duration: 1, ease:"sine"}, "<-4")
+    .from(modjo, {x:-600, opacity:0, duration: 1, ease:"sine"}, "<-4")
 
 t2.to(titre1, {duration: 10, text: "La formation au comportement du militaire", ease: "none", delay: 5});
 
