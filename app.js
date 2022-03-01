@@ -1,8 +1,43 @@
+gsap.registerPlugin(TextPlugin);
+
+//animation accueil
+const commanderAccueil = document.querySelector('#commanderAccueil')
+const iconeCommanderAccueil = document.querySelector('#iconeCommanderAccueil')
+const eduquerAccueil = document.querySelector('#eduquerAccueil')
+const iconeSituerAccueil = document.querySelector('#iconeSituerAccueil')
+const instruireAccueil = document.querySelector('#instruireAccueil')
+const iconeCommuniquerAccueil = document.querySelector('#iconeCommuniquerAccueil')
+const situerAccueil = document.querySelector('#situerAccueil')
+const iconeEduquerAccueil = document.querySelector('#iconeEduquerAccueil')
+const communiquerAccueil = document.querySelector('#communiquerAccueil')
+const iconeInstuireAccueil = document.querySelector('#iconeInstruireAccueil')
+const logoAlphaAccueil = document.querySelector('#logoAlphaAccueil')
+const titre1 = document.querySelector('h1')
+const incarnation = document.querySelector('.title-incarner')
+const modjo = document.querySelector('.title-modjo')
+var t1 = gsap.timeline({})
+var t2 = gsap.timeline({})
 
 
 
+t1
+    .from(commanderAccueil, { x: 700, duration: 1, ease: "bounce" })
+    .to(iconeCommanderAccueil, {rotation:45, y:10, ease: "bounce"})
+    .from(situerAccueil, {  x: 700, duration: 1, ease: "bounce" }, "<-0.1")
+    .to(iconeSituerAccueil, {y:10, ease: "bounce"})
+    .from(communiquerAccueil, { x: 700, duration: 1, ease: "bounce"}, "<-0.1")
+    .to(iconeCommuniquerAccueil, {y:10, ease: "bounce"})
+    .from(eduquerAccueil, { x: 700, duration: 1, ease: "bounce" }, "<-0.1")
+    .to(iconeEduquerAccueil, {y:10, ease: "bounce"})
+    .from(instruireAccueil, { x: 700, duration: 1, ease: "bounce" }, "<-0.1")
+    .to(iconeInstuireAccueil, {y:10, ease: "bounce"})
+    .from(logoAlphaAccueil, { scale: 0.1, duration: 3 }, "<-3")
+    .to(iconeCommanderAccueil, { rotation: 0, y: 10, ease: "bounce" })
+    .from(incarnation, {y:700, duration: 3, ease:"rought"}, "<-2")
+    .from(commanderAccueil, { rotation: 0, duration: 1, ease: "bounce" })
+    .from(modjo, {x:-600, duration: 1, ease:"sine"}, "<-4")
 
-
+t2.to(titre1, {duration: 10, text: "La formation au comportement du militaire", ease: "none", delay: 5});
 
 
 
