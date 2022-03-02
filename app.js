@@ -3,61 +3,61 @@ gsap.registerPlugin(TextPlugin);
 // gsap.registerPlugin(MotionPathPlugin);
 
 //animation accueil
-// const commanderAccueil = document.querySelector('#commanderAccueil')
-// const iconeCommanderAccueil = document.querySelector('#iconeCommanderAccueil')
-// const eduquerAccueil = document.querySelector('#eduquerAccueil')
-// const iconeSituerAccueil = document.querySelector('#iconeSituerAccueil')
-// const instruireAccueil = document.querySelector('#instruireAccueil')
-// const iconeCommuniquerAccueil = document.querySelector('#iconeCommuniquerAccueil')
-// const situerAccueil = document.querySelector('#situerAccueil')
-// const iconeEduquerAccueil = document.querySelector('#iconeEduquerAccueil')
-// const communiquerAccueil = document.querySelector('#communiquerAccueil')
-// const iconeInstuireAccueil = document.querySelector('#iconeInstruireAccueil')
-// const logoAlphaAccueil = document.querySelector('#logoAlphaAccueil')
-// const titre1 = document.querySelector('h1')
-// const incarnation = document.querySelector('.title-incarner')
-// const modjo = document.querySelector('.title-modjo')
-// const loader =document.getElementById('pin')
+const commanderAccueil = document.querySelector('#commanderAccueil')
+const iconeCommanderAccueil = document.querySelector('#iconeCommanderAccueil')
+const eduquerAccueil = document.querySelector('#eduquerAccueil')
+const iconeSituerAccueil = document.querySelector('#iconeSituerAccueil')
+const instruireAccueil = document.querySelector('#instruireAccueil')
+const iconeCommuniquerAccueil = document.querySelector('#iconeCommuniquerAccueil')
+const situerAccueil = document.querySelector('#situerAccueil')
+const iconeEduquerAccueil = document.querySelector('#iconeEduquerAccueil')
+const communiquerAccueil = document.querySelector('#communiquerAccueil')
+const iconeInstuireAccueil = document.querySelector('#iconeInstruireAccueil')
+const logoAlphaAccueil = document.querySelector('#logoAlphaAccueil')
+const titre1 = document.querySelector('h1')
+const incarnation = document.querySelector('.title-incarner')
+const modjo = document.querySelector('.title-modjo')
+const loader =document.getElementById('pin')
 
 
 
-// var t0 = gsap.timeline({})
-// var t1 = gsap.timeline({paused:true, delay:5})
-// var t2 = gsap.timeline({paused:true})
+var t0 = gsap.timeline({})
+var t1 = gsap.timeline({paused:true, delay:5})
+var t2 = gsap.timeline({paused:true})
 
-// window.addEventListener('load', () =>{
-//     t1.play()
-//     t2.play()
-//   })
+window.addEventListener('load', () =>{
+    t1.play()
+    t2.play()
+  })
 
 
-// t0
-//     .fromTo(loader, { opacity: 1},{opacity:0, duration:3})
+t0
+    .fromTo(loader, { opacity: 1},{opacity:0, duration:3})
     
 
 
 
-// t1
-//     .from(commanderAccueil, { y: 700, opacity: 0,duration: 1, ease: "bounce" , delay:5})
-//     .from(iconeCommanderAccueil, { opacity:0, y:-250, scale: 1, ease: "bounce"})
-//     .from(communiquerAccueil, { x: 700, opacity: 0,duration: 1, ease: "bounce"}, "<-0.1")
-//     .from(iconeCommuniquerAccueil, {x:-500, opacity: 0,ease: "bounce"})
-//     .from(situerAccueil, {  y: -700, opacity: 0, duration: 1, ease: "bounce" })
-//     .from(iconeSituerAccueil, {y:250, opacity:0, ease: "bounce"})
-//     .from(eduquerAccueil, { y:700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
-//     .from(iconeEduquerAccueil, {x:500, opacity:0,ease: "bounce"})
-//     .from(instruireAccueil, { y: 700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
-//     .from(iconeInstuireAccueil, {y:200, opacity: 0,ease: "bounce"})
-//     .from(incarnation, {y:-50, opacity:0,duration: 3, opacity:0,ease:"rought"}, "<-3")
-//     .fromTo(modjo, {x:-600, y:10, opacity:0}, { x: 0,y:-10,  opacity: 1, duration: 1, ease: "sine" }, "<-4")
-//     .from(logoAlphaAccueil, { opacity: 0,scale: 0.1, duration: 3, delay: 2 })
+t1
+    .from(commanderAccueil, { y: 700, opacity: 0,duration: 1, ease: "bounce" , delay:5})
+    .from(iconeCommanderAccueil, { opacity:0, y:-250, scale: 1, ease: "bounce"})
+    .from(communiquerAccueil, { x: 700, opacity: 0,duration: 1, ease: "bounce"}, "<-0.1")
+    .from(iconeCommuniquerAccueil, {x:-500, opacity: 0,ease: "bounce"})
+    .from(situerAccueil, {  y: -700, opacity: 0, duration: 1, ease: "bounce" })
+    .from(iconeSituerAccueil, {y:250, opacity:0, ease: "bounce"})
+    .from(eduquerAccueil, { y:700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
+    .from(iconeEduquerAccueil, {x:500, opacity:0,ease: "bounce"})
+    .from(instruireAccueil, { y: 700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
+    .from(iconeInstuireAccueil, {y:200, opacity: 0,ease: "bounce"})
+    .from(incarnation, {y:-50, opacity:0,duration: 3, opacity:0,ease:"rought"}, "<-3")
+    .fromTo(modjo, {x:-600, y:10, opacity:0}, { x: 0,y:-10,  opacity: 1, duration: 1, ease: "sine" }, "<-4")
+    .from(logoAlphaAccueil, { opacity: 0,scale: 0.1, duration: 3, delay: 2 })
    
     
     
 
-// t2
-//     .from(titre1, { y: -400, ease: "bounce", duration :3 , scale:2})
-//     .to(titre1, { duration: 5, text: "La formation au comportement du militaire", ease: "none", delay: 1, scale:1.5 })
+t2
+    .from(titre1, { y: -400, ease: "bounce", duration :3 , scale:2})
+    .to(titre1, { duration: 5, text: "La formation au comportement du militaire", ease: "none", delay: 1, scale:1.5 })
 
 //section mission
 const mission = document.querySelector('.title-mission')
@@ -143,7 +143,7 @@ tlcommander
     .to(logoCommanderParcours, {
         scrollTrigger: {
             trigger: sectionParcours, 
-            start: "1% 5%",
+            start: "-1% 5%",
             end:"+=500",
             markers: true,
             scrub:true,
@@ -163,8 +163,8 @@ tlsituer
     .to(logoSituerParcours, {
         scrollTrigger: {
             trigger: containerCompetenceSituer, 
-            start: "1% 5%",
-            end:"+=1200",
+            start: "1% center",
+            end:"700px top",
             markers: true,
             scrub:true,
             toggleActions:"restart pause reverse resume"

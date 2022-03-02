@@ -502,6 +502,7 @@ height: 1500px;
 
 .box-description-aptitude {
   display: flex;
+  position: relative;
   flex-direction: row;
   color: #2a4161;
   text-align: center;
@@ -511,7 +512,12 @@ height: 1500px;
 }
 
 .box-description-aptitude img {
-  height: 50px;
+    position: absolute;
+    top:-50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    opacity: 0.4;
+  height: 150px;
   border-radius: 50%;
   margin-right: 10px;
   margin-top: 5px;
