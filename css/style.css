@@ -186,10 +186,7 @@ body {
   font-style: italic;
   font-size: 3rem;
 }
-.section-mission:hover {
-  color: #294062;
-  background: #f1f1f1;
-}
+
 
 /*-----------------formation------------------ */
 .section-formation {

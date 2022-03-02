@@ -68,10 +68,10 @@ t3
 
     .to(mission, {
         scrollTrigger: {
-            trigger: ".section-mission", 
+            trigger: sectionMission, 
             start: "-1% 5%",
             end:"300px top",
-            markers: true,
+            // markers: true,
             scrub:true,
             toggleActions:"restart pause reverse resume"
             },
@@ -80,10 +80,10 @@ t3
     })
     .to(sectionMission, {
         scrollTrigger: {
-            trigger: ".section-mission", 
-            start: "-1% 5%",
-            end:"300px top",
-            markers: true,
+            trigger: sectionMission, 
+            start: "top center",
+            end:"bottom 50%",
+            // markers: true,
             scrub:true,
             toggleActions:"restart pause reverse resume"
             },
@@ -93,14 +93,14 @@ t3
     .to(subtitleMission, {
         scrollTrigger: {
             trigger: sectionMission, 
-            start: "top 5%",
-            end:"300px top",
+            start: "top center",
+            end:"top center",
             markers: true,
             scrub:true,
             toggleActions:"restart pause reverse resume"
             },
     
-            y:300
+            y:100
     })  
     
 
