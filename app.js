@@ -62,14 +62,47 @@ t2
 //section mission
 const mission = document.querySelector('.title-mission')
 var t3 = gsap.timeline({})
-
-
+const sectionMission =document.querySelector('.section-mission')
+const subtitleMission = document.querySelector('.subtitle-mission')
 t3
-    .fromTo(mission, {
-    scrollTrigger: mission, 
-    y:-10, color:'red'
-}, {scrollTrigger: mission, 
-    y:10, color:'blue'})
+
+    .to(mission, {
+        scrollTrigger: {
+            trigger: ".section-mission", 
+            start: "-1% 5%",
+            end:"300px top",
+            markers: true,
+            scrub:true,
+            toggleActions:"restart pause reverse resume"
+            },
+    
+            x: -110, 
+    })
+    .to(sectionMission, {
+        scrollTrigger: {
+            trigger: ".section-mission", 
+            start: "-1% 5%",
+            end:"300px top",
+            markers: true,
+            scrub:true,
+            toggleActions:"restart pause reverse resume"
+            },
+    
+            backgroundColor: "#f1f1f1",
+    })  
+    .to(subtitleMission, {
+        scrollTrigger: {
+            trigger: sectionMission, 
+            start: "top 5%",
+            end:"300px top",
+            markers: true,
+            scrub:true,
+            toggleActions:"restart pause reverse resume"
+            },
+    
+            y:300
+    })  
+    
 
 // ---------------section competences--------
 const competenceCommander = document.getElementById('competence-commander')
@@ -143,7 +176,7 @@ tlcommander
     .to(logoCommanderParcours, {
         scrollTrigger: {
             trigger: sectionParcours, 
-            start: "-1% 5%",
+            start: "1% 5%",
             end:"+=500",
             markers: true,
             scrub:true,
@@ -163,7 +196,7 @@ tlsituer
     .to(logoSituerParcours, {
         scrollTrigger: {
             trigger: containerCompetenceSituer, 
-            start: "1% center",
+            start: "1% 5%",
             end:"700px top",
             markers: true,
             scrub:true,
