@@ -57,7 +57,7 @@ t1
 
 t2
     .from(titre1, { y: -400, ease: "bounce", duration :3 , scale:2})
-    .to(titre1, { duration: 5, text: "La formation au comportement du militaire", ease: "none", delay: 1, scale:1.5 })
+    .to(titre1, { duration: 5, text: "La formation au comportement du militaire", ease: "none", delay: 1, scale:1.2 })
 
 //section mission
 const mission = document.querySelector('.title-mission')
