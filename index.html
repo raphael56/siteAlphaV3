@@ -66,7 +66,9 @@
  <!--section accueil  -->
  
 <section class="container-fluid section-accueil" id="accueil">
-
+<div class="pin" id="pin">
+	<img src="/ressources/images/pin.svg" alt="">
+</div>
 	<div class=" col-12 container-title-accueil order-first ">
 		<div class="box-modjo text-uppercase">
 			<p class="title-incarner">incarnez le chef</p>
@@ -74,30 +76,22 @@
 		</div>
 		<div class="box-logo-alpha">
 			<img src="./ressources/images/img-logoAlpha.png" alt="logo-alpha" class="img-fluid " id="logoAlphaAccueil">
-			<h1>vous êtes à la bonne place <span></span></h1>
+			<h1>préparez-vous à incarnez!<span></span></h1>
 		</div>
 	</div>
 
 <div class="row">
 	<div class="justify-content-center box-5competences">
 		<div class="container-text-competences justify-content-center align-content-center ">
-			<p class="  color-commander" id="commanderAccueil">commander</p>
 			<p class="  color-situer" id="situerAccueil">se situer</p>
 			<p class="  color-communiquer" id="communiquerAccueil">communiquer</p>
+			<p class="  color-commander" id="commanderAccueil">commander</p>
 			<p class="  color-eduquer" id="eduquerAccueil">éduquer</p>
 			<p class="  color-instruire" id="instruireAccueil">instruire</p>
 		</div>
 
 		<div class=" icone-accueil-competences">
-			<div>
-
-				<a href="en_construction.html">
-
-					<img id="iconeCommanderAccueil" src="./ressources/images/commander-518x543.png" alt="icone-commander" class=" p-1">
-					
-				</a>
-			</div>
-
+			
 			
 			<div>
 				<img id="iconeSituerAccueil" src="./ressources/images/se_situer_br.png" alt="icone-situer" class="i p-1">
@@ -106,6 +100,14 @@
 			<div>
 				<img id="iconeCommuniquerAccueil" src="./ressources/images/communiquer-518x543.png" alt="icone-communiquer" class=" p-1">
 				
+			</div>
+			<div>
+
+				<a href="en_construction.html">
+
+					<img id="iconeCommanderAccueil" src="./ressources/images/commander-518x543.png" alt="icone-commander" class=" p-1">
+					
+				</a>
 			</div>
 
 			<div>
@@ -300,14 +302,14 @@
 				<div class="line"></div>
 			</div>
 			<div class="fil-competence">
-				<img src="/ressources/images/logo-cdt-propre-518x543.png" alt="badge commander">
+				<img src="/ressources/images/logo-cdt-propre-518x543.png" alt="badge commander" id="logoCommanderParcours">
 				<div >
 					<p class="title-aptitude color-commander">aptitude</p>
 				</div>
 			</div>
 		</div>
 		<div class="container-box-description-aptitude">
-			<div class="box-description-aptitude">
+			<div class="box-description-aptitude cdt10">
 				<img src="ressources/images/cdt10-518x543.png" alt="logo cdt10">
 				<p class="color-commander">s'appliquer à la subsidiarité</p>
 			</div>	
@@ -347,16 +349,17 @@
 	
 		<div class="box-fil">
 			<div class="line-container">
-				<div class="line"></div>
+				<div class="line line-situer"></div>
 			</div>
 			<div class="fil-competence">
-				<img src="/ressources/images/logo-sit-propre-518x543.png" alt="badge situer">
+				<img src="/ressources/images/logo-sit-propre-518x543.png" alt="badge situer" id="logoSituerParcours">
 				<div >
-					<p class="title-aptitude color-situer">aptitude</p>
+					<p class="title-aptitude 
+					title-aptitude-situer color-situer">aptitude</p>
 				</div>
 			</div>
 		</div>
-		<div class="container-box-description-aptitude ">
+		<div class="container-box-description-aptitude  aptitude-situer">
 				<div class="box-description-aptitude">
 					<img src="ressources/images/sit10-518x543.png" alt="logo sit10">
 					<p class="color-situer">se positionner <br> au sein de l'institution</p>
@@ -391,7 +394,7 @@
 
 	<div class="container  container-competence-instruire">
 		<div class="img-competence">
-			<img src="ressources/images/instruire-icone-518x543.png" alt="logo instruire">
+			<img src="ressources/images/instruire-icone-518x543.png" alt="logo instruire" >
 		</div>
 
 		<div class="parcours-title-competence title-instruire">
@@ -408,7 +411,7 @@
 				<div class="line"></div>
 			</div>
 			<div class="fil-competence">
-				<img src="/ressources/images/instruire-logo-518x543.png" alt="badge instruire">
+				<img src="/ressources/images/instruire-logo-518x543.png" alt="badge instruire" id="logoInstruireParcours">
 				<div >
 					<p class="title-aptitude color-instruire">aptitude</p>
 				</div>
@@ -453,7 +456,7 @@
 				<div class="line"></div>
 			</div>
 			<div class="fil-competence">
-				<img src="/ressources/images/logo-eduquer-518x543.png" alt="badge eduquer">
+				<img src="/ressources/images/logo-eduquer-518x543.png" alt="badge eduquer" id="logoEduquerParcours">
 				<div >
 					<p class="title-aptitude color-eduquer">aptitude</p>
 				</div>
@@ -504,7 +507,7 @@
 			<div class="line"></div>
 		</div>
 		<div class="fil-competence">
-			<img src="/ressources/images/logo-com-propre-518x543.png" alt="badge communiquer">
+			<img src="/ressources/images/logo-com-propre-518x543.png" alt="badge communiquer" id="logoCommuniquerParcours">
 			<div >
 				<p class="title-aptitude color-communiquer">aptitude</p>
 			</div>
@@ -538,8 +541,17 @@
 <!-- Bootstrap JS bundle →-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+<!-- Gsap js  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+
+
+<!-- App JS -->
 <script src="app.js"></script>
 
   </body>

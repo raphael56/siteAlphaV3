@@ -69,9 +69,15 @@ body {
   align-items: center;
 }
 
-h1 span {
-    color:#6fb936;
-  }
+.pin img{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 10%;
+  fill: #294062;
+}
 
 
 
@@ -459,12 +465,15 @@ h1 span {
   background: rgba(255, 255, 255, 0.2);
   width: 1000px;
 }
+
+
+
 .box-fil {
   display: flex;
   position: relative;
   /* background: blue; */
 }
-.fil-competence div p {
+.fil-competence div p{
   /* background: blue; */
 }
 .fil-competence img {
@@ -472,13 +481,23 @@ h1 span {
   position: relative;
   z-index: 10;
 }
+
+#logoSituerParcours{
+    /* background: #000; */
+    left: -3px;
+    top: -10px;
+}
 .container-box-description-aptitude {
-  display: flex;
-  flex-direction: column;
-  /* background: pink; */
-  height: 1000px;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* background: pink; */
+    height: 1000px;
+    justify-content: space-around;
+    align-items: center;
+}
+ .aptitude-situer {
+height: 1500px;
+/* background: #000; */
 }
 
 .box-description-aptitude {
@@ -510,6 +529,17 @@ h1 span {
   top: 20px;
   left: 45px;
 }
+.line-situer{
+    height: 1500px;
+    /* background: #000; */
+}
+
+.title-aptitude-situer{
+width: 1500px;
+top: 51%;
+  left: -665px;
+} 
+
 
 .container-competence-seSituer {
   display: flex;
