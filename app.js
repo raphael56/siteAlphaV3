@@ -223,6 +223,15 @@ t5
     
 })
 
+
+
+
+
+
+
+
+
+
 // ---------------section competences--------
 const competenceCommander = document.getElementById('competence-commander')
 const iconeCommander = document.getElementById('iconeCommander')
@@ -241,6 +250,61 @@ const bgSectionCompetences = document.querySelector('.section-competences')
 var t6 = gsap.timeline({ paused: true })
 
 t6
+.fromTo(iconeCommuniquer,{x:100}, {
+    scrollTrigger: {
+        trigger: pedagogie,
+        start: "2500 50%",
+        end: "+=200",
+        scrub: true,
+        markers:true,
+        // pin: true,
+        toggleActions:"restart pause reverse resume"
+    },
+    x:0,
+    opacity: 1,
+    
+})
+.fromTo(iconeInstruire,{x:100}, {
+    scrollTrigger: {
+        trigger: pedagogie,
+        start: "2500 50%",
+        end: "+=200",
+        scrub: true,
+        markers:true,
+        // pin: true,
+        toggleActions:"restart pause reverse resume"
+    },
+    x:0,
+    opacity: 1,
+    
+})
+.fromTo(iconeEduquer,{y:500}, {
+    scrollTrigger: {
+        trigger: pedagogie,
+        start: "2500 50%",
+        end: "+=200",
+        scrub: true,
+        markers:true,
+        // pin: true,
+        toggleActions:"restart pause reverse resume"
+    },
+    y:0,
+    opacity: 1,
+    
+})
+.fromTo(iconeSituer,{x:-500}, {
+    scrollTrigger: {
+        trigger: pedagogie,
+        start: "2500 50%",
+        end: "+=200",
+        scrub: true,
+        markers:true,
+        // pin: true,
+        toggleActions:"restart pause reverse resume"
+    },
+    x:0,
+    opacity: 1,
+})
 .fromTo(iconeCommander,{x:-500}, {
     scrollTrigger: {
         trigger: pedagogie,
@@ -251,8 +315,6 @@ t6
         // pin: true,
         toggleActions:"restart pause reverse resume"
     },
-    color: "white",
-    fontWeight: "900", 
     x:0,
     opacity: 1,
     
