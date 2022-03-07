@@ -256,7 +256,7 @@ t6
         start: "2500 50%",
         end: "+=200",
         scrub: true,
-        markers:true,
+        // markers:true,
         // pin: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -270,7 +270,7 @@ t6
         start: "2500 50%",
         end: "+=200",
         scrub: true,
-        markers:true,
+        // markers:true,
         // pin: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -284,7 +284,7 @@ t6
         start: "2500 50%",
         end: "+=200",
         scrub: true,
-        markers:true,
+        // markers:true,
         // pin: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -298,7 +298,7 @@ t6
         start: "2500 50%",
         end: "+=200",
         scrub: true,
-        markers:true,
+        // markers:true,
         // pin: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -311,7 +311,7 @@ t6
         start: "2500 50%",
         end: "+=200",
         scrub: true,
-        markers:true,
+        // markers:true,
         // pin: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -384,14 +384,15 @@ var tlcommander = gsap.timeline({paused:true})
 tlcommander
     .to(logoCommanderParcours, {
         scrollTrigger: {
-            trigger: sectionParcours, 
-            start: "1% 5%",
-            end:"+=500",
+            trigger: logoCommanderParcours, 
+            start: "3600 15%",
+            end:"+=1300",
             // markers: true,
-            scrub:true,
+            scrub: true,
+            pin:"container-fil-commander",
             toggleActions:"restart pause reverse resume"
         },
-        y: 1000, 
+        y:1000,
       
         
     })
@@ -404,15 +405,16 @@ var tlsituer = gsap.timeline({paused:true})
 tlsituer
     .to(logoSituerParcours, {
         scrollTrigger: {
-            trigger: containerCompetenceSituer, 
-            start: "1% 5%",
-            end:"700px top",
+            trigger: logoSituerParcours, 
+            start: "4600 1%",
+            end:"+=2000",
             // markers: true,
-            scrub:true,
+            scrub: true,
+            pin:"container-fil-situer",
             toggleActions:"restart pause reverse resume"
         },
 
-        y: 1470, 
+        y: 1500, 
        
         
     })
@@ -426,15 +428,16 @@ var tlinstruire = gsap.timeline({paused:true})
 tlinstruire
     .to(logoInstruireParcours, {
         scrollTrigger: {
-            trigger: containerCompetenceInstruire, 
-            start: "1% 5%",
-            end:"+=1200",
+            trigger: logoInstruireParcours, 
+            start: "6500 30%",
+            end:"+=1000",
             // markers: true,
-            scrub:true,
+            scrub: true,
+            pin:"container-fil-instruire",
             toggleActions:"restart pause reverse resume"
         },
 
-        y: 1000, 
+        y: 990, 
        
         
     })
@@ -447,19 +450,20 @@ var tleduquer = gsap.timeline({paused:true})
 tleduquer
     .to(logoEduquerParcours, {
         scrollTrigger: {
-            trigger: containerCompetenceEduquer, 
-            start: "1% 5%",
-            end:"+=1200",
+            trigger: logoEduquerParcours, 
+            start: "7500 1%",
+            end:"+=1000",
             // markers: true,
-            scrub:true,
+            scrub: true,
+            pin:"container-fil-eduquer",
             toggleActions:"restart pause reverse resume"
         },
 
-        y: 1000, 
+        y: 980, 
        
         
     })
-//instruire
+//communiquer
 const logoCommuniquerParcours = document.getElementById('logoCommuniquerParcours')
 const containerCompetenceCommuniquer = document.querySelector('.container-competence-communiquer')
 
@@ -468,15 +472,16 @@ var tlinstruire = gsap.timeline({paused:true})
 tlinstruire
     .to(logoCommuniquerParcours, {
         scrollTrigger: {
-            trigger: containerCompetenceCommuniquer, 
-            start: "1% 5%",
-            end:"+=1200",
-            // markers: true,
-            scrub:true,
+            trigger: logoCommuniquerParcours, 
+            start: "8800 1%",
+            end:"+=1000",
+            markers: true,
+            scrub: true,
+            pin:"container-fil-communiquer",
             toggleActions:"restart pause reverse resume"
         },
 
-        y: 1000, 
+        y: 980, 
        
         
     })
