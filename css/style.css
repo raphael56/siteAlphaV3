@@ -6,6 +6,7 @@
   padding: 0;
 }
 
+
 /* définition des couleurs par compétences */
 .color-situer {
   color: #1a4a28;
@@ -162,13 +163,13 @@ body {
 
 /* mediaquery section accueil */
 
-@media screen and (max-width: 764px) {
-}
+/* @media screen and (max-width: 764px) {
+} */
 
-/*-----------------mission------------------ */
+/*----------------- section mission----------------------------------- */
 
 .section-mission {
-  background: #294062;
+  background-color: #294062;
   height: calc(100vh - 70px);
   color: #294062;
   display: flex;
@@ -181,6 +182,7 @@ body {
 }
 .subtitle-mission {
   font-size: 2.1rem;
+  scale:1;
 }
 .subtitle-mission span {
   font-style: italic;
@@ -188,7 +190,7 @@ body {
 }
 
 
-/*-----------------formation------------------ */
+/*------------------------formation------------------------------- */
 .section-formation {
   background: linear-gradient(to bottom, #ffffff, #5c7590 50%, #375577);
   height: calc(100vh - 70px);
@@ -225,6 +227,7 @@ body {
   justify-content: center;
   text-transform: uppercase;
   height: 100%;
+  opacity: 0;
 }
 .line-formation img {
   padding: 0.2rem;

@@ -17,8 +17,17 @@
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
-  </head>
-  <body>
+	<script type="text/javascript">
+		function ftw()
+		{
+		temps=1000;
+		setTimeout("alert(message);",temps);
+		setTimeout("document.body.style.display='block';",temps+1);
+		}
+		</script>
+		</head>
+		<body onload="ftw()" style="display:none;">
+
     <!-- navbar -->
 	<nav class="navbar navbar-expand-md fixed-top navbar-dark">
 		
@@ -134,21 +143,23 @@
 <section class="container-fluid section-mission" id="mission">
 <div class=" container-mission align-items-center justify-items-center text-uppercase text-center">
 	<p class=" title-mission">votre mission:</p>
-<p class="  subtitle-mission"><span> Développer</span>  <br> un <br> <span>
+<p class="  subtitle-mission"><span id="developper-mission"> Développer</span>  <br> un <br> <span id="savoirEtre-mission">
 	savoir-être 
 </span> <br>
-	d'officier</p>
+<span id="officier-mission">
+	d'officier
+</span>
+</p>
 </div>
-
 </section>
 <!-- section formation -->
 <section class="container-fluid section-formation" id="formation">
-	<div class="row title-formation"><h3>pour cela vous devrez vous appuyer sur</h3></div>
+	<div class="row title-formation"><h3 id="appuis">vos appuis</h3></div>
 
 <div class="col box-formation-gauche">
-<div class=" line-formation"><img src="ressources/images/phi.png" alt="phi grec"><p>une philosophie de pensée</p></div>
-<div class=" line-formation"><img src="ressources/images/expert.png" alt="roue crantée"><p>une expertise éprouvée</p></div>
-<div class=" line-formation"><img src="ressources/images/peda.png" alt="icone étudiant"><p>une pédagogie active</p></div>
+<div class=" line-formation" id="phi"><img src="ressources/images/phi.png" alt="phi grec"><p>une philosophie de pensée</p></div>
+<div class=" line-formation" id="roue"><img src="ressources/images/expert.png" alt="roue crantée" ><p>une expertise éprouvée</p></div>
+<div class=" line-formation" id="peda"><img src="ressources/images/peda.png" alt="icone étudiant" ><p>une pédagogie active</p></div>
 </div>
 
 <div class="col box-formation-droite">
@@ -158,7 +169,7 @@
 
 <!-- section pedagogie -->
 <section class="container-fluid section-pedagogie" id="pedagogie">
-	<div class="row title-pedagogie"><h3>Une pédagogie </h3><p>où vous serez dans l'action principale</p></div>
+	<div class="row title-pedagogie"><h3>vous êtes dans l'action principale</h3></div>
 
 	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
@@ -209,6 +220,20 @@
 
 
 </section>
+
+<!-- test scroll horizontal -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- section 5 compétences -->
 <section class="container-fluid section-competences">
@@ -544,6 +569,15 @@
 </section>
 
 
+
+
+<!-- jquery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+$(".loader").fadeOut("1000"); })
+</script>
+
 <!-- Bootstrap JS bundle →-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -559,6 +593,10 @@
 
 <!-- App JS -->
 <script src="app.js"></script>
+
+
+
+
 
   </body>
 </html>
