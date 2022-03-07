@@ -475,7 +475,7 @@ tlinstruire
             trigger: logoCommuniquerParcours, 
             start: "8800 1%",
             end:"+=1000",
-            markers: true,
+            // markers: true,
             scrub: true,
             pin:"container-fil-communiquer",
             toggleActions:"restart pause reverse resume"
