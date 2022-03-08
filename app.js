@@ -107,16 +107,18 @@ t3
         fontSize: "2.8rem",
         fontWeight: "900", 
     })
-    .to(officier, {
+    .fromTo(officier, {opacity:0,fontSize:"2rem"},{
         scrollTrigger: {
             trigger: officier,
-            start: "bottom 50%",
-            end:"+=1500px 10%",
+            start: "900 50%",
+            end:"+=300px 70%",
             scrub: true,
+            markers:true,
             toggleActions:"restart pause reverse resume"
         },
         fontSize: "4rem",
         fontWeight: "900", 
+        opacity:1
     })
 
     
