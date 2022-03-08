@@ -192,7 +192,7 @@ const caroussel = document.querySelector('#carouselExampleCaptions')
 var t5 = gsap.timeline({ paused: true })
 
 t5
-.fromTo(titlePeda,{y:500}, {
+.fromTo(titlePeda,{y:70, opacity:0}, {
     scrollTrigger: {
         trigger: pedagogie,
         start: "1900 50%",
@@ -212,7 +212,6 @@ t5
                 start: "1950 50%",
                 end: "+=300",
                 scrub: true,
-                markers:true,
                 toggleActions:"restart pause reverse resume"
             },
     
@@ -241,12 +240,40 @@ const iconeInstruire = document.getElementById('iconeInstruire')
 const competenceCommuniquer = document.getElementById('competence-communiquer')
 const iconeCommuniquer = document.getElementById('iconeCommuniquer')
 const bgSectionCompetences = document.querySelector('.section-competences')
-
+const softSkills = document.getElementById('soft-skills')
+const acquisition = document.getElementById('acquisition')
 
 var t6 = gsap.timeline({ paused: true })
 
 t6
-.fromTo(iconeCommuniquer,{x:50, display:"none",opacity:0}, {
+    .fromTo(acquisition,{display:"none",opacity:0}, {
+    scrollTrigger: {
+        // scroller:bgSectionCompetences,
+        trigger: acquisition,
+        start: "2500 50%",
+        end: "+=200",
+            scrub: 0.5,
+        markers:true,
+        toggleActions:"restart pause reverse resume"
+    },
+    opacity: 1,
+    display: "flex"
+    })
+    .fromTo(softSkills,{x:300, display:"none",opacity:0}, {
+    scrollTrigger: {
+        // scroller:bgSectionCompetences,
+        trigger: softSkills,
+        start: "2500 50%",
+        end: "+=200",
+            scrub: 0.5,
+        markers:true,
+        toggleActions:"restart pause reverse resume"
+    },
+    x:50,
+    opacity: 1,
+    display: "flex"
+    })
+    .fromTo(iconeCommuniquer,{x:50, display:"none",opacity:0}, {
     scrollTrigger: {
         // scroller:bgSectionCompetences,
         trigger: pedagogie,
