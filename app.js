@@ -253,7 +253,6 @@ t6
         start: "2500 50%",
         end: "+=200",
             scrub: 0.5,
-        markers:true,
         toggleActions:"restart pause reverse resume"
     },
     opacity: 1,
@@ -266,7 +265,6 @@ t6
         start: "2500 50%",
         end: "+=200",
             scrub: 0.5,
-        markers:true,
         toggleActions:"restart pause reverse resume"
     },
     x:50,
