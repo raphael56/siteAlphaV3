@@ -82,7 +82,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 25%;
-    height: 10%;
+    height: auto;
   fill: #294062;
 }
 
@@ -90,7 +90,6 @@ body {
 
 
 .box-5competences {
-
   flex-direction: column;
   flex-wrap: nowrap;
   /* background: pink; */
@@ -143,6 +142,27 @@ body {
   font-weight: 600;
   margin: 0;
   padding: 0;
+  animation: color 10s ease-in-out infinite alternate; 
+}
+@keyframes color {
+    0%{
+        color:#294062;
+    }
+    20%{
+        color:#1a4a28;
+    }
+    40%{
+        color:#734693;
+    }
+    60%{
+        color:#891b0b;
+    }
+    80%{
+        color:#8d943f;
+    }
+    100%{
+        color:#294062;
+    }
 }
 .title-modjo {
   color: grey;
@@ -166,7 +186,131 @@ body {
   font-size: 0.7rem;
   color: #294062;
 }
+#logoAlphaAccueil{
+    animation: scale 1s ease-in-out infinite alternate; 
+}
 
+@keyframes scale {
+    0%{
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+    100%{
+        transform: scale(0.99);
+            -webkit-transform: scale(0.99);
+    }
+}
+
+#iconeSituerAccueil{
+    animation: notificationVerte 2s ease-in-out infinite alternate;
+}
+
+@keyframes notificationVerte {
+    0%{
+        background: #1a4a28;
+        transform: translateY(5px);
+    }
+    100%{
+        background: #71c58c;
+        transform: translateY(-5px);
+    }
+   
+}
+#iconeCommuniquerAccueil{
+    animation: notificationViolet 2s ease-in-out infinite alternate;
+}
+
+@keyframes notificationViolet{
+    0%{
+        background: #734693;
+        transform: translateY(-5px);
+    }
+    100%{
+        background: #8968a0;
+        transform: translateY(5px);
+    }
+   
+}
+#iconeEduquerAccueil{
+    animation: notificationKaki 2s ease-in-out infinite alternate;
+}
+
+@keyframes notificationKaki{
+    0%{
+        background: #8d943f;
+        transform: translateY(-5px);
+    }
+    100%{
+        background: #a6ac6c;
+        transform: translateY(5px);
+    }
+   
+}
+#iconeInstruireAccueil{
+    animation: notificationRouge 2s ease-in-out infinite alternate;
+}
+
+@keyframes notificationRouge{
+    0%{
+        background: #891b0b;
+        transform: translateY(-5px);
+    }
+    100%{
+        background: #e08476;
+        transform: translateY(5px);
+    }
+   
+}
+#iconeCommanderAccueil{
+    animation: notificationBleu 10s ease-in-out infinite alternate;
+}
+
+@keyframes notificationBleu{
+    0%{
+        background: #294062;
+        transform: translateY(0px);
+    }
+    10%{
+        
+        transform: translateY(-10px);
+    }
+    20%{
+        background: #789acc;
+        transform: translateY(0px);
+    }
+    30%{
+       
+        transform: translateY(-30px);
+    }
+    40%{
+        background: #657b9c;
+        transform: translateY(0px);
+    }
+    50%{
+        
+        transform: translateY(-50px);
+    }
+    60%{
+        
+        transform: translateY(0px);
+    }
+    70%{
+        background: #6395e0;
+        transform: translateY(-40px);
+    }
+    80%{
+    
+        transform: translateY(0px);
+    }
+    90%{
+        background: #294062;
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+   
+}
 /* mediaquery section accueil */
 
 /* @media screen and (max-width: 764px) {

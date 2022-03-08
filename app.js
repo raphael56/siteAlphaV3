@@ -146,7 +146,7 @@ t4
         // pin: true,
         toggleActions:"restart pause reverse resume"
     },
-    color: "red",
+    color: "blue",
     fontWeight: "900", 
     y:50,
     opacity: 1,
@@ -202,11 +202,11 @@ t4
 // section pedagogie
 const pedagogie = document.getElementById('pedagogie')
 const titlePeda = document.querySelector('.title-pedagogie')
- 
+const caroussel = document.querySelector('#carouselpeda')
 var t5 = gsap.timeline({ paused: true })
 
 t5
-.fromTo(titlePeda,{x:-500}, {
+.fromTo(titlePeda,{y:500}, {
     scrollTrigger: {
         trigger: pedagogie,
         start: "1600 50%",
@@ -218,10 +218,24 @@ t5
     },
     color: "white",
     fontWeight: "900", 
-    x:0,
+    y:0,
     opacity: 1,
-    
 })
+    .fromTo(caroussel,{ y: 100,opacity:0},
+        {
+            scrollTrigger: {
+                trigger: titlePeda,
+                start: "2000 50%",
+                end: "+=50",
+                scrub: true,
+                markers:true,
+                // pin: true,
+                toggleActions:"restart pause reverse resume"
+            },
+    
+           y:0,
+            opacity: 1,
+}) 
 
 
 
@@ -264,7 +278,7 @@ t6
     opacity: 1,
     
 })
-.fromTo(iconeInstruire,{x:100}, {
+.fromTo(iconeInstruire,{x:300}, {
     scrollTrigger: {
         trigger: pedagogie,
         start: "2500 50%",
