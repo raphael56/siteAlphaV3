@@ -127,13 +127,13 @@ const phi = document.getElementById('phi')
 const roue = document.getElementById('roue')
 const peda = document.getElementById('peda')
  
-var t4 = gsap.timeline({ paused:true})
+var t4 = gsap.timeline({paused: true})
 
 t4
 .to(appuis, {
     scrollTrigger: {
         trigger: formation,
-        start: "1200 50%",
+        start: "1200 30%",
         end: "+=300",
         scrub: true,
         toggleActions:"restart pause reverse resume"
@@ -147,8 +147,9 @@ t4
     .fromTo(phi, {x:-50}, {
     scrollTrigger: {
         trigger: formation,
-        start: "1200px 70%",
-        end:() => "+=200px",
+        start: "1200px 30%",
+            end: "+=200px",
+        // markers:true,
         scrub: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -160,8 +161,8 @@ t4
     .fromTo(roue, {x:50},{
     scrollTrigger: {
         trigger: formation,
-        start: "1400px 70%",
-        end:() => "+=200px",
+        start: "1400px 40%",
+        end:"+=200px",
         scrub: true,
         toggleActions:"restart pause reverse resume"
         },
@@ -173,8 +174,8 @@ t4
 .fromTo(peda, {x:-50}, {
     scrollTrigger: {
         trigger: formation,
-        start: "1600px 70%",
-        end: () => "+=200px",
+        start: "1600px 50%",
+        end:"+=200px",
         scrub: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -306,7 +307,6 @@ t6
     },
     y:0,
     opacity: 1,
-    
 })
 .fromTo(iconeSituer,{x:-50, opacity:0}, {
     scrollTrigger: {
@@ -329,7 +329,6 @@ t6
     },
     x:0,
     opacity: 1,
-    
 })
 
 
@@ -383,8 +382,65 @@ iconeCommuniquer.addEventListener('mouseleave', () => {
     bgSectionCompetences.style.backgroundColor = '#294062'
     
 })
+// ------- section doctrine
+const doctrine = document.querySelector('.section-doctrine')
+const forge = document.getElementById('forge')
+const alphabrique = document.getElementById('alphabrique')
+const source = document.getElementById('source')
+var t7 = gsap.timeline({ paused: true })
 
-
+t7
+    .fromTo(forge,{display:"none",opacity:0, scale:0}, {
+    scrollTrigger: {
+        // scroller:bgSectionCompetences,
+        trigger: forge,
+        start: "2900 50%",
+        end: "+=200",
+            scrub: 0.5,
+        toggleActions:"restart pause reverse resume"
+        },
+        scale: 2,
+    opacity: 1,
+    display: "flex"
+    })
+    .fromTo(alphabrique,{display:"none",opacity:0, scale:1}, {
+    scrollTrigger: {
+        // scroller:bgSectionCompetences,
+        trigger: forge,
+        start: "2900 50%",
+        end: "+=200",
+            scrub: 0.5,
+        toggleActions:"restart pause reverse resume"
+        },
+        scale: 1.5,
+        opacity: 1,
+    y:50,
+    display: "flex"
+    })
+    .fromTo(alphabrique,{scale:1.5}, {
+    scrollTrigger: {
+        // scroller:bgSectionCompetences,
+        trigger: forge,
+        start: "3100 50%",
+        end: "+=200",
+            scrub: 0.5,
+        toggleActions:"restart pause reverse resume"
+        },
+        scale: 1,
+        y:0
+    })
+    .fromTo(source,{scale:0.5, opacity:0}, {
+    scrollTrigger: {
+        // scroller:bgSectionCompetences,
+        trigger: source,
+        start: "3200 50%",
+        end: "+=200",
+            scrub: 0.5,
+        toggleActions:"restart pause reverse resume"
+        },
+        scale: 1,
+        opacity:1
+    })
 // --------section parcours------------------
 const sectionParcours = document.querySelector('.section-parcours')
 
