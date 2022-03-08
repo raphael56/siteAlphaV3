@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 20000px;
   font-family: roboto, sans-serif;
  }
@@ -47,6 +47,7 @@ body {
   height: 70px;
   background: #294062;
   text-transform: uppercase;
+  width: 100vw;
 }
 
 .navbar-brand img {
@@ -67,23 +68,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   position: relative;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.pin img{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: auto;
-  fill: #294062;
 }
 
 
@@ -319,6 +310,7 @@ body {
 /*----------------- section mission----------------------------------- */
 
 .section-mission {
+    width: 100vw;
   background-color: #294062;
   height: calc(100vh - 70px);
   color: #294062;
@@ -343,6 +335,7 @@ body {
 /*------------------------formation------------------------------- */
 .section-formation {
   background: linear-gradient(to bottom, #ffffff, #5c7590 50%, #375577);
+  width: 100vw;
   height: calc(100vh - 70px);
   color: #f1f1f1;
   display: flex;
@@ -369,6 +362,7 @@ body {
   justify-content: center;
   width: 100%;
 }
+
 .line-formation {
   display: flex;
   margin: 20px 0;
@@ -383,12 +377,12 @@ body {
   padding: 0.2rem;
   width: 4rem;
 }
-.line-formation p {
-}
+
 /*-----------------pedagogie------------------ */
 .section-pedagogie {
   background: linear-gradient(to bottom, #375577, #2a4161);
   height: calc(100vh - 70px);
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -414,6 +408,7 @@ body {
 .section-competences {
   background-color: #375577;
   height: calc(100vh - 70px);
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;

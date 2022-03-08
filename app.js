@@ -17,7 +17,7 @@ const logoAlphaAccueil = document.querySelector('#logoAlphaAccueil')
 const titre1 = document.querySelector('h1')
 const incarnation = document.querySelector('.title-incarner')
 const modjo = document.querySelector('.title-modjo')
-const loader =document.getElementById('pin')
+
 
 
 
@@ -31,21 +31,17 @@ window.addEventListener('load', () =>{
   })
 
 
-t0
-    .fromTo(loader, { opacity: 1},{opacity:0, duration:3})
-    
-
 t1
-    .from(commanderAccueil, { y: 700, opacity: 0,duration: 1, ease: "bounce" , delay:5})
+    .from(commanderAccueil, { y: -700, opacity: 0,duration: 1, ease: "bounce" , delay:5})
     .from(iconeCommanderAccueil, { opacity:0, y:-250, scale: 1, ease: "bounce"})
     .from(communiquerAccueil, { x: 700, opacity: 0,duration: 1, ease: "bounce"}, "<-0.1")
     .from(iconeCommuniquerAccueil, {x:-500, opacity: 0,ease: "bounce"})
     .from(situerAccueil, {  y: -700, opacity: 0, duration: 1, ease: "bounce" })
     .from(iconeSituerAccueil, {y:250, opacity:0, ease: "bounce"})
-    .from(eduquerAccueil, { y:700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
+    .from(eduquerAccueil, { x:700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
     .from(iconeEduquerAccueil, {x:500, opacity:0,ease: "bounce"})
-    .from(instruireAccueil, { y: 700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
-    .from(iconeInstuireAccueil, {y:200, opacity: 0,ease: "bounce"})
+    .from(instruireAccueil, { x: -700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
+    .from(iconeInstuireAccueil, {y:-200, opacity: 0,ease: "bounce"})
     .from(incarnation, {y:-50, opacity:0,duration: 3, opacity:0,ease:"rought"}, "<-3")
     .fromTo(modjo, {x:-600, y:10, opacity:0}, { x: 0,y:-10,  opacity: 1, duration: 1, ease: "sine" }, "<-4")
     .from(logoAlphaAccueil, { opacity: 0,scale: 0.1, duration: 3 })
@@ -57,7 +53,7 @@ t2
     .from(titre1, { y: -400, ease: "bounce", duration :3 , scale:2})
     .to(titre1, { duration: 5, text: "La formation au comportement du militaire", ease: "none", delay: 1, scale:1.2 })
 
-// -----------------------------animation section mission----------------
+//-----------------------------animation section mission----------------
 const titleMission = document.querySelector('.title-mission')
 const sectionMission =document.querySelector('.section-mission')
 const subtitleMission = document.querySelector('.subtitle-mission')
@@ -117,8 +113,6 @@ t3
             start: "bottom 50%",
             end:"+=1500px 10%",
             scrub: true,
-            // markers:true,
-            // pin: true,
             toggleActions:"restart pause reverse resume"
         },
         fontSize: "4rem",
@@ -133,7 +127,7 @@ const phi = document.getElementById('phi')
 const roue = document.getElementById('roue')
 const peda = document.getElementById('peda')
  
-var t4 = gsap.timeline({ paused: true })
+var t4 = gsap.timeline({ paused:true})
 
 t4
 .to(appuis, {
@@ -142,24 +136,20 @@ t4
         start: "1200 50%",
         end: "+=300",
         scrub: true,
-        // markers:true,
-        // pin: true,
         toggleActions:"restart pause reverse resume"
     },
-    color: "blue",
+    color: "#294062",
     fontWeight: "900", 
     y:50,
-    opacity: 1,
+    opacity: 0.8,
     
 })
-    .fromTo(phi, {x:-300}, {
+    .fromTo(phi, {x:-50}, {
     scrollTrigger: {
         trigger: formation,
         start: "1200px 70%",
         end:() => "+=200px",
         scrub: true,
-        // markers:true,
-        // pin: true,
         toggleActions:"restart pause reverse resume"
     },
     opacity: 1,
@@ -167,29 +157,25 @@ t4
     x:0,
     
 })
-    .fromTo(roue, {x:300}, {
+    .fromTo(roue, {x:50},{
     scrollTrigger: {
         trigger: formation,
         start: "1400px 70%",
         end:() => "+=200px",
         scrub: true,
-        // markers:true,
-        // pin: true,
         toggleActions:"restart pause reverse resume"
-    },
+        },
     opacity: 1,
     fontWeight: "900", 
     x:0,
     
 })
-.fromTo(peda, {x:-300}, {
+.fromTo(peda, {x:-50}, {
     scrollTrigger: {
         trigger: formation,
         start: "1600px 70%",
-        end:() => "+=200px",
+        end: () => "+=200px",
         scrub: true,
-        // markers:true,
-        // pin: true,
         toggleActions:"restart pause reverse resume"
     },
     opacity: 1,
@@ -202,19 +188,17 @@ t4
 // section pedagogie
 const pedagogie = document.getElementById('pedagogie')
 const titlePeda = document.querySelector('.title-pedagogie')
-const caroussel = document.querySelector('#carouselpeda')
+const caroussel = document.querySelector('#carouselExampleCaptions')
 var t5 = gsap.timeline({ paused: true })
 
 t5
 .fromTo(titlePeda,{y:500}, {
     scrollTrigger: {
         trigger: pedagogie,
-        start: "1600 50%",
-        end: "+=200",
+        start: "1900 50%",
+        end: "+=100",
         scrub: true,
-        // markers:true,
-        // pin: true,
-        toggleActions:"restart pause reverse resume"
+        toggleActions:"restart pause none none"
     },
     color: "white",
     fontWeight: "900", 
@@ -224,12 +208,11 @@ t5
     .fromTo(caroussel,{ y: 100,opacity:0},
         {
             scrollTrigger: {
-                trigger: titlePeda,
-                start: "2000 50%",
-                end: "+=50",
+                trigger: caroussel,
+                start: "1950 50%",
+                end: "+=300",
                 scrub: true,
                 markers:true,
-                // pin: true,
                 toggleActions:"restart pause reverse resume"
             },
     
@@ -260,18 +243,16 @@ const iconeCommuniquer = document.getElementById('iconeCommuniquer')
 const bgSectionCompetences = document.querySelector('.section-competences')
 
 
-
 var t6 = gsap.timeline({ paused: true })
 
 t6
 .fromTo(iconeCommuniquer,{x:100}, {
     scrollTrigger: {
+        // scroller:bgSectionCompetences,
         trigger: pedagogie,
         start: "2500 50%",
         end: "+=200",
-        scrub: true,
-        // markers:true,
-        // pin: true,
+        scrub: 0.5,
         toggleActions:"restart pause reverse resume"
     },
     x:0,
@@ -283,9 +264,7 @@ t6
         trigger: pedagogie,
         start: "2500 50%",
         end: "+=200",
-        scrub: true,
-        // markers:true,
-        // pin: true,
+        scrub: 0.5,
         toggleActions:"restart pause reverse resume"
     },
     x:0,
@@ -297,9 +276,7 @@ t6
         trigger: pedagogie,
         start: "2500 50%",
         end: "+=200",
-        scrub: true,
-        // markers:true,
-        // pin: true,
+        scrub: 0.5,
         toggleActions:"restart pause reverse resume"
     },
     y:0,
@@ -311,9 +288,7 @@ t6
         trigger: pedagogie,
         start: "2500 50%",
         end: "+=200",
-        scrub: true,
-        // markers:true,
-        // pin: true,
+        scrub: 0.5,
         toggleActions:"restart pause reverse resume"
     },
     x:0,
@@ -324,9 +299,7 @@ t6
         trigger: pedagogie,
         start: "2500 50%",
         end: "+=200",
-        scrub: true,
-        // markers:true,
-        // pin: true,
+        scrub: 0.5,
         toggleActions:"restart pause reverse resume"
     },
     x:0,
@@ -340,51 +313,51 @@ t6
 
 
 
-iconeCommander.addEventListener('mouseenter', () => {
-    competenceCommander.classList.toggle('active');
-    bgSectionCompetences.style.backgroundColor = '#5C7590'
-})
-iconeCommander.addEventListener('mouseleave', () => {
-    competenceCommander.classList.toggle('active')
-    bgSectionCompetences.style.backgroundColor = '#294062'
+// iconeCommander.addEventListener('mouseenter', () => {
+//     competenceCommander.classList.toggle('active');
+//     bgSectionCompetences.style.backgroundColor = '#5C7590'
+// })
+// iconeCommander.addEventListener('mouseleave', () => {
+//     competenceCommander.classList.toggle('active')
+//     bgSectionCompetences.style.backgroundColor = '#294062'
     
-})
-iconeSituer.addEventListener('mouseenter', () => {
-    competenceSituer.classList.toggle('active');
-    bgSectionCompetences.style.backgroundColor = '#1A4A28'
-})
-iconeSituer.addEventListener('mouseleave', () => {
-    competenceSituer.classList.toggle('active')
-    bgSectionCompetences.style.backgroundColor = '#294062'
+// })
+// iconeSituer.addEventListener('mouseenter', () => {
+//     competenceSituer.classList.toggle('active');
+//     bgSectionCompetences.style.backgroundColor = '#1A4A28'
+// })
+// iconeSituer.addEventListener('mouseleave', () => {
+//     competenceSituer.classList.toggle('active')
+//     bgSectionCompetences.style.backgroundColor = '#294062'
     
-})
-iconeEduquer.addEventListener('mouseenter', () => {
-    competenceEduquer.classList.toggle('active');
-    bgSectionCompetences.style.backgroundColor = '#8D943F'
-})
-iconeEduquer.addEventListener('mouseleave', () => {
-    competenceEduquer.classList.toggle('active')
-    bgSectionCompetences.style.backgroundColor = '#294062'
+// })
+// iconeEduquer.addEventListener('mouseenter', () => {
+//     competenceEduquer.classList.toggle('active');
+//     bgSectionCompetences.style.backgroundColor = '#8D943F'
+// })
+// iconeEduquer.addEventListener('mouseleave', () => {
+//     competenceEduquer.classList.toggle('active')
+//     bgSectionCompetences.style.backgroundColor = '#294062'
     
-})
-iconeInstruire.addEventListener('mouseenter', () => {
-    competenceInstruire.classList.toggle('active');
-    bgSectionCompetences.style.backgroundColor = '#891B0B'
-})
-iconeInstruire.addEventListener('mouseleave', () => {
-    competenceInstruire.classList.toggle('active')
-    bgSectionCompetences.style.backgroundColor = '#294062'
+// })
+// iconeInstruire.addEventListener('mouseenter', () => {
+//     competenceInstruire.classList.toggle('active');
+//     bgSectionCompetences.style.backgroundColor = '#891B0B'
+// })
+// iconeInstruire.addEventListener('mouseleave', () => {
+//     competenceInstruire.classList.toggle('active')
+//     bgSectionCompetences.style.backgroundColor = '#294062'
     
-})
-iconeCommuniquer.addEventListener('mouseenter', () => {
-    competenceCommuniquer.classList.toggle('active');
-    bgSectionCompetences.style.backgroundColor = '#734693'
-})
-iconeCommuniquer.addEventListener('mouseleave', () => {
-    competenceCommuniquer.classList.toggle('active')
-    bgSectionCompetences.style.backgroundColor = '#294062'
+// })
+// iconeCommuniquer.addEventListener('mouseenter', () => {
+//     competenceCommuniquer.classList.toggle('active');
+//     bgSectionCompetences.style.backgroundColor = '#734693'
+// })
+// iconeCommuniquer.addEventListener('mouseleave', () => {
+//     competenceCommuniquer.classList.toggle('active')
+//     bgSectionCompetences.style.backgroundColor = '#294062'
     
-})
+// })
 
 
 // --------section parcours------------------
@@ -401,7 +374,6 @@ tlcommander
             trigger: logoCommanderParcours, 
             start: "3600 15%",
             end:"+=1300",
-            // markers: true,
             scrub: true,
             pin:"container-fil-commander",
             toggleActions:"restart pause reverse resume"
@@ -422,7 +394,7 @@ tlsituer
             trigger: logoSituerParcours, 
             start: "4600 1%",
             end:"+=2000",
-            // markers: true,
+ 
             scrub: true,
             pin:"container-fil-situer",
             toggleActions:"restart pause reverse resume"
@@ -445,7 +417,6 @@ tlinstruire
             trigger: logoInstruireParcours, 
             start: "6500 30%",
             end:"+=1000",
-            // markers: true,
             scrub: true,
             pin:"container-fil-instruire",
             toggleActions:"restart pause reverse resume"
@@ -467,7 +438,6 @@ tleduquer
             trigger: logoEduquerParcours, 
             start: "7500 1%",
             end:"+=1000",
-            // markers: true,
             scrub: true,
             pin:"container-fil-eduquer",
             toggleActions:"restart pause reverse resume"
@@ -489,7 +459,6 @@ tlinstruire
             trigger: logoCommuniquerParcours, 
             start: "8800 1%",
             end:"+=1000",
-            // markers: true,
             scrub: true,
             pin:"container-fil-communiquer",
             toggleActions:"restart pause reverse resume"
