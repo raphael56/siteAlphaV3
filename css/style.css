@@ -454,8 +454,8 @@ body {
 .container-competences-couleur p {
   display: none;
   position: absolute;
-  bottom: 20%;
-  transform: translatex(-5%);
+  bottom: 10%;
+  transform: translateX(-5%);
 }
 
 .container-competences-couleur p.active:nth-child(1) {

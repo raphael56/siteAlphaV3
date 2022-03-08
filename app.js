@@ -246,7 +246,7 @@ const bgSectionCompetences = document.querySelector('.section-competences')
 var t6 = gsap.timeline({ paused: true })
 
 t6
-.fromTo(iconeCommuniquer,{x:100}, {
+.fromTo(iconeCommuniquer,{x:50, display:"none",opacity:0}, {
     scrollTrigger: {
         // scroller:bgSectionCompetences,
         trigger: pedagogie,
@@ -257,9 +257,9 @@ t6
     },
     x:0,
     opacity: 1,
-    
+    display: "flex"
 })
-.fromTo(iconeInstruire,{x:300}, {
+.fromTo(iconeInstruire,{x:50, opacity:0}, {
     scrollTrigger: {
         trigger: pedagogie,
         start: "2500 50%",
@@ -269,9 +269,9 @@ t6
     },
     x:0,
     opacity: 1,
-    
+  
 })
-.fromTo(iconeEduquer,{y:500}, {
+.fromTo(iconeEduquer,{y:50, opacity:0}, {
     scrollTrigger: {
         trigger: pedagogie,
         start: "2500 50%",
@@ -283,7 +283,7 @@ t6
     opacity: 1,
     
 })
-.fromTo(iconeSituer,{x:-500}, {
+.fromTo(iconeSituer,{x:-50, opacity:0}, {
     scrollTrigger: {
         trigger: pedagogie,
         start: "2500 50%",
@@ -294,7 +294,7 @@ t6
     x:0,
     opacity: 1,
 })
-.fromTo(iconeCommander,{x:-500}, {
+.fromTo(iconeCommander,{x:-50, opacity:0}, {
     scrollTrigger: {
         trigger: pedagogie,
         start: "2500 50%",
@@ -313,51 +313,51 @@ t6
 
 
 
-// iconeCommander.addEventListener('mouseenter', () => {
-//     competenceCommander.classList.toggle('active');
-//     bgSectionCompetences.style.backgroundColor = '#5C7590'
-// })
-// iconeCommander.addEventListener('mouseleave', () => {
-//     competenceCommander.classList.toggle('active')
-//     bgSectionCompetences.style.backgroundColor = '#294062'
+iconeCommander.addEventListener('mouseenter', () => {
+    competenceCommander.classList.toggle('active');
+    bgSectionCompetences.style.backgroundColor = '#5C7590'
+})
+iconeCommander.addEventListener('mouseleave', () => {
+    competenceCommander.classList.toggle('active')
+    bgSectionCompetences.style.backgroundColor = '#294062'
     
-// })
-// iconeSituer.addEventListener('mouseenter', () => {
-//     competenceSituer.classList.toggle('active');
-//     bgSectionCompetences.style.backgroundColor = '#1A4A28'
-// })
-// iconeSituer.addEventListener('mouseleave', () => {
-//     competenceSituer.classList.toggle('active')
-//     bgSectionCompetences.style.backgroundColor = '#294062'
+})
+iconeSituer.addEventListener('mouseenter', () => {
+    competenceSituer.classList.toggle('active');
+    bgSectionCompetences.style.backgroundColor = '#1A4A28'
+})
+iconeSituer.addEventListener('mouseleave', () => {
+    competenceSituer.classList.toggle('active')
+    bgSectionCompetences.style.backgroundColor = '#294062'
     
-// })
-// iconeEduquer.addEventListener('mouseenter', () => {
-//     competenceEduquer.classList.toggle('active');
-//     bgSectionCompetences.style.backgroundColor = '#8D943F'
-// })
-// iconeEduquer.addEventListener('mouseleave', () => {
-//     competenceEduquer.classList.toggle('active')
-//     bgSectionCompetences.style.backgroundColor = '#294062'
+})
+iconeEduquer.addEventListener('mouseenter', () => {
+    competenceEduquer.classList.toggle('active');
+    bgSectionCompetences.style.backgroundColor = '#8D943F'
+})
+iconeEduquer.addEventListener('mouseleave', () => {
+    competenceEduquer.classList.toggle('active')
+    bgSectionCompetences.style.backgroundColor = '#294062'
     
-// })
-// iconeInstruire.addEventListener('mouseenter', () => {
-//     competenceInstruire.classList.toggle('active');
-//     bgSectionCompetences.style.backgroundColor = '#891B0B'
-// })
-// iconeInstruire.addEventListener('mouseleave', () => {
-//     competenceInstruire.classList.toggle('active')
-//     bgSectionCompetences.style.backgroundColor = '#294062'
+})
+iconeInstruire.addEventListener('mouseenter', () => {
+    competenceInstruire.classList.toggle('active');
+    bgSectionCompetences.style.backgroundColor = '#891B0B'
+})
+iconeInstruire.addEventListener('mouseleave', () => {
+    competenceInstruire.classList.toggle('active')
+    bgSectionCompetences.style.backgroundColor = '#294062'
     
-// })
-// iconeCommuniquer.addEventListener('mouseenter', () => {
-//     competenceCommuniquer.classList.toggle('active');
-//     bgSectionCompetences.style.backgroundColor = '#734693'
-// })
-// iconeCommuniquer.addEventListener('mouseleave', () => {
-//     competenceCommuniquer.classList.toggle('active')
-//     bgSectionCompetences.style.backgroundColor = '#294062'
+})
+iconeCommuniquer.addEventListener('mouseenter', () => {
+    competenceCommuniquer.classList.toggle('active');
+    bgSectionCompetences.style.backgroundColor = '#734693'
+})
+iconeCommuniquer.addEventListener('mouseleave', () => {
+    competenceCommuniquer.classList.toggle('active')
+    bgSectionCompetences.style.backgroundColor = '#294062'
     
-// })
+})
 
 
 // --------section parcours------------------
