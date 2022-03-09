@@ -24,26 +24,36 @@ const modjo = document.querySelector('.title-modjo')
 
 
 
-var t0 = gsap.timeline({})
-var t1 = gsap.timeline({paused:true, delay:5})
+var t0 = gsap.timeline({paused:true})
+var t1 = gsap.timeline({paused:true, delay:3})
 var t2 = gsap.timeline({paused:true})
 
 window.addEventListener('load', () =>{
     t1.play()
     t2.play()
+})
+  
+t0
+  .to(iconeCommanderAccueil, {
+      scrollTrigger: {
+          trigger: incarnation,
+          start: "top top",
+          end: "1000",
+          scrub: true,
+          toggleActions: "restart pause reverse resume",
+          pin:true,
+      },y:350, scale: 2
   })
-
 
 t1
     .from(commanderAccueil, { y: -700, opacity: 0,duration: 1, ease: "bounce" , delay:5})
-    .from(iconeCommanderAccueil, { opacity:0, y:-250, scale: 1, ease: "bounce"})
     .from(communiquerAccueil, { x: 700, opacity: 0,duration: 1, ease: "bounce"}, "<-0.1")
     .from(iconeCommuniquerAccueil, {x:-500, opacity: 0,ease: "bounce"})
     .from(situerAccueil, {  y: -700, opacity: 0, duration: 1, ease: "bounce" })
     .from(iconeSituerAccueil, {y:250, opacity:0, ease: "bounce"})
     .from(eduquerAccueil, { x:700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
     .from(iconeEduquerAccueil, {x:500, opacity:0,ease: "bounce"})
-    .from(instruireAccueil, { x: -700, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
+    .from(instruireAccueil, { x: -300, opacity: 0,duration: 1, ease: "bounce" }, "<-0.1")
     .from(iconeInstuireAccueil, {y:-200, opacity: 0,ease: "bounce"})
     .from(incarnation, {y:-50, opacity:0,duration: 3, opacity:0,ease:"rought"}, "<-3")
     .fromTo(modjo, {x:-600, y:10, opacity:0}, { x: 0,y:-10,  opacity: 1, duration: 1, ease: "sine" }, "<-4")
@@ -65,45 +75,61 @@ const subtitleMission = document.querySelector('.subtitle-mission')
 const mission = document.getElementById('mission')
 const developper = document.getElementById('developper-mission')
 const savoirEtre = document.getElementById('savoirEtre-mission')
+const un = document.getElementById('un')
 const officier = document.getElementById('officier-mission')
 var t3 = gsap.timeline({ paused: true })
 
 t3
     .to(mission, {
         scrollTrigger: {
-            trigger: titre1,
-            start: "bottom top",
-            end: "+=200%",
-            scrub: 1,
-            markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
-            toggleActions: "restart pause reverse resume"
+            trigger: mission,
+            start: "top top",
+            end: "+=100",
+            scrub: true,
+            toggleActions: "restart pause reverse resume",
         },
         backgroundColor: "#f1f1f1"
     })
-    .to(titleMission, {
+    .fromTo(titleMission,{y:-250, opacity:1}, {
         scrollTrigger: {
-            trigger: sectionMission, 
-            start: "-1% 10%",
-            end:"700px top",
-            scrub:true,
+            trigger: mission, 
+            start: "top 10%",
+            end:"200px top",
+            scrub: true,
             toggleActions:"restart pause reverse resume"
-            },
-            x: -110,
+        },
+        opacity: 0.5,
+        y:0
     })
     .to(developper, {
         scrollTrigger: {
+            trigger: titleMission,
+            start: "top center",
+            end: "100px",
+            scrub: true,
+            markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
+            toggleActions:"restart pause reverse resume"
+        },
+        fontSize: "3rem",
+        fontWeight: "600", 
+        opacity:1,
+    })
+    .to(un, {
+        scrollTrigger: {
             trigger: developper,
-            start: "bottom 10%",
-            end:"100px top",
+            start: "top top",
+            end: "100px",
+            // markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
             scrub:true,
             toggleActions:"restart pause reverse resume"
         },
         fontSize: "2rem",
         fontWeight: "600", 
+        opacity:0,
     })
     .to(savoirEtre, {
         scrollTrigger: {
-            trigger: savoirEtre,
+            trigger: un,
             start: "-1% 10%",
             end:"10px top",
             scrub:true,

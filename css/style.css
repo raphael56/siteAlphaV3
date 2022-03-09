@@ -238,63 +238,16 @@ body {
     }
    
 }
-#iconeCommanderAccueil{
-    animation: notificationBleu 10s ease-in-out infinite alternate;
-}
 
-@keyframes notificationBleu{
-    0%{
-        background: #294062;
-        transform: translateY(0px);
-    }
-    10%{
-        
-        transform: translateY(-10px);
-    }
-    20%{
-        background: #789acc;
-        transform: translateY(0px);
-    }
-    30%{
-       
-        transform: translateY(-30px);
-    }
-    40%{
-        background: #657b9c;
-        transform: translateY(0px);
-    }
-    50%{
-        
-        transform: translateY(-50px);
-    }
-    60%{
-        
-        transform: translateY(0px);
-    }
-    70%{
-        background: #6395e0;
-        transform: translateY(-40px);
-    }
-    80%{
-    
-        transform: translateY(0px);
-    }
-    90%{
-        background: #294062;
-        transform: translateY(-5px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
    
-}
+
 /* ---------------------------------------------------------- */
 /*----------------- section mission----------------------------------- */
 /* ---------------------------------------------------------- */
 .section-mission {
     width: 100vw;
   background-color: #294062;
-  height: calc(100vh - 70px);
+  height: 200vh;
   color: #294062;
   display: flex;
   flex-direction: column;
@@ -302,15 +255,16 @@ body {
   justify-content: center;
 }
 .title-mission {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  text-transform: lowercase;
 }
 .subtitle-mission {
-  font-size: 2.1rem;
-  scale:1;
+  /* font-size: 2.1rem; */
+  /* scale:1; */
 }
 .subtitle-mission span {
   font-style: italic;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 /* ---------------------------------------------------------- */
