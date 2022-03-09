@@ -2,7 +2,10 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 // gsap.registerPlugin(MotionPathPlugin);
 
-//--------------------animation accueil-----------------------------------------
+
+// ----------------------------------------------------------------------------
+//--------------------section accueil-----------------------------------------
+// ----------------------------------------------------------------------------
 const commanderAccueil = document.querySelector('#commanderAccueil')
 const iconeCommanderAccueil = document.querySelector('#iconeCommanderAccueil')
 const eduquerAccueil = document.querySelector('#eduquerAccueil')
@@ -52,8 +55,10 @@ t1
 t2
     .from(titre1, { y: -400, ease: "bounce", duration :3 , scale:2})
     .to(titre1, { duration: 5, text: "La formation au comportement du militaire", ease: "none", delay: 1, scale:1.2 })
+// ----------------------------------------------------------------------------
+//----------------------------- section mission--------------------------------
+// ----------------------------------------------------------------------------
 
-//-----------------------------animation section mission----------------
 const titleMission = document.querySelector('.title-mission')
 const sectionMission =document.querySelector('.section-mission')
 const subtitleMission = document.querySelector('.subtitle-mission')
@@ -68,9 +73,9 @@ t3
         scrollTrigger: {
             trigger: titre1,
             start: "bottom top",
-            endTrigger: mission,
             end: "+=200%",
             scrub: 1,
+            markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
             toggleActions: "restart pause reverse resume"
         },
         backgroundColor: "#f1f1f1"
@@ -113,7 +118,6 @@ t3
             start: "900 50%",
             end:"+=300px 70%",
             scrub: true,
-            markers:true,
             toggleActions:"restart pause reverse resume"
         },
         fontSize: "4rem",
@@ -121,8 +125,9 @@ t3
         opacity:1
     })
 
-    
-// section formation
+// ----------------------------------------------------------------------------
+// ------------------------------------section formation-----------------------
+// ----------------------------------------------------------------------------
    const formation = document.getElementById('formation')
 const appuis = document.getElementById('appuis')
 const phi = document.getElementById('phi')
@@ -151,7 +156,6 @@ t4
         trigger: formation,
         start: "1200px 30%",
             end: "+=200px",
-        // markers:true,
         scrub: true,
         toggleActions:"restart pause reverse resume"
     },
@@ -187,8 +191,10 @@ t4
     
 })
 
+// ----------------------------------------------------------------------------
+// --------------------------------------section pedagogie---------------------
+// ----------------------------------------------------------------------------
 
-// section pedagogie
 const pedagogie = document.getElementById('pedagogie')
 const titlePeda = document.querySelector('.title-pedagogie')
 const caroussel = document.querySelector('#carouselExampleCaptions')
@@ -230,8 +236,10 @@ t5
 
 
 
+// ----------------------------------------------------------------------------
+// --------------------------------------section competences--------------------------------------
+// ----------------------------------------------------------------------------
 
-// ---------------section competences--------
 const competenceCommander = document.getElementById('competence-commander')
 const iconeCommander = document.getElementById('iconeCommander')
 const competenceSituer = document.getElementById('competence-situer')
@@ -251,7 +259,6 @@ var t6 = gsap.timeline({ paused: true })
 t6
     .fromTo(acquisition,{display:"none",opacity:0}, {
     scrollTrigger: {
-        // scroller:bgSectionCompetences,
         trigger: acquisition,
         start: "2500 50%",
         end: "+=200",
@@ -263,7 +270,6 @@ t6
     })
     .fromTo(softSkills,{x:300, display:"none",opacity:0}, {
     scrollTrigger: {
-        // scroller:bgSectionCompetences,
         trigger: softSkills,
         start: "2500 50%",
         end: "+=200",
@@ -276,7 +282,6 @@ t6
     })
     .fromTo(iconeCommuniquer,{x:50, display:"none",opacity:0}, {
     scrollTrigger: {
-        // scroller:bgSectionCompetences,
         trigger: pedagogie,
         start: "2500 50%",
         end: "+=200",
@@ -335,10 +340,6 @@ t6
 
 
 
-
-
-
-
 iconeCommander.addEventListener('mouseenter', () => {
     competenceCommander.classList.toggle('active');
     bgSectionCompetences.style.backgroundColor = '#5C7590'
@@ -384,7 +385,11 @@ iconeCommuniquer.addEventListener('mouseleave', () => {
     bgSectionCompetences.style.backgroundColor = '#294062'
     
 })
-// ------- section doctrine
+
+// ----------------------------------------------------------------------------
+// ----------------------------------section doctrine--------------------------
+// ----------------------------------------------------------------------------
+
 const doctrine = document.querySelector('.section-doctrine')
 const forge = document.getElementById('forge')
 const alphabrique = document.getElementById('alphabrique')
@@ -394,7 +399,6 @@ var t7 = gsap.timeline({ paused: true })
 t7
     .fromTo(forge,{display:"none",opacity:0, scale:0}, {
     scrollTrigger: {
-        // scroller:bgSectionCompetences,
         trigger: forge,
         start: "2900 50%",
         end: "+=200",
@@ -407,7 +411,6 @@ t7
     })
     .fromTo(alphabrique,{display:"none",opacity:0, scale:1}, {
     scrollTrigger: {
-        // scroller:bgSectionCompetences,
         trigger: forge,
         start: "2900 50%",
         end: "+=200",
@@ -421,7 +424,6 @@ t7
     })
     .fromTo(alphabrique,{scale:1.5}, {
     scrollTrigger: {
-        // scroller:bgSectionCompetences,
         trigger: forge,
         start: "3100 50%",
         end: "+=200",
@@ -433,7 +435,6 @@ t7
     })
     .fromTo(source,{scale:0.5, opacity:0}, {
     scrollTrigger: {
-        // scroller:bgSectionCompetences,
         trigger: source,
         start: "3200 50%",
         end: "+=200",
@@ -443,7 +444,11 @@ t7
         scale: 1,
         opacity:1
     })
-// --------section parcours------------------
+
+// ----------------------------------------------------------------------------
+// ------------------------------------ section parcours-----------------------
+// ----------------------------------------------------------------------------
+
 const sectionParcours = document.querySelector('.section-parcours')
 
 //commander
@@ -546,10 +551,7 @@ tlinstruire
             pin:"container-fil-communiquer",
             toggleActions:"restart pause reverse resume"
         },
-
         y: 980, 
-       
-        
     })
     
 

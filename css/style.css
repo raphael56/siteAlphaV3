@@ -34,14 +34,9 @@ body {
   height: 20000px;
   font-family: roboto, sans-serif;
  }
-
-
-
-
-
-
-
+/* ---------------------------------------------------------- */
 /* -----------------------navbar----------------------- */
+/* ---------------------------------------------------------- */
 
 .navbar {
   height: 70px;
@@ -58,9 +53,9 @@ body {
   width: 100%;
   text-align: center;
 }
-
-/* -----------------------accueil----------------------- */
-
+/* ---------------------------------------------------------- */
+/* ----------------------- section accueil----------------------- */
+/* ---------------------------------------------------------- */
 .section-accueil {
   background-image: url(../ressources/images/BG-accueil.png);
   height: 100vh;
@@ -77,13 +72,9 @@ body {
   align-items: center;
 }
 
-
-
-
 .box-5competences {
   flex-direction: column;
   flex-wrap: nowrap;
-  /* background: pink; */
   max-width: 320px;
   margin-top: 1vh;
 }
@@ -102,7 +93,6 @@ body {
   justify-content: center;
   position: relative;
   width: 100%;
-  /* background: red; */
 }
 
 .icone-accueil-competences img {
@@ -116,7 +106,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background: blue; */
 }
 
 .box-modjo {
@@ -124,7 +113,6 @@ body {
   text-align: center;
   flex-direction: column;
   height: 60px;
-  /* background: lightgreen; */
 }
 
 .title-incarner {
@@ -168,8 +156,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* background: green; */
 }
 .box-logo-alpha h1 {
   text-transform: uppercase;
@@ -302,13 +288,9 @@ body {
     }
    
 }
-/* mediaquery section accueil */
-
-/* @media screen and (max-width: 764px) {
-} */
-
+/* ---------------------------------------------------------- */
 /*----------------- section mission----------------------------------- */
-
+/* ---------------------------------------------------------- */
 .section-mission {
     width: 100vw;
   background-color: #294062;
@@ -331,8 +313,9 @@ body {
   font-size: 3rem;
 }
 
-
-/*------------------------formation------------------------------- */
+/* ---------------------------------------------------------- */
+/*------------------------ section formation------------------------------- */
+/* ---------------------------------------------------------- */
 .section-formation {
   background: linear-gradient(to bottom, #ffffff, #5c7590 50%, #375577);
   width: 100vw;
@@ -377,8 +360,9 @@ body {
   padding: 0.2rem;
   width: 4rem;
 }
-
-/*-----------------pedagogie------------------ */
+/* ---------------------------------------------------------- */
+/*----------------- section pedagogie------------------ */
+/* ---------------------------------------------------------- */
 .section-pedagogie {
   background: linear-gradient(to bottom, #375577, #2a4161);
   height: calc(100vh - 70px);
@@ -403,8 +387,9 @@ body {
 }
 
 
-
-/*-----------------compétences------------------ */
+/* ---------------------------------------------------------- */
+/*----------------- section compétences------------------ */
+/* ---------------------------------------------------------- */
 .section-competences {
   background-color: #375577;
   height: calc(100vh - 70px);
@@ -448,7 +433,6 @@ body {
 .box2-5competences div p {
   font-size: 0rem;
   text-align: center;
-  /* background: #000; */
 }
 
 .container-competences-couleur p {
@@ -496,8 +480,9 @@ body {
     display: block;
   }
 }
-
-/*-----------------doctrine------------------ */
+/* ---------------------------------------------------------- */
+/*----------------- section doctrine------------------ */
+/* ---------------------------------------------------------- */
 .section-doctrine {
   background: linear-gradient(to bottom, #375577, #2a4161);
   height: calc(100vh - 70px);
@@ -529,7 +514,9 @@ body {
 .container-img-doctrine {
   margin-left: 10px;
 }
-/*-----------------parcours------------------ */
+/* ---------------------------------------------------------- */
+/*----------------- section parcours------------------ */
+/* ---------------------------------------------------------- */
 .section-parcours {
   background-image: url(../ressources/images/bg-parcours.svg);
   background-position: center;
@@ -618,11 +605,8 @@ body {
 .box-fil {
   display: flex;
   position: relative;
-  /* background: blue; */
 }
-.fil-competence div p{
-  /* background: blue; */
-}
+
 .fil-competence img {
   width: 100px;
   position: relative;
@@ -630,7 +614,6 @@ body {
 }
 
 #logoSituerParcours{
-    /* background: #000; */
     left: -3px;
     top: -10px;
 }
@@ -644,7 +627,6 @@ body {
 }
  .aptitude-situer {
 height: 1500px;
-/* background: #000; */
 }
 
 .box-description-aptitude {
@@ -684,7 +666,6 @@ height: 1500px;
 }
 .line-situer{
     height: 1500px;
-    /* background: #000; */
 }
 
 .title-aptitude-situer{
@@ -698,7 +679,6 @@ top: 51%;
   display: flex;
   width: 100%;
   flex-direction: row-reverse;
-  /* height: calc(20% - 70px- 4%); */
 }
 .title-seSituer {
   color: #1a4a28;
