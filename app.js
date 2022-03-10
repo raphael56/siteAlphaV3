@@ -570,7 +570,7 @@ t6
     scrollTrigger: {
       trigger: competenceInstruire,
       start: "-100px top",
-      end: "+=500",
+      end: "+=700",
       scrub: true,
       toggleActions: "restart pause reverse resume",
     },
@@ -610,112 +610,6 @@ t6
     
     
     
-    
-    
-    
-
-//   .fromTo(
-//     iconeSituer,
-//     { x: -50, opacity: 0 },
-//     {
-//       scrollTrigger: {
-//         trigger: acquisition,
-//         start: "top 50%",
-//         end: "+=200",
-//         scrub: true,
-//         toggleActions: "restart pause reverse resume",
-//       },
-//       x: 0,
-//       opacity: 1,
-//     }
-//   )
-//   .fromTo(
-//     iconeEduquer,
-//     { y: 50, opacity: 0 },
-//     {
-//       scrollTrigger: {
-//         trigger: acquisition,
-//         start: "top 50%",
-//         end: "+=200",
-//         scrub: true,
-//         toggleActions: "restart pause reverse resume",
-//       },
-//       y: 0,
-//       opacity: 1,
-//     }
-//   )
-//   .fromTo(
-//     iconeInstruire,
-//     { x: 50, opacity: 0 },
-//     {
-//       scrollTrigger: {
-//         trigger: acquisition,
-//         start: "top 50%",
-//         end: "+=200",
-//         scrub: true,
-//         toggleActions: "restart pause reverse resume",
-//       },
-//       x: 0,
-//       opacity: 1,
-//     }
-//   )
-
-//   .fromTo(
-//     iconeCommuniquer,
-//     { x: 50, opacity: 0 },
-//     {
-//       scrollTrigger: {
-//         trigger: acquisition,
-//         start: "top 50%",
-//         end: "+=200",
-//         scrub: true,
-//         toggleActions: "restart pause reverse resume",
-//       },
-//       x: 0,
-//       opacity: 1,
-//     }
-//   );
-
-// iconeCommander.addEventListener("mouseenter", () => {
-//   competenceCommander.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#5C7590";
-// });
-// iconeCommander.addEventListener("mouseleave", () => {
-//   competenceCommander.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#294062";
-// });
-// iconeSituer.addEventListener("mouseenter", () => {
-//   competenceSituer.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#1A4A28";
-// });
-// iconeSituer.addEventListener("mouseleave", () => {
-//   competenceSituer.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#294062";
-// });
-// iconeEduquer.addEventListener("mouseenter", () => {
-//   competenceEduquer.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#8D943F";
-// });
-// iconeEduquer.addEventListener("mouseleave", () => {
-//   competenceEduquer.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#294062";
-// });
-// iconeInstruire.addEventListener("mouseenter", () => {
-//   competenceInstruire.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#891B0B";
-// });
-// iconeInstruire.addEventListener("mouseleave", () => {
-//   competenceInstruire.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#294062";
-// });
-// iconeCommuniquer.addEventListener("mouseenter", () => {
-//   competenceCommuniquer.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#734693";
-// });
-// iconeCommuniquer.addEventListener("mouseleave", () => {
-//   competenceCommuniquer.classList.toggle("active");
-//   bgSectionCompetences.style.backgroundColor = "#294062";
-// });
 
 // ----------------------------------------------------------------------------
 // ----------------------------------section doctrine--------------------------
@@ -724,12 +618,12 @@ t6
 const doctrine = document.querySelector(".section-doctrine");
 const forge = document.getElementById("forge");
 const alphabrique = document.getElementById("alphabrique");
-const source = document.getElementById("source");
+const culture = document.getElementById("culture");
 var t7 = gsap.timeline({ paused: true });
 
 t7.fromTo(
   forge,
-  { opacity: 0, scale: 0 },
+  { opacity: 0, x:-100 },
   {
     scrollTrigger: {
       trigger: forge,
@@ -738,7 +632,7 @@ t7.fromTo(
       scrub: 0.5,
       toggleActions: "restart pause reverse resume",
     },
-    scale: 2,
+   x:0,
     opacity: 1,
 
   }
@@ -761,29 +655,14 @@ t7.fromTo(
     }
   )
   .fromTo(
-    alphabrique,
-    { scale: 1.5 },
-    {
-      scrollTrigger: {
-        trigger: forge,
-        start: "top 50%",
-        end: "+=200",
-        scrub: 0.5,
-        toggleActions: "restart pause reverse resume",
-      },
-      scale: 1,
-      y: 0,
-    }
-  )
-  .fromTo(
-    source,
+    culture,
     { scale: 0.5, opacity: 0 },
     {
       scrollTrigger: {
-        trigger: source,
-        start: "top 50%",
+        trigger: alphabrique,
+        start: "10% 50%",
         end: "+=200",
-        scrub: 0.5,
+        scrub: true,
         toggleActions: "restart pause reverse resume",
       },
       scale: 1,
