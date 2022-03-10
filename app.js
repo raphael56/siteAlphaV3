@@ -240,7 +240,6 @@ t4
         start: "400px 50%",
         end: "+=300px 20%",
         scrub: true,
-        markers:true,
         toggleActions:"restart pause reverse resume"
     },
         opacity: 1,
@@ -277,11 +276,11 @@ const caroussel = document.querySelector('#carouselExampleCaptions')
 var t5 = gsap.timeline({ paused: true })
 
 t5
-.fromTo(titlePeda,{y:70, opacity:0}, {
+.fromTo(titlePeda,{y:-350, opacity:0}, {
     scrollTrigger: {
         trigger: pedagogie,
-        start: "1900 50%",
-        end: "+=100",
+        start: "-10% 50%",
+        end: "+=300",
         scrub: true,
         toggleActions:"restart pause none none"
     },
@@ -293,13 +292,12 @@ t5
     .fromTo(caroussel,{ y: 100,opacity:0},
         {
             scrollTrigger: {
-                trigger: caroussel,
-                start: "1950 50%",
+                trigger: pedagogie,
+                start: "top top",
                 end: "+=300",
                 scrub: true,
                 toggleActions:"restart pause reverse resume"
             },
-    
            y:0,
             opacity: 1,
 }) 
@@ -333,24 +331,26 @@ const acquisition = document.getElementById('acquisition')
 var t6 = gsap.timeline({ paused: true })
 
 t6
-    .fromTo(acquisition,{display:"none",opacity:0}, {
+    .fromTo(acquisition,{opacity:0}, {
     scrollTrigger: {
         trigger: acquisition,
-        start: "2500 50%",
-        end: "+=200",
-            scrub: 0.5,
-        toggleActions:"restart pause reverse resume"
+        start: "30% 60%",
+        end: "+=30%",
+            scrub: true,
+
+            toggleActions: "restart pause reverse resume", 
     },
-    opacity: 1,
-    display: "flex"
+    opacity: 1
     })
-    .fromTo(softSkills,{x:300, display:"none",opacity:0}, {
+    .fromTo(softSkills,{x:-50, display:"none",opacity:0}, {
     scrollTrigger: {
         trigger: softSkills,
-        start: "2500 50%",
-        end: "+=200",
+        start: "top 70%",
+            end: "+=200",
+        markers:true, 
             scrub: 0.5,
-        toggleActions:"restart pause reverse resume"
+            toggleActions: "restart pause reverse resume",
+
     },
     x:50,
     opacity: 1,
@@ -358,11 +358,12 @@ t6
     })
     .fromTo(iconeCommuniquer,{x:50, display:"none",opacity:0}, {
     scrollTrigger: {
-        trigger: pedagogie,
-        start: "2500 50%",
+        trigger: acquisition,
+        start: "top 50%",
         end: "+=200",
-        scrub: 0.5,
-        toggleActions:"restart pause reverse resume"
+        scrub: true,
+            toggleActions: "restart pause reverse resume", 
+           
     },
     x:0,
     opacity: 1,
@@ -370,11 +371,11 @@ t6
 })
 .fromTo(iconeInstruire,{x:50, opacity:0}, {
     scrollTrigger: {
-        trigger: pedagogie,
-        start: "2500 50%",
+        trigger: acquisition,
+        start: "top 50%",
         end: "+=200",
-        scrub: 0.5,
-        toggleActions:"restart pause reverse resume"
+        scrub: true,
+        toggleActions: "restart pause reverse resume", 
     },
     x:0,
     opacity: 1,
@@ -382,33 +383,36 @@ t6
 })
 .fromTo(iconeEduquer,{y:50, opacity:0}, {
     scrollTrigger: {
-        trigger: pedagogie,
-        start: "2500 50%",
+        trigger: acquisition,
+        start: "top 50%",
         end: "+=200",
-        scrub: 0.5,
-        toggleActions:"restart pause reverse resume"
+        scrub: true,
+        toggleActions: "restart pause reverse resume", 
+  
     },
     y:0,
     opacity: 1,
 })
 .fromTo(iconeSituer,{x:-50, opacity:0}, {
     scrollTrigger: {
-        trigger: pedagogie,
-        start: "2500 50%",
+        trigger: acquisition,
+        start: "top 50%",
         end: "+=200",
-        scrub: 0.5,
-        toggleActions:"restart pause reverse resume"
+        scrub: true,
+        toggleActions: "restart pause reverse resume", 
+     
     },
     x:0,
     opacity: 1,
 })
 .fromTo(iconeCommander,{x:-50, opacity:0}, {
     scrollTrigger: {
-        trigger: pedagogie,
-        start: "2500 50%",
+        trigger: acquisition,
+        start: "top 50%",
         end: "+=200",
-        scrub: 0.5,
-        toggleActions:"restart pause reverse resume"
+        scrub: true,
+        toggleActions: "restart pause reverse resume", 
+       
     },
     x:0,
     opacity: 1,
