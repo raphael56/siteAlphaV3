@@ -1,8 +1,16 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollToPlugin);
 // gsap.registerPlugin(MotionPathPlugin);
 
 
+
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        //pour cacher la barre d'adresse
+        window.scrollTo(0, 1);
+    }, 0);
+});
 // ----------------------------------------------------------------------------
 //--------------------section accueil-----------------------------------------
 // ----------------------------------------------------------------------------
@@ -41,10 +49,8 @@ t0
           end: "1000",
           scrub: true,
           toggleActions: "restart pause reverse resume",
-          pin:true,
       },y:350, scale: 2
   })
-
 t1
     .from(commanderAccueil, { y: -700, opacity: 0,duration: 1, ease: "bounce" , delay:5})
     .from(communiquerAccueil, { x: 700, opacity: 0,duration: 1, ease: "bounce"}, "<-0.1")
@@ -80,6 +86,15 @@ const officier = document.getElementById('officier-mission')
 var t3 = gsap.timeline({ paused: true })
 
 t3
+    .to(iconeCommanderAccueil, {
+        scrollTrigger: {
+            trigger: mission,
+            start: "top top",
+            end: "100",
+            scrub: true,
+            toggleActions: "restart pause reverse resume",
+        }, opacity: 0
+    })
     .to(mission, {
         scrollTrigger: {
             trigger: mission,
@@ -90,7 +105,7 @@ t3
         },
         backgroundColor: "#f1f1f1"
     })
-    .fromTo(titleMission,{y:-250, opacity:1}, {
+    .fromTo(titleMission,{y:-150, opacity:0}, {
         scrollTrigger: {
             trigger: mission, 
             start: "top 10%",
@@ -98,8 +113,20 @@ t3
             scrub: true,
             toggleActions:"restart pause reverse resume"
         },
-        opacity: 0.5,
+        opacity: 0.9,
         y:0
+    })
+    .fromTo(titleMission,{y:-150, opacity:1}, {
+        scrollTrigger: {
+            trigger: titleMission, 
+            start: "top 10%",
+            end:"100px top",
+            scrub: true,
+            // markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
+            toggleActions:"restart pause reverse resume"
+        },
+        opacity: 0,
+        
     })
     .to(developper, {
         scrollTrigger: {
@@ -107,7 +134,7 @@ t3
             start: "top center",
             end: "100px",
             scrub: true,
-            markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
+            // markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
             toggleActions:"restart pause reverse resume"
         },
         fontSize: "3rem",
@@ -117,35 +144,39 @@ t3
     .to(un, {
         scrollTrigger: {
             trigger: developper,
-            start: "top top",
+            start: "bottom 70%",
             end: "100px",
-            // markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
             scrub:true,
             toggleActions:"restart pause reverse resume"
         },
-        fontSize: "2rem",
+        fontSize: "4rem",
         fontWeight: "600", 
         opacity:0,
     })
     .to(savoirEtre, {
         scrollTrigger: {
             trigger: un,
-            start: "-1% 10%",
-            end:"10px top",
+            start: "bottom 80%",
+            end:"100px",
             scrub:true,
             toggleActions:"restart pause reverse resume"
         },
         fontSize: "2.8rem",
         fontWeight: "900", 
     })
-    .fromTo(officier, {opacity:0,fontSize:"2rem"},{
+    .fromTo(officier,
+        { y: -200, opacity: 0, fontSize: "1rem" }, 
+        {
         scrollTrigger: {
-            trigger: officier,
-            start: "900 50%",
-            end:"+=300px 70%",
+            trigger: developper,
+            start: "top 70%",
+            end:"150px 60%%",
             scrub: true,
-            toggleActions:"restart pause reverse resume"
+            // markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
+            toggleActions: "restart pause reverse resume",
+           
         },
+        y:500,
         fontSize: "4rem",
         fontWeight: "900", 
         opacity:1
@@ -163,6 +194,16 @@ const peda = document.getElementById('peda')
 var t4 = gsap.timeline({paused: true})
 
 t4
+.to(formation, {
+    scrollTrigger: {
+        trigger: formation,
+        start: "10% center",
+        end: "+=100%",
+        scrub: true,
+        toggleActions: "restart pause reverse resume",
+    },
+    background: "linear-gradient(to bottom, #294062, #5c7590 )"
+})
 .to(appuis, {
     scrollTrigger: {
         trigger: formation,
@@ -177,43 +218,52 @@ t4
     opacity: 0.8,
     
 })
-    .fromTo(phi, {x:-50}, {
+    .fromTo(phi, {x:-50, y:200, color:"#294062"}, {
     scrollTrigger: {
         trigger: formation,
-        start: "1200px 30%",
-            end: "+=200px",
-        scrub: true,
-        toggleActions:"restart pause reverse resume"
+        start: "200px 50%",
+            end: "+=300px 20%",
+            scrub: true,
+            toggleActions: "restart pause reverse resume",
+            immediateRender: false
     },
-    opacity: 1,
-    fontWeight: "900", 
-    x:0,
+        opacity: 1,
+        fontWeight: "900", 
+        x: 0,
+        y: 0,
+        color: "#f1f1f1"
     
 })
-    .fromTo(roue, {x:50},{
+.fromTo(roue, {x:50, y:300, color:"#294062"}, {
     scrollTrigger: {
         trigger: formation,
-        start: "1400px 40%",
-        end:"+=200px",
+        start: "400px 50%",
+        end: "+=300px 20%",
         scrub: true,
-        toggleActions:"restart pause reverse resume"
-        },
-    opacity: 1,
-    fontWeight: "900", 
-    x:0,
-    
-})
-.fromTo(peda, {x:-50}, {
-    scrollTrigger: {
-        trigger: formation,
-        start: "1600px 50%",
-        end:"+=200px",
-        scrub: true,
+        markers:true,
         toggleActions:"restart pause reverse resume"
     },
-    opacity: 1,
-    fontWeight: "900", 
-    x:0,
+        opacity: 1,
+        fontWeight: "900", 
+        x: 0,
+        y: 0,
+        color: "#f1f1f1",
+    
+})
+.fromTo(peda, {x:-50, y:200, color:"#294062"}, {
+    scrollTrigger: {
+        trigger: formation,
+        start: "600px 50%",
+            end: "+=300px 20%",
+            scrub: true,
+            toggleActions: "restart pause reverse resume",
+            immediateRender: false
+    },
+        opacity: 1,
+        fontWeight: "900", 
+        x: 0,
+        y: 0,
+        color: "#f1f1f1"
     
 })
 
@@ -489,7 +539,7 @@ tlcommander
             start: "3600 15%",
             end:"+=1300",
             scrub: true,
-            pin:"container-fil-commander",
+            pin:".container-fil-commander",
             toggleActions:"restart pause reverse resume"
         },
         y:1000,
@@ -510,7 +560,7 @@ tlsituer
             end:"+=2000",
  
             scrub: true,
-            pin:"container-fil-situer",
+            pin:".container-fil-situer",
             toggleActions:"restart pause reverse resume"
         },
 
@@ -532,7 +582,7 @@ tlinstruire
             start: "6500 30%",
             end:"+=1000",
             scrub: true,
-            pin:"container-fil-instruire",
+            pin:".container-fil-instruire",
             toggleActions:"restart pause reverse resume"
         },
 
@@ -553,7 +603,7 @@ tleduquer
             start: "7500 1%",
             end:"+=1000",
             scrub: true,
-            pin:"container-fil-eduquer",
+            pin:".container-fil-eduquer",
             toggleActions:"restart pause reverse resume"
         },
 
@@ -574,7 +624,7 @@ tlinstruire
             start: "8800 1%",
             end:"+=1000",
             scrub: true,
-            pin:"container-fil-communiquer",
+            pin:".container-fil-communiquer",
             toggleActions:"restart pause reverse resume"
         },
         y: 980, 

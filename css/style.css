@@ -59,7 +59,7 @@ body {
 .section-accueil {
   background-image: url(../ressources/images/BG-accueil.png);
   height: 100vh;
-  background-position: center;
+  background-position: center top 70px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -193,6 +193,19 @@ body {
     }
    
 }
+#iconeCommanderAccueil{
+    animation: notificationBleu 2s ease-in-out infinite alternate;
+}
+
+@keyframes notificationBleu{
+    0%{
+        background: #294062;
+    }
+    100%{
+        background: #5c7590;
+    }
+   
+}
 #iconeCommuniquerAccueil{
     animation: notificationViolet 2s ease-in-out infinite alternate;
 }
@@ -247,12 +260,13 @@ body {
 .section-mission {
     width: 100vw;
   background-color: #294062;
-  height: 200vh;
+  height: 150vh;
   color: #294062;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
 }
 .title-mission {
   font-size: 1.5rem;
@@ -271,9 +285,9 @@ body {
 /*------------------------ section formation------------------------------- */
 /* ---------------------------------------------------------- */
 .section-formation {
-  background: linear-gradient(to bottom, #ffffff, #5c7590 50%, #375577);
+  background-color: #f1f1f1;;
   width: 100vw;
-  height: calc(100vh - 70px);
+  height: 200vh;
   color: #f1f1f1;
   display: flex;
   flex-direction: column;
