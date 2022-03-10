@@ -333,7 +333,7 @@ body {
 /* ---------------------------------------------------------- */
 .section-pedagogie {
   background: #5c7590;
-  height: 200vh;
+  height: 180vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -343,7 +343,7 @@ body {
 }
 .title-pedagogie {
   text-align: center;
-  margin: 10px 0 5px;
+  margin: 30px 0 5px;
   text-transform: uppercase;
   color: #f1f1f1;
 }
@@ -359,9 +359,10 @@ body {
 /*----------------- section compétences------------------ */
 /* ---------------------------------------------------------- */
 .section-competences {
-  background-color: #375577;
-  height: 100vh;
+  background-color: #5c7590;
+  height: 400vh;
   width: 100vw;
+  overflow-x:hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,76 +385,60 @@ body {
   text-transform: uppercase;
 }
 
-.box2-5competences {
-  padding: 10px;
-  border: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.box2-5competences div {
-  width: 100%;
-}
-.box2-5competences div img {
-  width: 100%;
-}
 .box2-5competences div p {
-  font-size: 0rem;
   text-align: center;
-}
-
-.container-competences-couleur p {
-  display: none;
-  position: absolute;
-  bottom: 10%;
-  transform: translateX(-5%);
-}
-
-.container-competences-couleur p.active:nth-child(1) {
-  color: #33425a;
-  display: block;
-}
-.container-competences-couleur p.active:nth-child(2) {
-  color: #71c58c;
-  display: block;
-}
-.container-competences-couleur p.active:nth-child(3) {
-  color: #c8ce93;
-  display: block;
-}
-.container-competences-couleur p.active:nth-child(4) {
-  color: #fcfcfc;
-  display: block;
-}
-.container-competences-couleur p.active:nth-child(5) {
-  color: #957aa8;
-  display: block;
-}
-
-.container-competences-couleur p {
-  text-align: center;
-  width: 100%;
-  text-transform: uppercase;
   font-size: 2rem;
-  font-weight: 900;
+  padding-bottom: 100px;
 }
+.box2-5competences div:nth-child(1) {
+  color: #294062;
+}
+.box2-5competences div:nth-child(2) {
+  color: #1a4a28;
+}
+.box2-5competences div:nth-child(3) {
+  color: #8d943f;
+}
+.box2-5competences div:nth-child(4) {
+  color: #891b0b;
+}
+.box2-5competences div:nth-child(5) {
+  color: #734693;
+}
+
+.box2-5competences {
+  margin-top: 20px;
+  padding: 10px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: #000; */
+  margin: 0 auto;
+  text-align: center;
+
+  
+}
+
+
+.box2-5competences div img {
+  width: 80%;
+  
+}
+
+
+
+
 /* mediaquery section competence */
 
-@media screen and (max-width: 764px) {
-  .box2-5competences
-    div:nth-child(1):hover
-    + .container-competences-couleur
-    p:nth-child(1) {
-    display: block;
-  }
-}
+
 /* ---------------------------------------------------------- */
 /*----------------- section doctrine------------------ */
 /* ---------------------------------------------------------- */
 .section-doctrine {
   background: linear-gradient(to bottom, #375577, #2a4161);
-  height: calc(100vh - 70px);
+  height: 200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
