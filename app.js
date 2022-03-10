@@ -749,10 +749,9 @@ var tlcommander = gsap.timeline({ paused: true });
 tlcommander.to(logoCommanderParcours, {
   scrollTrigger: {
     trigger: logoCommanderParcours,
-    start: "top 15%",
+    start: "top center",
     end: "+=1300",
     scrub: true,
-    pin: ".container-fil-commander",
     toggleActions: "restart pause reverse resume",
   },
   y: 1000,
@@ -768,11 +767,10 @@ var tlsituer = gsap.timeline({ paused: true });
 tlsituer.to(logoSituerParcours, {
   scrollTrigger: {
     trigger: logoSituerParcours,
-    start: "top 1%",
+    start: "top center",
     end: "+=2000",
 
     scrub: true,
-    pin: ".container-fil-situer",
     toggleActions: "restart pause reverse resume",
   },
 
@@ -790,10 +788,9 @@ var tlinstruire = gsap.timeline({ paused: true });
 tlinstruire.to(logoInstruireParcours, {
   scrollTrigger: {
     trigger: logoInstruireParcours,
-    start: "top 30%",
+    start: "top center",
     end: "+=1000",
     scrub: true,
-    pin: ".container-fil-instruire",
     toggleActions: "restart pause reverse resume",
   },
 
@@ -810,10 +807,9 @@ var tleduquer = gsap.timeline({ paused: true });
 tleduquer.to(logoEduquerParcours, {
   scrollTrigger: {
     trigger: logoEduquerParcours,
-    start: "top 1%",
+    start: "top center",
     end: "+=1000",
     scrub: true,
-    pin: ".container-fil-eduquer",
     toggleActions: "restart pause reverse resume",
   },
 
@@ -832,10 +828,9 @@ var tlinstruire = gsap.timeline({ paused: true });
 tlinstruire.to(logoCommuniquerParcours, {
   scrollTrigger: {
     trigger: logoCommuniquerParcours,
-    start: "top 1%",
+    start: "top center",
     end: "+=1000",
     scrub: true,
-    pin: ".container-fil-communiquer",
     toggleActions: "restart pause reverse resume",
   },
   y: 980,
