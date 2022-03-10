@@ -494,6 +494,20 @@ body {
     color: #2a4161;
   }
 }
+
+/* transiton */
+
+.transition{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #d37014,#294062)
+}
+
+
+
+
+
+
 /* ---------------------------------------------------------- */
 /*----------------- section parcours------------------ */
 /* ---------------------------------------------------------- */
@@ -521,10 +535,14 @@ body {
   position: relative;
 }
 
+.title-parcours p{
+  font-size: 1.5rem;
+}
 .title-parcours {
   position: relative;
   text-transform: uppercase;
   color: #f1f1f1;
+  padding: 150px 0;
 }
 .img-competence img {
   border-radius: 50%;

@@ -616,6 +616,11 @@ t6
 // ----------------------------------------------------------------------------
 
 const doctrine = document.querySelector(".section-doctrine");
+const livreBleu = document.querySelector(".livreBleu");
+const livreVert = document.querySelector(".livreVert");
+const livreKaki = document.querySelector(".livreKaki");
+const livreOrange = document.querySelector(".livreOrange");
+
 const forge = document.getElementById("forge");
 const alphabrique = document.getElementById("alphabrique");
 const culture = document.getElementById("culture");
@@ -668,7 +673,67 @@ t7.fromTo(
       scale: 1,
       opacity: 1,
     }
-  );
+  )
+  .fromTo(
+    livreBleu,
+    { scale: 0.5, opacity: 0 },
+    {
+      scrollTrigger: {
+        trigger: culture,
+        start: "10% 50%",
+        end: "+=200",
+        scrub: true,
+        toggleActions: "restart pause reverse resume",
+      },
+      scale: 1,
+      opacity: 1,
+    }
+  )
+  .fromTo(
+    livreKaki,
+    { scale: 0.5, opacity: 0 },
+    {
+      scrollTrigger: {
+        trigger: culture,
+        start: "10% 50%",
+        end: "+=200",
+        scrub: true,
+        toggleActions: "restart pause reverse resume",
+      },
+      scale: 1,
+      opacity: 1,
+    }
+  )
+  .fromTo(
+    livreVert,
+    { scale: 0.5, opacity: 0 },
+    {
+      scrollTrigger: {
+        trigger: culture,
+        start: "10% 50%",
+        end: "+=200",
+        scrub: true,
+        toggleActions: "restart pause reverse resume",
+      },
+      scale: 1,
+      opacity: 1,
+    }
+  )
+  .fromTo(
+    livreOrange,
+    { scale: 0.5, opacity: 0 },
+    {
+      scrollTrigger: {
+        trigger: culture,
+        start: "10% 50%",
+        end: "+=200",
+        scrub: true,
+        toggleActions: "restart pause reverse resume",
+      },
+      scale: 1,
+      opacity: 1,
+    }
+  )
 
 // ----------------------------------------------------------------------------
 // ------------------------------------ section parcours-----------------------
