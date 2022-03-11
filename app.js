@@ -38,7 +38,8 @@ window.addEventListener("load", () => {
   t2.play();
 });
 
-t0.to(iconeCommanderAccueil, {
+t0
+.to(iconeCommanderAccueil, {
   scrollTrigger: {
     trigger: incarnation,
     start: "top top",
@@ -48,7 +49,12 @@ t0.to(iconeCommanderAccueil, {
   },
   y: 350,
   scale: 2,
-});
+})
+// .to(iconeCommuniquerAccueil, { x: -500, opacity: 0, ease: "bounce" })
+// .to(iconeEduquerAccueil, { x: 500, opacity: 0, ease: "bounce" })
+// .to(iconeSituerAccueil, { y: 250, opacity: 0, ease: "bounce" })
+// .to(iconeInstuireAccueil, { y: -200, opacity: 0, ease: "bounce" })
+
 t1.from(commanderAccueil, {
   y: -700,
   opacity: 0,
@@ -61,21 +67,17 @@ t1.from(commanderAccueil, {
     { x: 700, opacity: 0, duration: 1, ease: "bounce" },
     "<-0.1"
   )
-  .from(iconeCommuniquerAccueil, { x: -500, opacity: 0, ease: "bounce" })
   .from(situerAccueil, { y: -700, opacity: 0, duration: 1, ease: "bounce" })
-  .from(iconeSituerAccueil, { y: 250, opacity: 0, ease: "bounce" })
   .from(
     eduquerAccueil,
     { x: 700, opacity: 0, duration: 1, ease: "bounce" },
     "<-0.1"
   )
-  .from(iconeEduquerAccueil, { x: 500, opacity: 0, ease: "bounce" })
   .from(
     instruireAccueil,
     { x: -300, opacity: 0, duration: 1, ease: "bounce" },
     "<-0.1"
   )
-  .from(iconeInstuireAccueil, { y: -200, opacity: 0, ease: "bounce" })
   .from(
     incarnation,
     { y: -50, opacity: 0, duration: 3, opacity: 0, ease: "rought" },
@@ -89,9 +91,11 @@ t1.from(commanderAccueil, {
   )
   .from(logoAlphaAccueil, { opacity: 0, scale: 0.1, duration: 3 });
 
-t2.from(titre1, { y: -400, ease: "bounce", duration: 3, scale: 2 }).to(titre1, {
+t2
+    .from(titre1, { y: -400, ease: "bounce", duration: 3, scale: 2 })
+    .to(titre1, {
   duration: 5,
-  text: "La formation au comportement du militaire",
+  text: "La Formation au Comportement du Militaire",
   ease: "none",
   delay: 1,
   scale: 1.2,
@@ -740,22 +744,48 @@ t7.fromTo(
 // ----------------------------------------------------------------------------
 
 const sectionParcours = document.querySelector(".section-parcours");
-
+const titleParcours = document.querySelector(".title-parcours")
 //commander
+const badgeCommander = document.getElementById('badgeCommander')
 const logoCommanderParcours = document.getElementById("logoCommanderParcours");
 
+  
 var tlcommander = gsap.timeline({ paused: true });
 
-tlcommander.to(logoCommanderParcours, {
-  scrollTrigger: {
-    trigger: logoCommanderParcours,
-    start: "top center",
-    end: "+=1300",
-    scrub: true,
-    toggleActions: "restart pause reverse resume",
-  },
-  y: 1000,
-});
+tlcommander
+    .fromTo(titleParcours,{x:-50, opacity:0},
+        {
+        scrollTrigger: {
+            trigger: sectionParcours,
+            start: "top center",
+            end: "+=300",
+            markers:true,
+            scrub: true,
+            toggleActions: "restart pause reverse resume",
+            },
+            x:0, opacity: 1
+    })
+    .fromTo(badgeCommander,{x:-50, opacity:0}, {
+            scrollTrigger: {
+                trigger: sectionParcours,
+                start: "top center",
+                end: "+=300",
+                scrub: true,
+                toggleActions: "restart pause reverse resume",
+            },
+        x: 0,
+            opacity:1,
+            })
+    .to(logoCommanderParcours, {
+            scrollTrigger: {
+                trigger: logoCommanderParcours,
+                start: "top center",
+                end: "+=1300",
+                scrub: true,
+                toggleActions: "restart pause reverse resume",
+            },
+            y: 1000,
+            })
 //se situer
 const logoSituerParcours = document.getElementById("logoSituerParcours");
 const containerCompetenceSituer = document.querySelector(

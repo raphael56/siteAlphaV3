@@ -195,6 +195,7 @@ body {
 }
 #iconeCommanderAccueil{
     animation: notificationBleu 2s ease-in-out infinite alternate;
+    z-index:10;
 }
 
 @keyframes notificationBleu{
@@ -542,36 +543,19 @@ body {
   position: relative;
   text-transform: uppercase;
   color: #f1f1f1;
-  padding: 150px 0;
+  padding: 50px 0;
 }
 .img-competence img {
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  margin-left: 20px;
+  
 }
 
 .parcours-title-competence {
-  margin-left: 30px;
+  margin-top: 50px;
   text-align: center;
   text-transform: uppercase;
-}
-
-.container-competence-commander {
-  display: flex;
-  width: 100%;
-  /* height: calc(20% - 70px- 4%); */
-}
-.title-commander {
-  color: #294062;
-}
-.title-commander p:nth-child(2) {
-  font-size: 0.7rem;
-}
-.title-commander p:nth-child(3) {
-  font-size: 0.7rem;
-  text-transform: none;
-  font-weight: 100;
 }
 
 .container-fil-commander,
@@ -598,8 +582,6 @@ body {
   width: 1000px;
 }
 
-
-
 .box-fil {
   display: flex;
   position: relative;
@@ -609,6 +591,27 @@ body {
   width: 100px;
   position: relative;
   z-index: 10;
+}
+
+.container-competence-commander {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+  /* height: calc(20% - 70px- 4%); */
+}
+
+.title-commander {
+  color: #294062;
+}
+.title-commander p:nth-child(2) {
+  font-size: 0.7rem;
+}
+.title-commander p:nth-child(3) {
+  font-size: 0.7rem;
+  text-transform: none;
+  font-weight: 100;
 }
 
 #logoSituerParcours{
