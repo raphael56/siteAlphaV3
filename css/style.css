@@ -513,20 +513,17 @@ body {
 /*----------------- section parcours------------------ */
 /* ---------------------------------------------------------- */
 .section-parcours {
-  background-image: url(../ressources/images/bg-parcours.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: calc(500vh - 70px);     */
+ background: rgba(41, 64, 98, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  /* border-bottom: 1px solid darkblue; */
+  height: 12000px; /* hauteur de la section*/
+
 }
 
-.container-parcours-competences {
+.container-parcours-competences { /* contient les 5 competences*/
   width: 100%;
   height: 100%;
   display: flex;
@@ -536,23 +533,21 @@ body {
   position: relative;
 }
 
-.title-parcours p{
-  font-size: 1.5rem;
-}
 .title-parcours {
   position: relative;
   text-transform: uppercase;
   color: #f1f1f1;
   padding: 50px 0;
+  font-size: 1.5rem;
 }
-.img-competence img {
+.img-competence img { /* img rondes des  5competences*/
   border-radius: 50%;
   height: 100px;
   width: 100px;
   
 }
 
-.parcours-title-competence {
+.parcours-title-competence { /*texte sous le badge */
   margin-top: 50px;
   text-align: center;
   text-transform: uppercase;
@@ -562,44 +557,92 @@ body {
 .container-fil-situer,
 .container-fil-instruire,
 .container-fil-eduquer,
-.container-fil-communiquer {
+.container-fil-communiquer { /* container de chaque competences*/
   display: flex;
   flex-direction: row;
-  margin-bottom: 50px;
+  margin: 150px 0;
+  height: 2500px; /*hauteur du container moyen*/
 }
 
-.title-aptitude {
-  font-size: 1rem;
-  font-weight: 900;
-  position: absolute;
-  top: 51%;
-  left: -420px;
-  transform: rotate(-90deg);
-  text-transform: uppercase;
-  text-align: center;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.2);
-  width: 1000px;
-}
 
-.box-fil {
+
+
+
+/*partie gauche avec logo + aptitude + fil */
+.box-fil { 
   display: flex;
   position: relative;
 }
 
-.fil-competence img {
-  width: 100px;
-  position: relative;
-  z-index: 10;
+        .line-container { 
+          position: relative;
+          background: red;
+        }
+        
+        .line { /* c'est la ligne blanche sous le logo */
+          height: 2500px;
+          width: 5px;
+          border-left: 5px solid rgba(255, 255, 255, 0.3);
+          position: absolute;
+          border-radius: 9999px;
+          left: 45px;
+        }
+        
+        .fil-competence{
+          display: flex;
+          flex-direction: row;
+        }
+        .fil-competence img {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          z-index: 10;
+        }
+
+
+/*partie droite avec les modules (3 normalement sauf se situer) */
+.container-box-description-aptitude {
+    display: flex;
+    flex-direction: column;
+    height:2000px;
+    justify-content: space-between;
+    align-items: center;
 }
+
+  .box-description-aptitude { /* contenant des modules*/
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: #2a4161;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 100px 0;
+  }
+  
+      .box-description-aptitude img {
+      width: 50%;
+      border-radius: 50%;
+    }
+
+    /* module */
+    .module{
+      margin: 10px;
+      padding: 10px;
+      border: 2px solid #294062;
+      border-radius: 10px;
+      background: rgba(41, 64, 98, 0.3);
+    }
+
 
 .container-competence-commander {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /* height: auto; */
   margin-bottom: 50px;
-  /* height: calc(20% - 70px- 4%); */
 }
 
 .title-commander {
@@ -614,65 +657,21 @@ body {
   font-weight: 100;
 }
 
+
+
+/* modification de Situer*/
+ /* .aptitude-situer {
+}
+
 #logoSituerParcours{
     left: -3px;
     top: -10px;
 }
-.container-box-description-aptitude {
-    display: flex;
-    flex-direction: column;
-    /* background: pink; */
-    height: 1000px;
-    justify-content: space-around;
-    align-items: center;
-}
- .aptitude-situer {
-height: 1500px;
-}
-
-.box-description-aptitude {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  color: #2a4161;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-}
-
-.box-description-aptitude img {
-    position: absolute;
-    top:-50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    opacity: 0.4;
-  height: 150px;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-top: 5px;
-}
-
-.line-container {
-  position: relative;
-}
-.line {
-  height: 1000px;
-  width: 5px;
-  border-left: 5px solid rgba(255, 255, 255, 0.3);
-  position: absolute;
-  border-radius: 9999px;
-  top: 20px;
-  left: 45px;
-}
 .line-situer{
-    height: 1500px;
+    height: 2000px;
 }
 
 .title-aptitude-situer{
-width: 1500px;
-top: 51%;
-  left: -665px;
 } 
 
 
@@ -691,12 +690,14 @@ top: 51%;
   font-size: 0.7rem;
   text-transform: none;
   font-weight: 100;
-}
+} */
 
-.container-competence-instruire {
+
+/* modification INSTRUIRE */
+/* .container-competence-instruire {
   display: flex;
   width: 100%;
-  /* height: calc(20% - 70px- 4%); */
+
 }
 .title-instruire {
   color: #891b0b;
@@ -708,13 +709,16 @@ top: 51%;
   font-size: 0.7rem;
   text-transform: none;
   font-weight: 100;
-}
+} */
 
-.container-competence-eduquer {
+
+/* modification EDUQUER */
+
+
+/* .container-competence-eduquer {
   display: flex;
   width: 100%;
   flex-direction: row-reverse;
-  /* height: calc(20% - 70px- 4%); */
 }
 .title-eduquer {
   color: #8d943f;
@@ -726,12 +730,14 @@ top: 51%;
   font-size: 0.7rem;
   text-transform: none;
   font-weight: 100;
-}
+} */
 
-.container-competence-communiquer {
+
+/* modification COMMUNIQUER */
+
+/* .container-competence-communiquer {
   display: flex;
   width: 100%;
-  /* height: calc(20% - 70px- 4%); */
 }
 .title-communiquer {
   color: #734693;
@@ -743,4 +749,6 @@ top: 51%;
   font-size: 0.7rem;
   text-transform: none;
   font-weight: 100;
-}
+} */
+
+

@@ -254,12 +254,12 @@ t4.to(formation, {
   })
   .fromTo(
     phi,
-    { x: -50, y: 200, color: "#294062" },
+    { x: -50, y: 200, color: "#294062", scale: 0.5  },
     {
       scrollTrigger: {
         trigger: formation,
-        start: "200px 50%",
-        end: "+=300px 20%",
+        start: "200px 70%",
+        end: "+=300px 70%",
         scrub: true,
         toggleActions: "restart pause reverse resume",
 
@@ -269,17 +269,20 @@ t4.to(formation, {
       x: 0,
       y: 0,
       color: "#f1f1f1",
+      scale: 1.5 
     }
   )
   .fromTo(
     roue,
-    { x: 50, y: 300, color: "#294062" },
+    { x: 50, y: 200, color: "#294062", scale: 0.5 },
     {
       scrollTrigger: {
         trigger: formation,
-        start: "400px 50%",
-        end: "+=300px 20%",
+        start: "400px 70%",
+        end: "+=300px 50%",
         scrub: true,
+     
+
         toggleActions: "restart pause reverse resume",
       },
       opacity: 1,
@@ -287,16 +290,17 @@ t4.to(formation, {
       x: 0,
       y: 0,
       color: "#f1f1f1",
+      scale: 1.5 
     }
   )
   .fromTo(
     peda,
-    { x: -50, y: 200, color: "#294062" },
+    { x: -50, y: 200, color: "#294062", scale: 0.5  },
     {
       scrollTrigger: {
-        trigger: formation,
-        start: "600px 50%",
-        end: "+=300px 20%",
+        trigger: roue,
+        start: "200px 70%",
+        end: "+=300px 50%",
         scrub: true,
         toggleActions: "restart pause reverse resume",
         immediateRender: false,
@@ -306,6 +310,7 @@ t4.to(formation, {
       x: 0,
       y: 0,
       color: "#f1f1f1",
+      scale: 1.5 
     }
   );
 
@@ -759,7 +764,6 @@ tlcommander
             trigger: sectionParcours,
             start: "top center",
             end: "+=300",
-            markers:true,
             scrub: true,
             toggleActions: "restart pause reverse resume",
             },
@@ -776,16 +780,21 @@ tlcommander
         x: 0,
             opacity:1,
             })
-    .to(logoCommanderParcours, {
+    .fromTo(logoCommanderParcours,{y:-50}, {
             scrollTrigger: {
                 trigger: logoCommanderParcours,
-                start: "top center",
-                end: "+=1300",
+                start: "top 20%",
+                end: "+=2700 50%",
                 scrub: true,
+                markers: true,
                 toggleActions: "restart pause reverse resume",
             },
-            y: 1000,
-            })
+            y: 1350,
+    })
+            
+
+
+
 //se situer
 const logoSituerParcours = document.getElementById("logoSituerParcours");
 const containerCompetenceSituer = document.querySelector(
