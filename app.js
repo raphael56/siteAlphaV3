@@ -9,6 +9,8 @@ window.addEventListener("load", function () {
     window.scrollTo(0, 1);
   }, 0);
 });
+
+
 // ----------------------------------------------------------------------------
 //--------------------section accueil-----------------------------------------
 // ----------------------------------------------------------------------------
@@ -28,6 +30,10 @@ const logoAlphaAccueil = document.querySelector("#logoAlphaAccueil");
 const titre1 = document.querySelector("h1");
 const incarnation = document.querySelector(".title-incarner");
 const modjo = document.querySelector(".title-modjo");
+
+
+
+const badgeCommander = document.getElementById('badgeCommander')
 
 var t0 = gsap.timeline({ paused: true });
 var t1 = gsap.timeline({ paused: true, delay: 3 });
@@ -99,7 +105,18 @@ t2
   ease: "none",
   delay: 1,
   scale: 1.2,
-});
+    })
+  
+
+
+
+
+iconeCommanderAccueil.addEventListener("click", () => {
+  gsap.to(window, { duration: 0.5, scrollTo: { y: badgeCommander, offsetY: 80 }, ease: "slow" });
+})
+
+
+
 // ----------------------------------------------------------------------------
 //----------------------------- section mission--------------------------------
 // ----------------------------------------------------------------------------
@@ -112,6 +129,9 @@ const developper = document.getElementById("developper-mission");
 const savoirEtre = document.getElementById("savoirEtre-mission");
 const un = document.getElementById("un");
 const officier = document.getElementById("officier-mission");
+
+const btnHaut = document.getElementById('btn-haut')
+
 var t3 = gsap.timeline({ paused: true });
 
 t3.to(iconeCommanderAccueil, {
@@ -158,7 +178,6 @@ t3.to(iconeCommanderAccueil, {
         start: "top 10%",
         end: "100px top",
         scrub: true,
-        // markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
         toggleActions: "restart pause reverse resume",
       },
       opacity: 0,
@@ -208,7 +227,7 @@ t3.to(iconeCommanderAccueil, {
         start: "top 70%",
         end: "150px 60%%",
         scrub: true,
-        // markers: {startColor: "green", endColor: "red", fontSize: "12px", indent:200},
+
         toggleActions: "restart pause reverse resume",
       },
       y: 500,
@@ -217,7 +236,24 @@ t3.to(iconeCommanderAccueil, {
       opacity: 1,
     }
   );
+// btn pour remonter tout en haut
+  var tlBtnHaut = gsap.timeline({  });
+tlBtnHaut.fromTo(btnHaut,{opacity:0}, 
+  {
+    scrollTrigger: {
+      trigger: sectionMission,
+      start: "top center",
+      end: "+=300",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    opacity: 1
+  })
 
+  btnHaut.addEventListener("click", () => {
+    gsap.to(window, { duration: 0.3, scrollTo: { y: 0 }, ease: "slow" });
+  })
+  
 // ----------------------------------------------------------------------------
 // ------------------------------------section formation-----------------------
 // ----------------------------------------------------------------------------
@@ -378,14 +414,15 @@ const acquisition = document.getElementById("acquisition");
 var t6 = gsap.timeline({ paused: true });
 
 t6
-.to(competences, {
+.fromTo(competences,{background: "#5c7590"}, {
     scrollTrigger: {
       trigger: competences,
-      start: "top center",
-        scrub: true,
+    start: "10% 10%",
+      end: "+=500px",
+    scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    backgroundColor: "#294062",
+    background: "#5c7590",
   })
     .fromTo(
   acquisition,
@@ -579,8 +616,8 @@ t6
     scrollTrigger: {
       trigger: competenceInstruire,
       start: "-100px top",
-      end: "+=700",
-      scrub: true,
+      end: "+=1000",
+    scrub: true,
       toggleActions: "restart pause reverse resume",
     },
     backgroundColor: "#734693",
@@ -607,8 +644,8 @@ t6
       scrollTrigger: {
         trigger: iconeCommuniquer,
         start: "top 50%",
-        end: "+=200",
-            scrub: true,
+        end: "+=500",
+        scrub: true,
         toggleActions: "restart pause reverse resume",
       },
       x: 0,
@@ -751,126 +788,191 @@ t7.fromTo(
 const sectionParcours = document.querySelector(".section-parcours");
 const titleParcours = document.querySelector(".title-parcours")
 //commander
-const badgeCommander = document.getElementById('badgeCommander')
+const titleExercerAutorite = document.getElementById('titleExercerAutorite')
 const logoCommanderParcours = document.getElementById("logoCommanderParcours");
-
+const conclusionCdt = document.querySelector('.conclusionCdt')
   
+var tlSectionParcours = gsap.timeline({ paused: true });
 var tlcommander = gsap.timeline({ paused: true });
 
+
+tlSectionParcours
+.fromTo(titleParcours,{x:-50, opacity:0},
+  {
+    scrollTrigger: {
+      trigger: sectionParcours,
+      start: "top center",
+      end: "+=300",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x:0, opacity: 1
+  })
+
 tlcommander
-    .fromTo(titleParcours,{x:-50, opacity:0},
-        {
-        scrollTrigger: {
-            trigger: sectionParcours,
-            start: "top center",
-            end: "+=300",
-            scrub: true,
-            toggleActions: "restart pause reverse resume",
-            },
-            x:0, opacity: 1
-    })
-    .fromTo(badgeCommander,{x:-50, opacity:0}, {
-            scrollTrigger: {
-                trigger: sectionParcours,
-                start: "top center",
-                end: "+=300",
-                scrub: true,
-                toggleActions: "restart pause reverse resume",
-            },
-        x: 0,
-            opacity:1,
-            })
-    .fromTo(logoCommanderParcours,{y:-50}, {
-            scrollTrigger: {
-                trigger: logoCommanderParcours,
-                start: "top 20%",
-                end: "+=2700 50%",
-                scrub: true,
-                markers: true,
-                toggleActions: "restart pause reverse resume",
-            },
-            y: 1350,
-    })
+.fromTo(badgeCommander,{x:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: badgeCommander,
+      start: "top center",
+      end: "+=300",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity:1,
+  })
+.fromTo(logoCommanderParcours,{y:-50}, {
+    scrollTrigger: {
+      trigger: logoCommanderParcours,
+      start: "top 40%",
+      endTrigger: conclusionCdt,
+      end: "-=20px 50%",
+    scrub: true,
+      pin: logoCommanderParcours,
+      toggleActions: "restart pause reverse resume",
+    },
+          })
+.fromTo("#imgCdt10",{y:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: logoCommanderParcours,
+      start: "top 40%",
+      end: "-=20px 10%",
+    scrub: true,
+  }, y: 0,
+  opacity:1,
+          })
+.fromTo(".moduleCdt10",{x:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: "#imgCdt10",
+      start: "top 40%",
+      end: "-=20px 10%",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+  }, x: 0,
+  opacity:1,
+          })
+.fromTo("#imgCdt20",{y:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: ".moduleCdt10",
+      start: "top 40%",
+      end: "-=20px 10%",
+    scrub: true,
+  }, y: 0,
+  opacity:1,
+          })
+.fromTo(".moduleCdt20",{x:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: "#imgCdt20",
+      start: "top 40%",
+      end: "-=20px 10%",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+  }, x: 0,
+  opacity:1,
+          })
+.fromTo("#imgCdt30",{y:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: ".moduleCdt20",
+      start: "top 40%",
+      end: "-=20px 10%",
+    scrub: true,
+  }, y: 0,
+  opacity:1,
+          })
+.fromTo(".moduleCdt30",{x:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: "#imgCdt30",
+      start: "top 40%",
+      end: "-=20px 10%",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+  }, x: 0,
+  opacity:1,
+          })
+          
             
 
 
 
 //se situer
-const logoSituerParcours = document.getElementById("logoSituerParcours");
-const containerCompetenceSituer = document.querySelector(
-  ".container-competence-seSituer"
-);
+// const logoSituerParcours = document.getElementById("logoSituerParcours");
+// const containerCompetenceSituer = document.querySelector(
+//   ".container-competence-seSituer"
+// );
 
-var tlsituer = gsap.timeline({ paused: true });
+// var tlsituer = gsap.timeline({ paused: true });
 
-tlsituer.to(logoSituerParcours, {
-  scrollTrigger: {
-    trigger: logoSituerParcours,
-    start: "top center",
-    end: "+=2000",
+// tlsituer.to(logoSituerParcours, {
+//   scrollTrigger: {
+//     trigger: logoSituerParcours,
+//     start: "top center",
+//     end: "+=2000",
+//     scrub: true,
+//     toggleActions: "restart pause reverse resume",
+//   },
 
-    scrub: true,
-    toggleActions: "restart pause reverse resume",
-  },
-
-  y: 1500,
-});
+//   y: 1500,
+// });
 
 //instruire
-const logoInstruireParcours = document.getElementById("logoInstruireParcours");
-const containerCompetenceInstruire = document.querySelector(
-  ".container-competence-instruire"
-);
+// const logoInstruireParcours = document.getElementById("logoInstruireParcours");
+// const containerCompetenceInstruire = document.querySelector(
+//   ".container-competence-instruire"
+// );
 
-var tlinstruire = gsap.timeline({ paused: true });
+// var tlinstruire = gsap.timeline({ paused: true });
 
-tlinstruire.to(logoInstruireParcours, {
-  scrollTrigger: {
-    trigger: logoInstruireParcours,
-    start: "top center",
-    end: "+=1000",
-    scrub: true,
-    toggleActions: "restart pause reverse resume",
-  },
+// tlinstruire.to(logoInstruireParcours, {
+//   scrollTrigger: {
+//     trigger: logoInstruireParcours,
+//     start: "top center",
+//     end: "+=1000",
+//     scrub: true,
+//     toggleActions: "restart pause reverse resume",
+//   },
 
-  y: 990,
-});
+//   y: 990,
+// });
+
 //eduquer
-const logoEduquerParcours = document.getElementById("logoEduquerParcours");
-const containerCompetenceEduquer = document.querySelector(
-  ".container-competence-eduquer"
-);
+// const logoEduquerParcours = document.getElementById("logoEduquerParcours");
+// const containerCompetenceEduquer = document.querySelector(
+//   ".container-competence-eduquer"
+// );
 
-var tleduquer = gsap.timeline({ paused: true });
+// var tleduquer = gsap.timeline({ paused: true });
 
-tleduquer.to(logoEduquerParcours, {
-  scrollTrigger: {
-    trigger: logoEduquerParcours,
-    start: "top center",
-    end: "+=1000",
-    scrub: true,
-    toggleActions: "restart pause reverse resume",
-  },
+// tleduquer.to(logoEduquerParcours, {
+//   scrollTrigger: {
+//     trigger: logoEduquerParcours,
+//     start: "top center",
+//     end: "+=1000",
+//     scrub: true,
+//     toggleActions: "restart pause reverse resume",
+//   },
 
-  y: 980,
-});
+//   y: 980,
+// });
+
+
 //communiquer
-const logoCommuniquerParcours = document.getElementById(
-  "logoCommuniquerParcours"
-);
-const containerCompetenceCommuniquer = document.querySelector(
-  ".container-competence-communiquer"
-);
+// const logoCommuniquerParcours = document.getElementById(
+//   "logoCommuniquerParcours"
+// );
+// const containerCompetenceCommuniquer = document.querySelector(
+//   ".container-competence-communiquer"
+// );
 
-var tlinstruire = gsap.timeline({ paused: true });
+// var tlcommuniquer = gsap.timeline({ paused: true });
 
-tlinstruire.to(logoCommuniquerParcours, {
-  scrollTrigger: {
-    trigger: logoCommuniquerParcours,
-    start: "top center",
-    end: "+=1000",
-    scrub: true,
-    toggleActions: "restart pause reverse resume",
-  },
-  y: 980,
-});
+// tlcommuniquer
+//   .to(logoCommuniquerParcours, {
+//   scrollTrigger: {
+//     trigger: logoCommuniquerParcours,
+//     start: "top center",
+//     end: "+=1000",
+//     scrub: true,
+//     toggleActions: "restart pause reverse resume",
+//   },
+//   y: 980,
+// })
