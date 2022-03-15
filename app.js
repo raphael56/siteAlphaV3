@@ -821,17 +821,17 @@ tlcommander
     x: 0,
     opacity:1,
   })
-.fromTo(logoCommanderParcours,{y:-50}, {
+.fromTo(logoCommanderParcours,{ y: -50, scale:1}, {
     scrollTrigger: {
       trigger: logoCommanderParcours,
       start: "top 40%",
-      endTrigger: conclusionCdt,
-      end: "-=20px 50%",
+    endTrigger: conclusionCdt,
+      end: "100%  bottom",
     scrub: true,
       pin: logoCommanderParcours,
+      onUpdate: self => console.log("progress:", self.progress),
       toggleActions: "restart pause reverse resume",
-    },
-          })
+    }, scale:1.5          })
 .fromTo("#imgCdt10",{y:-50, opacity:0}, {
     scrollTrigger: {
       trigger: logoCommanderParcours,
@@ -842,6 +842,16 @@ tlcommander
   opacity:1,
           })
 .fromTo(".moduleCdt10",{x:-50, opacity:0}, {
+    scrollTrigger: {
+      trigger: "#imgCdt10",
+      start: "top 40%",
+      end: "-=20px 10%",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+  }, x: 0,
+  opacity:1,
+          })
+.fromTo("#cdt10alpha",{x:-50, opacity:0}, {
     scrollTrigger: {
       trigger: "#imgCdt10",
       start: "top 40%",
