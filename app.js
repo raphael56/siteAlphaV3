@@ -418,43 +418,22 @@ t4.to(formation, {
 // ----------------------------------------------------------------------------
 
 const pedagogie = document.getElementById("pedagogie");
-const titlePeda = document.querySelector(".title-pedagogie");
-const caroussel = document.querySelector("#carouselExampleCaptions");
 var t5 = gsap.timeline({ paused: true });
 
-t5.fromTo(
-  titlePeda,
-  { y: -450, opacity: 0 },
-  {
-    scrollTrigger: {
-      trigger: pedagogie,
-      start: "-10% 40%",
-      end: "+=300",
-      scrub: true,
-      toggleActions: "restart pause reverse none",
-    },
-    color: "white",
-    fontWeight: "900",
-    y: 0,
-    opacity: 1,
-  }
-).fromTo(
-  caroussel,
-    {
- scale: 0.8
-    },
-  {
-    scrollTrigger: {
-      trigger: titlePeda,
-      start: "300px top",
-      end: "+=50",
-      scrub: true,
-      toggleActions: "restart pause reverse resume",
-      },
-  
-    opacity: 1,
-  }
-);
+const panels = document.querySelectorAll(".panel")
+
+panels.forEach((panel) => {
+    panel.addEventListener('click', () => {
+        removeActiveClasses()
+        panel.classList.add('active')
+    })
+})
+
+function removeActiveClasses() {
+    panels.forEach(panel => {
+        panel.classList.remove('active')
+    })
+}
 
 // ----------------------------------------------------------------------------
 // --------------------------------------section competences--------------------------------------
