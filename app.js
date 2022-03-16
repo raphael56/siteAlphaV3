@@ -41,7 +41,6 @@ var t2 = gsap.timeline({ paused: true });
 
 window.addEventListener("load", () => {
   t1.play();
-  t2.play();
 });
 
 t0
@@ -49,69 +48,133 @@ t0
   scrollTrigger: {
     trigger: incarnation,
     start: "top top",
-    end: "1000",
+    end: "500",
     scrub: true,
+  
     toggleActions: "restart pause reverse resume",
   },
   y: 350,
-  scale: 2,
+  scale: 0.7,
 })
-// .to(iconeCommuniquerAccueil, { x: -500, opacity: 0, ease: "bounce" })
-// .to(iconeEduquerAccueil, { x: 500, opacity: 0, ease: "bounce" })
-// .to(iconeSituerAccueil, { y: 250, opacity: 0, ease: "bounce" })
-// .to(iconeInstuireAccueil, { y: -200, opacity: 0, ease: "bounce" })
 
-t1.from(commanderAccueil, {
-  y: -700,
-  opacity: 0,
-  duration: 1,
-  ease: "bounce",
-  delay: 5,
-})
-  .from(
-    communiquerAccueil,
-    { x: 700, opacity: 0, duration: 1, ease: "bounce" },
-    "<-0.1"
-  )
-  .from(situerAccueil, { y: -700, opacity: 0, duration: 1, ease: "bounce" })
-  .from(
-    eduquerAccueil,
-    { x: 700, opacity: 0, duration: 1, ease: "bounce" },
-    "<-0.1"
-  )
-  .from(
-    instruireAccueil,
-    { x: -300, opacity: 0, duration: 1, ease: "bounce" },
-    "<-0.1"
-  )
-  .from(
-    incarnation,
-    { y: -50, opacity: 0, duration: 3, opacity: 0, ease: "rought" },
-    "<-3"
-  )
-  .fromTo(
-    modjo,
-    { x: -600, y: 10, opacity: 0 },
-    { x: 0, y: -10, opacity: 1, duration: 1, ease: "sine" },
-    "<-4"
-  )
-  .from(logoAlphaAccueil, { opacity: 0, scale: 0.1, duration: 3 });
 
-t2
-    .from(titre1, { y: -400, ease: "bounce", duration: 3, scale: 2 })
-    .to(titre1, {
+t1
+.from(titre1, { y: -400, ease: "bounce", duration: 2, scale: 2 })
+.to(titre1, {
   duration: 5,
   text: "La Formation au Comportement du Militaire",
   ease: "none",
   delay: 1,
   scale: 1.2,
-    })
-  
+})
+.from(
+  incarnation,
+  { y: -50, opacity: 1, duration: 1, opacity: 0, ease: "rought" },
+  "<-2"
+  )
+  .fromTo(
+    modjo,
+    { x: -600, x: 10, opacity: 0 },
+    { x: 0, x:0, opacity: 1, duration: 1, ease: "sine" },
+    "<+2"
+    )
+  .from(logoAlphaAccueil, { opacity: 0, scale: 0.1, duration: 3 })
+  .fromTo(incarnation,{y:0}, {
+    scrollTrigger: {
+      trigger: modjo,
+      start: "top center",
+      end: "+=200 center",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    y: 100
+  })
+  .to(
+    modjo,
+    {
+      scrollTrigger: {
+        trigger: modjo,
+        start: "top center",
+        end: "+=200 center",
+        scrub: true,
+        toggleActions: "restart pause reverse resume",
+      }, x: 0, x: 0, opacity: 0, duration: 1, ease: "sine"
+    }
+    )
 
 
-
-
+t2
+  .fromTo(commanderAccueil,
+    { x: -100, opacity:0 }, {
+  scrollTrigger: {
+    trigger: modjo,
+    start: "70px center",
+    end: "+=100 center",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  },
+  x: 0, opacity:1
+})
+  .fromTo(communiquerAccueil,
+    { y: -10, opacity:0}, {
+  scrollTrigger: {
+    trigger: modjo,
+    start: "70px center",
+    end: "+=100 center",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  },
+  y: 0, opacity:1
+})
+  .fromTo(instruireAccueil,
+    { y: 10, opacity:0}, {
+  scrollTrigger: {
+    trigger: modjo,
+    start: "70px center",
+    end: "+=100 center",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  },
+  y: 0, opacity:1
+})
+  .fromTo(situerAccueil,
+    { y: -10, opacity:0 }, {
+  scrollTrigger: {
+    trigger: modjo,
+    start: "70px center",
+    end: "+=100 center",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  },
+  y: 0, opacity:1
+})
+  .fromTo(eduquerAccueil,
+    { y: 10, opacity:0 }, {
+  scrollTrigger: {
+    trigger: modjo,
+    start: "70px center",
+    end: "+=100 center",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  },
+  y: 0, opacity:1
+})
+      
+// lien scroll vers le parcours
 iconeCommanderAccueil.addEventListener("click", () => {
+  gsap.to(window, { duration: 0.5, scrollTo: { y: badgeCommander, offsetY: 80 }, ease: "slow" });
+  tlcommander.play();
+})
+iconeCommuniquerAccueil.addEventListener("click", () => {
+  gsap.to(window, { duration: 0.5, scrollTo: { y: badgeCommander, offsetY: 80 }, ease: "slow" });
+})
+iconeEduquerAccueil.addEventListener("click", () => {
+  gsap.to(window, { duration: 0.5, scrollTo: { y: badgeCommander, offsetY: 80 }, ease: "slow" });
+})
+iconeInstuireAccueil.addEventListener("click", () => {
+  gsap.to(window, { duration: 0.5, scrollTo: { y: badgeCommander, offsetY: 80 }, ease: "slow" });
+})
+iconeSituerAccueil.addEventListener("click", () => {
   gsap.to(window, { duration: 0.5, scrollTo: { y: badgeCommander, offsetY: 80 }, ease: "slow" });
 })
 
@@ -788,10 +851,11 @@ t7.fromTo(
 const sectionParcours = document.querySelector(".section-parcours");
 const titleParcours = document.querySelector(".title-parcours")
 //commander
-const titleExercerAutorite = document.getElementById('titleExercerAutorite')
 const logoCommanderParcours = document.getElementById("logoCommanderParcours");
 const conclusionCdt = document.querySelector('.conclusionCdt')
-  
+const commanderTitle = document.getElementById('commanderTitle')
+const incarnerLeChef = document.getElementById('incarnerLeChef')
+const titleExercerAutorite = document.getElementById('titleExercerAutorite')
 var tlSectionParcours = gsap.timeline({ paused: true });
 var tlcommander = gsap.timeline({ paused: true });
 
@@ -810,7 +874,7 @@ tlSectionParcours
   })
 
 tlcommander
-.fromTo(badgeCommander,{x:-50, opacity:0}, {
+.fromTo(badgeCommander,{y:-50, opacity:0}, {
     scrollTrigger: {
       trigger: badgeCommander,
       start: "top center",
@@ -818,10 +882,46 @@ tlcommander
     scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    x: 0,
-    opacity:1,
-  })
-.fromTo(logoCommanderParcours,{ y: -50, scale:1}, {
+    y: 0,
+    opacity:1, 
+})
+.fromTo(commanderTitle,{opacity:0}, {
+    scrollTrigger: {
+      trigger: commanderTitle,
+      start: "top center",
+      end: "+=100",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+
+  opacity: 1, 
+    scale:2
+})
+.fromTo(titleExercerAutorite,{opacity:0}, {
+    scrollTrigger: {
+      trigger: titleExercerAutorite,
+      start: "top center",
+      end: "+=100",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+
+  opacity: 1, 
+    scale:1.8
+})
+.fromTo(incarnerLeChef,{opacity:1, scale:2}, {
+    scrollTrigger: {
+      trigger: commanderTitle,
+      start: "top center",
+      end: "+=100",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+
+  opacity: 0, 
+    scale:0.8
+})
+  .fromTo(logoCommanderParcours,{ y: -50, scale:1}, {
     scrollTrigger: {
       trigger: logoCommanderParcours,
       start: "top 40%",
@@ -830,7 +930,7 @@ tlcommander
     scrub: true,
       pin: logoCommanderParcours,
       onUpdate: self => console.log("progress:", self.progress),
-      toggleActions: "restart pause reverse resume",
+      toggleActions: " reverse ",
     }, scale:1.5          })
 .fromTo("#imgCdt10",{y:-50, opacity:0}, {
     scrollTrigger: {
