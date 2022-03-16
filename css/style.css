@@ -55,6 +55,55 @@ body {
   text-align: center;
 }
 /* ---------------------------------------------------------- */
+/* -----------------------navbar de côté----------------------- */
+/* ---------------------------------------------------------- */
+.Nav {
+  --nav-gap: 15px;
+  padding: var(--nav-gap);
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-Item {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: var(--nav-gap);
+}
+
+.nav-Link:hover ~ .nav-Label {
+  opacity: 1;
+}
+
+.nav-Label {
+  color: white;
+  text-shadow: 2px 2px 1px #294062;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.nav-Link {
+  background: rgba(41, 64, 98, 0.3);
+  border-radius: 50%;
+  height: var(--nav-gap);
+  margin-left: var(--nav-gap);
+  transition: transform 0.1s;
+  width: var(--nav-gap);
+  border: 1px white solid;
+}
+
+.nav-Link-selected {
+  background: #294062;
+  transform: scale(1.4);
+  border: 1px white solid;
+}
+
+
+
+/* ---------------------------------------------------------- */
 /* ----------------------- section accueil----------------------- */
 /* ---------------------------------------------------------- */
 .section-accueil {
@@ -520,7 +569,6 @@ margin-top: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background: #000; */
   margin: 0 auto;
   text-align: center;
 

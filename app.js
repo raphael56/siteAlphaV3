@@ -10,6 +10,50 @@ window.addEventListener("load", function () {
   }, 0);
 });
 
+// ----------------------------------------------------------------------------
+//--------------------navbar vertical----------------------------------
+// ----------------------------------------------------------------------------
+
+function activateNavigation() {
+  const sections = document.querySelectorAll(".section");
+  const navContainer = document.createElement("Nav");
+  const navItems = Array.from(sections).map((section) => {
+    return `
+                    <div class="nav-Item" data-for-section="${section.id}">
+                        <a href="#${section.id}" class="nav-Link"></a>
+                        <span class="nav-Label">${section.dataset.label}</span>
+                    </div>
+                `;
+    
+  });
+
+  navContainer.classList.add("Nav");
+  navContainer.innerHTML = navItems.join("");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      document.querySelectorAll(".nav-Link").forEach((navLink) => {
+        navLink.classList.remove("nav-Link-selected");
+      });
+
+      const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
+
+      document
+        .querySelector(
+          `.nav-Item[data-for-section="${visibleSection.target.id}"] .nav-Link`
+        )
+        .classList.add("nav-Link-selected");
+    },
+    { threshold: 0.5 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  document.body.appendChild(navContainer);
+}
+
+activateNavigation();
+
 
 // ----------------------------------------------------------------------------
 //--------------------section accueil-----------------------------------------
@@ -905,19 +949,19 @@ tlcommander
       trigger: logoCommanderParcours,
       start: "top 40%",
     endTrigger: conclusionCdt,
-      end: "100%  bottom",
-    scrub: true,
+      end: "180px bottom",
+      scrub: true,
       pin: logoCommanderParcours,
-      onUpdate: self => console.log("progress:", self.progress),
       toggleActions: " reverse ",
     }, scale:1.5          })
-.fromTo("#imgCdt10",{y:-50, opacity:0}, {
+.fromTo("#imgCdt10",{x:50, opacity:0}, {
     scrollTrigger: {
       trigger: logoCommanderParcours,
       start: "top 40%",
       end: "-=20px 10%",
     scrub: true,
-  }, y: 0,
+  }, 
+  x:0,
   opacity:1,
           })
 .fromTo(".moduleCdt10",{x:-50, opacity:0}, {
@@ -940,32 +984,33 @@ tlcommander
   }, x: 0,
   opacity:1,
           })
-.fromTo("#imgCdt20",{y:-50, opacity:0}, {
+.fromTo("#imgCdt20",{x:-50, opacity:0}, {
     scrollTrigger: {
-      trigger: ".moduleCdt10",
+      trigger: "#imgCdt20",
       start: "top 40%",
       end: "-=20px 10%",
     scrub: true,
-  }, y: 0,
+  }, x: 0,
   opacity:1,
           })
-.fromTo(".moduleCdt20",{x:-50, opacity:0}, {
+.fromTo(".moduleCdt20",{ opacity:0}, {
     scrollTrigger: {
       trigger: "#imgCdt20",
       start: "top 40%",
       end: "-=20px 10%",
     scrub: true,
       toggleActions: "restart pause reverse resume",
-  }, x: 0,
+  },
   opacity:1,
           })
-.fromTo("#imgCdt30",{y:-50, opacity:0}, {
+.fromTo("#imgCdt30",{ x:50,  opacity:0}, {
     scrollTrigger: {
-      trigger: ".moduleCdt20",
+      trigger: "#imgCdt30",
       start: "top 40%",
       end: "-=20px 10%",
     scrub: true,
-  }, y: 0,
+  },
+  x:0,
   opacity:1,
           })
 .fromTo(".moduleCdt30",{x:-50, opacity:0}, {
