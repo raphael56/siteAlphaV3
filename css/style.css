@@ -65,7 +65,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
+.section{
+  
+}
 .nav-Item {
   align-items: center;
   display: flex;
@@ -516,8 +518,8 @@ margin-top: 30px;
 .section-competences {
   background: linear-gradient(to bottom, #5c7590, #734693 );
   height: 400vh;
-  width: 100vw;
-  overflow-x:hidden;
+  
+  overflow:hidden;
   display: flex;
   flex-direction: column;
   align-items: center;

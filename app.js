@@ -35,9 +35,10 @@ function activateNavigation() {
       document.querySelectorAll(".nav-Link").forEach((navLink) => {
         navLink.classList.remove("nav-Link-selected");
       });
+      
 
       const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
-
+  
       document
         .querySelector(
           `.nav-Item[data-for-section="${visibleSection.target.id}"] .nav-Link`
@@ -47,6 +48,7 @@ function activateNavigation() {
     { threshold: 0.5 }
   );
 
+  
   sections.forEach((section) => observer.observe(section));
 
   document.body.appendChild(navContainer);
