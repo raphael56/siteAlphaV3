@@ -78,7 +78,7 @@ const modjo = document.querySelector(".title-modjo");
 const badgeCommander = document.getElementById('badgeCommander')
 
 var t0 = gsap.timeline({ paused: true });
-var t1 = gsap.timeline({ paused: true, delay: 3 });
+var t1 = gsap.timeline({ paused: true});
 var t2 = gsap.timeline({ paused: true });
 
 window.addEventListener("load", () => {
@@ -358,9 +358,9 @@ tlBtnHaut
   .fromTo(".Nav", { opacity: 0 }, 
   {
     scrollTrigger: {
-      trigger: sectionMission,
-      start: "top center",
-      end: "+=300",
+      trigger: "body",
+      start: "200px 100px",
+      end: "100px",
       scrub: true,
       toggleActions: "restart pause reverse resume",
     },
@@ -472,8 +472,20 @@ t4.to(formation, {
 // ----------------------------------------------------------------------------
 
 const pedagogie = document.getElementById("pedagogie");
+const titlePedagogie = document.querySelector(".title-pedagogie")
 var t5 = gsap.timeline({ paused: true });
 
+t5
+  .fromTo(titlePedagogie, { y:-600}, {
+  scrollTrigger: {
+    trigger: pedagogie,
+  start: "top 10%",
+      end: "+=200px",
+  scrub: true,
+    toggleActions: "restart pause reverse resume",
+  },
+    y: -400,
+})
 const panels = document.querySelectorAll(".panel")
 
 panels.forEach((panel) => {
@@ -510,16 +522,16 @@ const acquisition = document.getElementById("acquisition");
 var t6 = gsap.timeline({ paused: true });
 
 t6
-.fromTo(competences,{background: "#5c7590"}, {
-    scrollTrigger: {
-      trigger: competences,
-    start: "10% 10%",
-      end: "+=500px",
-    scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    background: "#5c7590",
-  })
+// .fromTo(competences,{background: "#5c7590"}, {
+//     scrollTrigger: {
+//       trigger: competences,
+//     start: "10% 10%",
+//       end: "+=500px",
+//     scrub: true,
+//       toggleActions: "restart pause reverse resume",
+//     },
+//     background: "#5c7590",
+//   })
     .fromTo(
   acquisition,
   { opacity: 0 },

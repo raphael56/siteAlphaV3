@@ -85,10 +85,11 @@ body {
 
 .Nav-label {
   all: unset;
-  color: #000000;
+  color: #f1f1f1;
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.1s;
+  text-shadow: 1px 1px 1px #333;
 }
 
 .Nav-link {
@@ -451,10 +452,16 @@ margin-top: 30px;
 /* ---------------------------------------------------------- */
 
 .title-pedagogie{
-  height: 100px;
+  height: 10px;
   justify-content: center;
   align-content: center;
-  margin: 100px 0;
+  /* margin: 100px 0; */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #294062;
+  text-transform: uppercase;
+
 }
 
 .section-pedagogie {
@@ -465,7 +472,8 @@ margin-top: 30px;
     align-items: center;
     justify-content:center;
     overflow: hidden;
-    height: 100vh;
+    height: 200vh;
+    padding-right: 22px;
 }
 .container{
   display: flex;
@@ -547,25 +555,63 @@ margin-top: 30px;
 }
 
  .box2-5competences {
-  margin-top: 20px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  text-align: center;
- font-size: 2rem;
+   /* margin-top: 20px;
+   padding: 10px; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto;
+   text-align: center;
+   font-size: 2rem;
+   height: 100vh;
+
+   
+  }  
   
-}  
-
-
-.box2-5competences div img {
-  width: 80%;
-    overflow:hidden; 
+  .box2-5competences.color-commander {
+    background: linear-gradient(to bottom, #294062, #5c82b6);
+  }
+  .box2-5competences.color-situer {
+    background: linear-gradient(to bottom , #5c82b6 10%, #1a4a28);
+  }
+  .box2-5competences.color-eduquer {
+    background: linear-gradient(to bottom , #1a4a28 10%, #8d943f);
+  }
+  .box2-5competences.color-instruire {
+    background: linear-gradient(to bottom , #8d943f 10%, #891b0b);
+  }
+  .box2-5competences.color-communiquer {
+    background: linear-gradient(to bottom , #891b0b 10%, #734693);
+  }
+  .box2-5competences div img {
+    width: 50%;
+    /* overflow:hidden;  */
 } 
 
 
+
+ .box-competence{
+   position: relative;
+   width: 95;
+   height: 50px;
+   background: none;
+   border: 1px solid white;
+   border-radius: 10px;
+   margin:10px;
+   padding: 10px;
+ }
+.btnBoxCompetence {
+  position:absolute;
+  top: 2%;
+  transform: translate(-50%, -50%);
+  background: #294062;
+  height: 40px;
+  width: 40px;
+}
+.commander{
+  display: none;
+}
 
 
 /* mediaquery section competence */
@@ -659,6 +705,30 @@ margin-top: 30px;
   /* height: 12000px;  */
 
 }
+.title-parcours {
+  position: relative;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  padding: 50px 0;
+  font-size: 1.5rem;
+}
+.btn-parcours{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  width: 60px;
+  height: 60px;
+  background-color: #294062;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  
+}
+.btn-parcours img{
+  width: 100%;
+  height: 100%;
+}
 
 .container-parcours-competences { /* contient les 5 competences*/
   width: 100%;
@@ -668,15 +738,9 @@ margin-top: 30px;
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  padding-right: 22px;
 }
 
-.title-parcours {
-  position: relative;
-  text-transform: uppercase;
-  color: #f1f1f1;
-  padding: 50px 0;
-  font-size: 1.5rem;
-}
 .img-competence img { /* img rondes des  5competences*/
   border-radius: 50%;
   height: 100px;
