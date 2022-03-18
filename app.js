@@ -19,12 +19,11 @@ function activateNavigation() {
   const navContainer = document.createElement("Nav");
   const navItems = Array.from(sections).map((section) => {
     return `
-                    <div class="nav-Item" data-for-section="${section.id}">
-                        <a href="#${section.id}" class="nav-Link"></a>
-                        <span class="nav-Label">${section.dataset.label}</span>
+                    <div class="Nav-item" data-for-section="${section.id}">
+                        <a href="#${section.id}" class="Nav-link"></a>
+                        <span class="Nav-label">${section.dataset.label}</span>
                     </div>
                 `;
-    
   });
 
   navContainer.classList.add("Nav");
@@ -32,28 +31,25 @@ function activateNavigation() {
 
   const observer = new IntersectionObserver(
     (entries) => {
-      document.querySelectorAll(".nav-Link").forEach((navLink) => {
-        navLink.classList.remove("nav-Link-selected");
+      document.querySelectorAll(".Nav-link").forEach((navLink) => {
+        navLink.classList.remove("Nav-link-selected");
       });
-      
 
       const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
-  
+ 
       document
         .querySelector(
-          `.nav-Item[data-for-section="${visibleSection.target.id}"] .nav-Link`
-        )
-        .classList.add("nav-Link-selected");
+          `.Nav-item[data-for-section="${visibleSection.target.id}"] .Nav-link`
+        ).classList.add("Nav-link-selected");
     },
     { threshold: 0.5 }
   );
 
-  
   sections.forEach((section) => observer.observe(section));
 
   document.body.appendChild(navContainer);
-}
 
+}
 activateNavigation();
 
 
@@ -347,7 +343,19 @@ t3.to(iconeCommanderAccueil, {
   );
 // btn pour remonter tout en haut
   var tlBtnHaut = gsap.timeline({  });
-tlBtnHaut.fromTo(btnHaut,{opacity:0}, 
+tlBtnHaut
+  .fromTo(btnHaut, { opacity: 0 }, 
+  {
+    scrollTrigger: {
+      trigger: sectionMission,
+      start: "top center",
+      end: "+=300",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    opacity: 1
+  })
+  .fromTo(".Nav", { opacity: 0 }, 
   {
     scrollTrigger: {
       trigger: sectionMission,
@@ -496,7 +504,7 @@ const iconeInstruire = document.getElementById("iconeInstruire");
 const competenceCommuniquer = document.getElementById("competence-communiquer");
 const iconeCommuniquer = document.getElementById("iconeCommuniquer");
 const competences = document.querySelector(".section-competences");
-const softSkills = document.getElementById("soft-skills");
+const soft = document.getElementById("soft");
 const acquisition = document.getElementById("acquisition");
 
 var t6 = gsap.timeline({ paused: true });
@@ -527,17 +535,17 @@ t6
   }
 )
   .fromTo(
-    softSkills,
+    soft,
     { x: -50, opacity: 0 },
     {
       scrollTrigger: {
-        trigger: softSkills,
+        trigger: soft,
         start: "2% 70%",
         end: "+=200",
         scrub: 0.5,
         toggleActions: "restart pause reverse resume",
       },
-      x: 50,
+      x: 0,
       opacity: 1,
     
     }
@@ -592,7 +600,7 @@ t6
   })
   .fromTo(
     iconeSituer,
-    { x: 50, opacity: 0 },
+    { x: -50, opacity: 0 },
     {
       scrollTrigger: {
         trigger: competenceCommander,
@@ -607,7 +615,7 @@ t6
 )
   .fromTo(
     competenceSituer,
-    { x: 50, opacity: 0 },
+    { x: -50, opacity: 0 },
     {
       scrollTrigger: {
         trigger: iconeSituer,
@@ -672,7 +680,7 @@ t6
   })
   .fromTo(
     iconeInstruire,
-    { x: 50, opacity: 0 },
+    { x: -50, opacity: 0 },
     {
       scrollTrigger: {
         trigger: competenceEduquer,
@@ -687,7 +695,7 @@ t6
 )
   .fromTo(
     competenceInstruire,
-    { x: 50, opacity: 0 },
+    { x: -50, opacity: 0 },
     {
       scrollTrigger: {
         trigger: iconeInstruire,
