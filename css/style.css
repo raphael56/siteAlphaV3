@@ -59,6 +59,7 @@ body {
 /* ---------------------------------------------------------- */
 .section {
   min-height: 100vh;
+  padding-top: 70px;
 }
 
 .Nav {
@@ -69,6 +70,7 @@ body {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
 }
 
 .Nav-item {
@@ -124,7 +126,7 @@ body {
   background-size: cover;
   width: 100vw;
   position: relative;
-  
+  margin-top: -70px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -321,7 +323,7 @@ body {
     }
    
 }
-/* opacity a 0 pour ne pas afficher au loading de page*/
+
 .infoVersParcours{
 color: #294062;
 margin-top: 30px;
@@ -536,8 +538,13 @@ margin-top: 30px;
   align-items: center;
   justify-content: center;
   position: relative;
-}
+  height: 20vh;
+ 
+}   
 
+.boxAffichage  {
+  display: none;
+}
 .title-competences h3 {
   color: #f1f1f1;
   text-align: center;
@@ -564,7 +571,7 @@ margin-top: 30px;
    margin: 0 auto;
    text-align: center;
    font-size: 2rem;
-   height: 100vh;
+   height: 80vh;
 
    
   }  
@@ -585,34 +592,79 @@ margin-top: 30px;
     background: linear-gradient(to bottom , #891b0b 10%, #734693);
   }
   .box2-5competences div img {
-    width: 50%;
+    width: 30%;
     /* overflow:hidden;  */
 } 
 
-
+.box-commander, 
+.box-situer,
+.box-communiquer, 
+.box-eduquer, 
+.box-instruire{
+  display:block;
+}
 
  .box-competence{
    position: relative;
    width: 95;
-   height: 50px;
+   min-height: 50px;
+   height: auto;
    background: none;
    border: 1px solid white;
    border-radius: 10px;
    margin:10px;
    padding: 10px;
+   background: rgba(255, 255, 255, 0.3);
  }
 .btnBoxCompetence {
-  position:absolute;
-  top: 2%;
-  transform: translate(-50%, -50%);
-  background: #294062;
-  height: 40px;
+  all:unset;
+  border-radius: 50%;
   width: 40px;
+  height: 40px;
+  background: #294062;
+  position: absolute;
+  top: -1%;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
-.commander{
-  display: none;
-}
+.btnBoxCompetence img{
+  all:unset;
+  border-radius: 50%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  transform: rotate(180deg) scale(2);
+  
+}
+.box-commander .btnBoxCompetence {
+background: #294062;
+}
+.box-situer .btnBoxCompetence {
+background: #1a4a28;
+}
+.box-instruire .btnBoxCompetence {
+background: #891b0b;
+}
+.box-eduquer .btnBoxCompetence {
+background: #8d943f;
+}
+.box-communiquer .btnBoxCompetence {
+background: #734693;
+}
+.commander,
+.situer,
+.eduquer, 
+.instruire, 
+.communiquer
+{
+  font-size: 1rem;
+}
+.eduquer{
+  color:#2e310b;
+}
 
 /* mediaquery section competence */
 
@@ -621,7 +673,7 @@ margin-top: 30px;
 /*----------------- section doctrine------------------ */
 /* ---------------------------------------------------------- */
 .section-doctrine {
-  background: linear-gradient(to bottom, #734693, #294062, #d37014);
+  background: linear-gradient(to bottom, #1a4a28, #294062, #d37014);
   height: 200vh;
   display: flex;
   flex-direction: column;

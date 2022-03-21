@@ -10,6 +10,12 @@ window.addEventListener("load", function () {
   }, 0);
 });
 
+
+
+
+
+
+
 // ----------------------------------------------------------------------------
 //--------------------navbar vertical----------------------------------
 // ----------------------------------------------------------------------------
@@ -19,39 +25,56 @@ function activateNavigation() {
   const navContainer = document.createElement("Nav");
   const navItems = Array.from(sections).map((section) => {
     return `
-                    <div class="Nav-item" data-for-section="${section.id}">
-                        <a href="#${section.id}" class="Nav-link"></a>
-                        <span class="Nav-label">${section.dataset.label}</span>
-                    </div>
-                `;
+    <div class="Nav-item" data-for-section="${section.id}">
+    <a href="#${section.id}" class="Nav-link"></a>
+    <span class="Nav-label">${section.dataset.label}</span>
+    </div>
+    `;
   });
-
+  
   navContainer.classList.add("Nav");
   navContainer.innerHTML = navItems.join("");
-
+  
   const observer = new IntersectionObserver(
     (entries) => {
       document.querySelectorAll(".Nav-link").forEach((navLink) => {
         navLink.classList.remove("Nav-link-selected");
       });
-
+      
       const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
- 
+      
       document
-        .querySelector(
-          `.Nav-item[data-for-section="${visibleSection.target.id}"] .Nav-link`
+      .querySelector(
+        `.Nav-item[data-for-section="${visibleSection.target.id}"] .Nav-link`
         ).classList.add("Nav-link-selected");
-    },
-    { threshold: 0.5 }
-  );
-
-  sections.forEach((section) => observer.observe(section));
-
-  document.body.appendChild(navContainer);
-
-}
-activateNavigation();
-
+      },
+      { threshold: 0.5 }
+      );
+      
+      sections.forEach((section) => observer.observe(section));
+      
+      document.body.appendChild(navContainer);
+      
+    }
+    activateNavigation();
+    
+    // ----------------------------------------------------------------------------
+    //--------------------jquery scrooll smooth----------------------------------
+    // ----------------------------------------------------------------------------
+    // jQuery("document").ready(function($){
+    //   $('a[href*=#]:not([href=#])').click(function() {
+    //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    //       var target = $(this.hash);
+    //       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    //       if (target.length) {
+    //         $('html,body').animate({
+    //           scrollTop: target.offset().top +300
+    //         }, 1000);
+    //         return false;
+    //       }
+    //     }
+    //   });
+    // });
 
 // ----------------------------------------------------------------------------
 //--------------------section accueil-----------------------------------------
@@ -504,6 +527,7 @@ function removeActiveClasses() {
 // ----------------------------------------------------------------------------
 // --------------------------------------section competences--------------------------------------
 // ----------------------------------------------------------------------------
+const competences = document.querySelector(".section-competences");
 
 const competenceCommander = document.getElementById("competence-commander");
 const iconeCommander = document.getElementById("iconeCommander");
@@ -515,9 +539,126 @@ const competenceInstruire = document.getElementById("competence-instruire");
 const iconeInstruire = document.getElementById("iconeInstruire");
 const competenceCommuniquer = document.getElementById("competence-communiquer");
 const iconeCommuniquer = document.getElementById("iconeCommuniquer");
-const competences = document.querySelector(".section-competences");
 const soft = document.getElementById("soft");
 const acquisition = document.getElementById("acquisition");
+
+const btnCompetence = document.querySelectorAll('.btnBoxCompetence')
+const boxAffichage = document.querySelectorAll('.boxAffichage')
+
+
+btnCompetence.forEach(item => {
+  item.addEventListener('click', ()=> {
+    boxAffichage.forEach(i => {
+      if (i.style.display == "block") {
+        i.style.display= "none"
+      } else {
+        i.style.display= "block"
+      }
+      })
+  })
+})
+
+
+
+const boxTitle = document.querySelector(".box-title")
+const boxCommander = document.querySelector(".box-commander")
+const boxSituer = document.querySelector(".box-situer")
+const boxEduquer = document.querySelector(".box-eduquer")
+const boxInstruire = document.querySelector(".box-instruire")
+const boxCommuniquer = document.querySelector(".box-communiquer")
+
+var tcompetence = gsap.timeline({ paused: true });
+
+tcompetence
+  .fromTo(boxTitle, {display:"none" }, {
+     scrollTrigger: {
+      trigger: pedagogie,
+      start: "top top",
+      end: "300px",
+      scrub: true,
+      // toggleActions: "restart pause reverse resume",
+      // markers:true,
+    },
+    display:"block",
+  }
+  )
+  .fromTo(boxCommander, {display:"none" }, {
+     scrollTrigger: {
+      trigger: pedagogie,
+      start: "top top",
+      end: "300px",
+      scrub: true,
+      // toggleActions: "restart pause reverse resume",
+      // markers:true,
+    },
+    display:"block",
+  }
+  )
+  .fromTo(boxCommander, {display:"block" }, {
+    scrollTrigger: {
+      trigger: pedagogie,
+      start: "-10% 30%",
+      scrub: true,
+      // toggleActions: "restart pause reverse resume",
+      // markers:true,
+    },
+    display:"block",
+  }
+  )
+  .fromTo(boxSituer, {display:"none" }, {
+     scrollTrigger: {
+      trigger: competences,
+      start: "-10% 30%",
+      end: "30px",
+      scrub: true,
+      // toggleActions: "restart pause reverse resume",
+      // markers:true,
+    },
+    display:"block",
+  }
+  )
+  .fromTo(boxEduquer, {display:"none" }, {
+     scrollTrigger: {
+      trigger: competences,
+      start: "-10% 30%",
+      end: "30px",
+      scrub: true,
+      // toggleActions: "restart pause reverse resume",
+      // markers:true,
+    },
+    display:"block",
+  }
+  )
+  .fromTo(boxInstruire, {display:"none" }, {
+     scrollTrigger: {
+      trigger: competences,
+      start: "-10% 30%",
+      end: "30px",
+      scrub: true,
+      // toggleActions: "restart pause reverse resume",
+      // markers:true,
+    },
+    display:"block",
+  }
+  )
+  .fromTo(boxCommuniquer, {display:"none" }, {
+     scrollTrigger: {
+      trigger: competences,
+      start: "-10% 30%",
+      end: "30px",
+      scrub: true,
+      // toggleActions: "restart pause reverse resume",
+      // markers:true,
+    },
+    display:"block",
+  }
+  )
+  
+
+
+
+
+
 
 var t6 = gsap.timeline({ paused: true });
 
@@ -532,234 +673,234 @@ t6
 //     },
 //     background: "#5c7590",
 //   })
-    .fromTo(
-  acquisition,
-  { opacity: 0 },
-  {
-    scrollTrigger: {
-      trigger: acquisition,
-      start: "30% 60%",
-      end: "+=30%",
-      scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    opacity: 1,
-  }
-)
-  .fromTo(
-    soft,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: soft,
-        start: "2% 70%",
-        end: "+=200",
-        scrub: 0.5,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
+//     .fromTo(
+//   acquisition,
+//   { opacity: 0 },
+//   {
+//     scrollTrigger: {
+//       trigger: acquisition,
+//       start: "30% 60%",
+//       end: "+=30%",
+//       scrub: true,
+//       toggleActions: "restart pause reverse resume",
+//     },
+//     opacity: 1,
+//   }
+// )
+//   .fromTo(
+//     soft,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: soft,
+//         start: "2% 70%",
+//         end: "+=200",
+//         scrub: 0.5,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
     
-    }
-)
-.to(competences, {
-    scrollTrigger: {
-      trigger: competences,
-      start: "top center",
-        scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    backgroundColor: "#294062",})
-  .fromTo(
-    iconeCommander,
-    { x: -100, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: acquisition,
-        start: "top 60%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-  .fromTo(
-    competenceCommander,
-    { x: -100, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeCommander,
-        start: "top 60%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-.to(competences, {
-    scrollTrigger: {
-      trigger: competenceCommander,
-      start: "-100px top",
-      end: "+=500",
-      scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    backgroundColor: "#1a4a28",
-  })
-  .fromTo(
-    iconeSituer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceCommander,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-  .fromTo(
-    competenceSituer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeSituer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-.to(competences, {
-    scrollTrigger: {
-      trigger: competenceSituer,
-      start: "-100px top",
-      end: "+=500",
-      scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    backgroundColor: "#8d943f",
-  })
-  .fromTo(
-    iconeEduquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceSituer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-  .fromTo(
-    competenceEduquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeEduquer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-.to(competences, {
-    scrollTrigger: {
-      trigger: competenceEduquer,
-      start: "-100px top",
-      end: "+=500",
-      scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    backgroundColor: "#891b0b",
-  })
-  .fromTo(
-    iconeInstruire,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceEduquer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-  .fromTo(
-    competenceInstruire,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeInstruire,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-.to(competences, {
-    scrollTrigger: {
-      trigger: competenceInstruire,
-      start: "-100px top",
-      end: "+=1000",
-    scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    backgroundColor: "#734693",
-  })
-  .fromTo(
-    iconeCommuniquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceInstruire,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-  .fromTo(
-    competenceCommuniquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeCommuniquer,
-        start: "top 50%",
-        end: "+=500",
-        scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
+//     }
+// )
+// .to(competences, {
+//     scrollTrigger: {
+//       trigger: competences,
+//       start: "top center",
+//         scrub: true,
+//       toggleActions: "restart pause reverse resume",
+//     },
+//     backgroundColor: "#294062",})
+//   .fromTo(
+//     iconeCommander,
+//     { x: -100, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: acquisition,
+//         start: "top 60%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+//   .fromTo(
+//     competenceCommander,
+//     { x: -100, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: iconeCommander,
+//         start: "top 60%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+// .to(competences, {
+//     scrollTrigger: {
+//       trigger: competenceCommander,
+//       start: "-100px top",
+//       end: "+=500",
+//       scrub: true,
+//       toggleActions: "restart pause reverse resume",
+//     },
+//     backgroundColor: "#1a4a28",
+//   })
+//   .fromTo(
+//     iconeSituer,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: competenceCommander,
+//         start: "top 50%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+//   .fromTo(
+//     competenceSituer,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: iconeSituer,
+//         start: "top 50%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+// .to(competences, {
+//     scrollTrigger: {
+//       trigger: competenceSituer,
+//       start: "-100px top",
+//       end: "+=500",
+//       scrub: true,
+//       toggleActions: "restart pause reverse resume",
+//     },
+//     backgroundColor: "#8d943f",
+//   })
+//   .fromTo(
+//     iconeEduquer,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: competenceSituer,
+//         start: "top 50%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+//   .fromTo(
+//     competenceEduquer,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: iconeEduquer,
+//         start: "top 50%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+// .to(competences, {
+//     scrollTrigger: {
+//       trigger: competenceEduquer,
+//       start: "-100px top",
+//       end: "+=500",
+//       scrub: true,
+//       toggleActions: "restart pause reverse resume",
+//     },
+//     backgroundColor: "#891b0b",
+//   })
+//   .fromTo(
+//     iconeInstruire,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: competenceEduquer,
+//         start: "top 50%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+//   .fromTo(
+//     competenceInstruire,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: iconeInstruire,
+//         start: "top 50%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+// .to(competences, {
+//     scrollTrigger: {
+//       trigger: competenceInstruire,
+//       start: "-100px top",
+//       end: "+=1000",
+//     scrub: true,
+//       toggleActions: "restart pause reverse resume",
+//     },
+//     backgroundColor: "#734693",
+//   })
+//   .fromTo(
+//     iconeCommuniquer,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: competenceInstruire,
+//         start: "top 50%",
+//         end: "+=200",
+//             scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
+//   .fromTo(
+//     competenceCommuniquer,
+//     { x: -50, opacity: 0 },
+//     {
+//       scrollTrigger: {
+//         trigger: iconeCommuniquer,
+//         start: "top 50%",
+//         end: "+=500",
+//         scrub: true,
+//         toggleActions: "restart pause reverse resume",
+//       },
+//       x: 0,
+//       opacity: 1,
+//     }
+// )
     
     
     
