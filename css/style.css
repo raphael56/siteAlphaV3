@@ -435,16 +435,46 @@ margin-top: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  position: relative;
 }
 .title-parcoursLien{
 margin-bottom: 50px;
 }
-#road{
-height: 50%;
+
+.header-section {
+  margin: 100px auto 0;
 }
+
+svg {
+  max-width: 600px;
+  overflow: visible;
+  margin-top: 60vh;
+}
+
+.ball {
+  fill: white;
+  visibility: hidden;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+text {
+  fill: white;
+  font-size: 15px;
+  font-family: "Signika Negative", sans-serif; 
+  visibility: hidden;
+}
+
+
 .parcours-man{
-position:relative;
-width: 30px;
+/* position:absolute; */
+width: 50px;
+left: 0%;
+top: 20%;
+
 }
 
 /* ---------------------------------------------------------- */
