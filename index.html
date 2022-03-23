@@ -25,44 +25,7 @@
  <!------------------------------------------------------------------------------>
  <!--------------------------------NAVBAR---------------------------------------->
  <!------------------------------------------------------------------------------>
-	<nav class="navbar navbar-expand-md fixed-top navbar-dark">
-		
-		<div class="container">
-		  <a class="navbar-brand text-uppercase fw-bold" href="#">
-			<a class="navbar-brand" href="index.html"><img src="ressources/images/LogoAlpha.png" alt="logo alpha"></a>
-		  </a>
-		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse justify-content-end bg-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-			  <li class="nav-item">
-				<a class="nav-link" href="index.html">accueil</a>
-			  </li>
-			  <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				  compétences
-				</a>
-				<ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
-				  <li><a class="dropdown-item" href="en_construction.html">Commander</a></li>
-				  <li><a class="dropdown-item" href="en_construction.html">Communiquer</a></li>
-				  <li><a class="dropdown-item" href="en_construction.html">Se situer</a></li>
-				  <li><a class="dropdown-item" href="en_construction.html">Eduquer</a></li>
-				  <li><a class="dropdown-item" href="en_construction.html">Instruire</a></li>
-				</ul>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="https://moodle.st-cyr.terre.defense.gouv.fr/moodle/pluginfile.php/100279/mod_resource/content/4/Site%20ORFA%20Mobirise%20V5%20V4/index.html">orfa</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="https://moodle.st-cyr.terre.defense.gouv.fr/moodle/pluginfile.php/100285/mod_resource/content/4/site%20Podcast/index.html">podcast</a>
-			  </li>
-			</ul>
-		  </div>
-		</div>
-  
-</nav>
+	<nav class="navbar navbar-expand-md fixed-top navbar-dark"></nav>
 
 
 
@@ -81,9 +44,15 @@
 			<h1>préparez-vous à incarnez!<span></span></h1>
 		</div>
 		<div class="box-modjo text-uppercase">
-			<p class="title-incarner">incarnez le chef</p>
+			<p class="title-incarner" id="titleIncarner">incarnez le chef</p>
 			<p class="title-modjo">un modjo qui dit que vous allez prendre chair</p>
 		</div>
+	</div>
+
+<div>
+	<a href="#titleIncarner">
+		<button id="btn-bas" class=" btn-bas" alt="fleche vers le bas"><img src="ressources/images/arrow-up-solid.svg" alt=""></button>
+	</a>
 	</div>
 
 <div class="row">
@@ -155,6 +124,15 @@
 	<button id="btn-haut" class=" btn-haut" alt="fleche vers le haut"><img src="ressources/images/arrow-up-solid.svg" alt=""></button>
 </div>
 <!------------------------------------------------------------------------------>
+<!--------------------------------- section parcours ---------------------------->
+<!------------------------------------------------------------------------------>
+
+<section class=" section container-fluid section-parcoursLien" id="parcoursLien" data-label="Parcours">
+	<div class="row title-parcoursLien"><h3 id="parcoursTitle">Suivez le parcours</h3></div>
+
+
+</section>
+<!------------------------------------------------------------------------------>
 <!--------------------------------- section formation ---------------------------->
 <!------------------------------------------------------------------------------>
 
@@ -179,7 +157,7 @@
 
 <section class="section section-pedagogie" id="pedagogie" data-label="Pédagogie">
 	
-	<div class="panel active" style="background-image: url('ressources/images/card3.png');">
+	<div class="panel " style="background-image: url('ressources/images/card3.png');">
 		<h3>Avoir une opinion et la défendre</h3>
 	</div>
 	
@@ -195,7 +173,7 @@
 		
 	</div> 
     
-	<div class="panel panel4" style="background-image: url('ressources/images/card4.png');">
+	<div class="panel panel4 active" style="background-image: url('ressources/images/card4.png');">
         
 		<h3>Se forger une reflexion</h3>
         
@@ -239,11 +217,11 @@
 	<div>
 		<img src="./ressources/images/logo-cdt-propre-518x543.png" alt="icone-commander" class="img-fluid " id="iconeCommander">
 		<p class="icone-txt" id="competence-commander">commander</p>
-		<div class="box-competence box-1">
-			<button class="btnBoxCompetence">
+		<div class="box-competence ">
+			<!-- <button class="btnBoxCompetence box-1">
 				<img src="ressources/images/arrow-up-solid.svg" alt="fleche vers le bas">
-			</button>
-			<div class="boxAffichage" id="box-1-affichage">
+			</button> -->
+			<div class="boxAffichage " id="box-1-affichage">
 				<p class="commander">Mettre en application la RH de commandement pour exercer son autorité en s’appuyant sur la loi, les règlements et le sens de l’humain pour donner du sens à l’action.
 					Savoir utiliser un style de commandement approprié aux différentes
 					situations. Assumer en tant que chef ses responsabilités au quotidien et en	opérations.</p>
@@ -260,9 +238,9 @@
 		<img src="./ressources/images/logo-sit-propre-518x543_gc.png" alt="icone-situer" class="img-fluid " id="iconeSituer">
 		<p class="icone-txt" id="competence-situer">se situer</p>
 		<div class="box-competence box-2">
-			<button class="btnBoxCompetence">
+			<!-- <button class="btnBoxCompetence">
 				<img src="ressources/images/arrow-up-solid.svg" alt="fleche vers le bas">
-			</button>
+			</button> -->
 			<div class="boxAffichage" id="box-1-affichage">
 				<p class="situer">Connaitre la politique de défense, connaitre son environnement général	et immédiat, comprendre son propre rôle et celui des autres tout en	utilisant à bon escient sa liberté de manœuvre dans le cadre de l’action générale.</p>
 			</div>
@@ -276,10 +254,10 @@
 	<div>
 		<img src="./ressources/images/logo-eduquer-518x543_gd@2x.png" alt="icone-eduquer" class="img-fluid " id="iconeEduquer">
 		<p class="icone-txt" id="competence-eduquer">eduquer</p>
-		<div class="box-competence box-2">
-			<button class="btnBoxCompetence">
+		<div class="box-competence box-3">
+			<!-- <button class="btnBoxCompetence">
 				<img src="ressources/images/arrow-up-solid.svg" alt="fleche vers le bas">
-			</button>
+			</button> -->
 			<div class="boxAffichage" id="box-1-affichage">
 				<p class="eduquer">Mettre en pratique les fondements et les principes du métier des armes qui composent les références éthiques et déontologiques du militaire. Assurer un rôle éducatif en développant les aptitudes des subordonnés. Développer la faculté de discernement, affirmer son jugement afin de faire preuve d’intelligence de situation.Cultiver les usages de la politesse et du savoir-vivre.</p>
 			</div>
@@ -296,9 +274,9 @@
 		<img src="./ressources/images/instruire-logo-518x543.png" alt="icone-instruire" class="img-fluid " id="iconeInstruire">
 		<p class="icone-txt" id="competence-instruire">instruire</p>
 		<div class="box-competence box-4">
-			<button class="btnBoxCompetence">
+			<!-- <button class="btnBoxCompetence">
 				<img src="ressources/images/arrow-up-solid.svg" alt="fleche vers le bas">
-			</button>
+			</button> -->
 			<div class="boxAffichage" id="box-1-affichage">
 				<p class="instruire">Mettre en application les principes de la formation pour adulte (andragogie) et acquérir des méthodes, des moyens, des attitudes pédagogiques permettant d’instruire le personnel.</p>
 			</div>
@@ -315,9 +293,9 @@
 		<img src="./ressources/images/logo-com-propre-518x543.png" alt="icone-communiquer" class="img-fluid " id="iconeCommuniquer">
 		<p class="icone-txt" id="competence-communiquer">communiquer</p>
 		<div class="box-competence box-5">
-			<button class="btnBoxCompetence">
+			<!-- <button class="btnBoxCompetence">
 				<img src="ressources/images/arrow-up-solid.svg" alt="fleche vers le bas">
-			</button>
+			</button> -->
 			<div class="boxAffichage" id="box-1-affichage">
 				<p class="communiquer">Mettre en œuvre les différentes techniques de communication au sein et hors de l’institution, maîtriser les outils médiatiques, aborder les relations interculturelles et savoir conduire une négociation. Identifier les dangers de la communication mal maîtrisée par les réseaux sociaux.</p>
 			</div>
@@ -353,315 +331,15 @@
 </section>
 
 
+<!-- footer -->
 
-
-
-
-
-
-<!------------------------------------------------------------------------------>
-<!--------------------------------- section parcours ---------------------------->
-<!------------------------------------------------------------------------------>
-<section class="section section-parcours" id="parcours" data-label="Parcours">
-	<div >
-			<p class="title-parcours">un parcours d'aptitude</p>
-	</div>
-	<div>
-		<button id="btn-parcours" class=" btn-parcours" alt="fleche vers le bas"><img src="ressources/images/arrow-up-solid.svg" alt=""></button>
-	</div>
-	</section>
-<div class="container-parcours-competences">
-
-	<!-- commmander -->
-	<div class="  container-competence-commander color-commander">
+<footer class="footer">
+	<div class="content has-text-centered">Tous droits réservés &copy;</div>
 		
-		<div class="img-competence">
-			<img id="badgeCommander" src="ressources/images/commander-518x543.png" alt="logo commander">
-		</div>
-
-		<div class="parcours-title-competence title-commander">
-			<h4 id="commanderTitle">commander</h4>
-			<p id="incarnerLeChef">incarner le chef</p>
-			<p id="titleExercerAutorite" class="text-lowercase">Exercer l'autorité globale <br> relevant des fonctions occupées</p>
-		</div>
-	</div>	
-	
-	<div class="container-fil-commander color-commander">
-		
-		<div class="box-fil ">
-			<div class="line-container">
-				<div class="line"></div>
-			</div>
-			<div class="fil-competence">
-				<img src="ressources/images/logo-cdt-propre-518x543.png" alt="badge commander" id="logoCommanderParcours">
-			</div>
-		</div>
-
-		<div class="container-box-description-aptitude ">
-			<div class=" box-description-aptitude cdt10">
-				<img id="imgCdt10" src="ressources/images/cdt10-518x543.png" alt="logo cdt10">
-				<div class="module moduleCdt10">
-				<p>objectif du module: <br> s'appliquer à la subsidiarité</p>
-				<p class="color-commander"></p>
-				<p id="cdt10alpha">CDT10-Alpha: Se préparer à obéir</p>
-				<p>CDT10-1: Dans la peau du subordonnée</p>
-				<p>CDT10-2: Commander, c'est savoir obéir</p>
-				<p>CDT10-3: Le régiment, creuset du commandement</p>
-			</div>	
-			</div>
-			<div class="box-description-aptitude">
-				<img id="imgCdt20" src="ressources/images/cdt20-518x543.png" alt="logo cdt20">
-				<div class="module moduleCdt20">
-					<p>objectif du module: <br> décider dans l'incertitude</p>
-					<p class="color-commander"></p>
-					<p>CDT20-ALPHA:</p>
-					<p>CDT20-1:</p>
-					<p>CDT20-2:</p>
-					<p>CDT20-3:</p>
-					<p>CDT20-4:</p>
-					<p>CDT20-5:</p>
-					<p>CDT20-6:</p>
-					<p>CDT20-7:</p>
-					<p>CDT20-8:</p>
-					<p>CDT20-9:</p>
-					<p>CDT20-10:</p>
-					<p>CDT20-11:</p>
-					<p>CDT20-12:</p>
-			</div>
-			
-			<div class="box-description-aptitude">
-				<img id="imgCdt30" src="ressources/images/cdt30-518x543.png" alt="logo cdt30">
-				<div class="module moduleCdt30">
-					<p>objectif du module: <br> gérer le quotidien du CDS</p>
-					<p class="color-commander"></p>
-					<p>CDT30-1:</p>
-					<p>CDT30-2:</p>
-					<p>CDT30-3:</p>
-					<p>CDT30-4:</p>
-					<p>CDT30-5:</p>
-					<p>CDT30-6:</p>
-					<p>CDT30-7:</p>
-					<p>CDT30-8:</p>
-					<p>CDT30-9:</p>
-					<p>CDT30-10:</p>
-					<p>CDT30-11:</p>
-					<p>CDT30-12:</p>
-			</div>
-		</div>
-	</div>
-	</div>
-	</div>
-	<div class=" conclusionCdt">
-		
-		<p class="color-commander">Fort de <strong>"commander c'est d'abord obéir" </strong> , à la fin de ce fil de compétence vous serez capable  <span class="text-center"> <strong>d'incarnez le chef</strong> </span>  
-			<span>
-				en ayant le  <strong>sens du commandement</strong> , 
-			</span>
-			<span>
-vous servant des <strong>principes du commandement  </strong> 
-			</span>
-			<span>
-et sachant gérer les aléas de votre fonction tant dans <strong>l'incertitude</strong>  que dans le <strong>quotidien</strong>.
-			</span>
-			
-			
-			</p>
-	</div>
-	
-	
-	<!-- se situer -->
-	<!-- <div class="container  container-competence-seSituer">
-		<div class="img-competence">
-			<img id="badgeSituer" src="ressources/images/se_situer_br.png" alt="logo se situer">
-		</div>
-		
-		<div class="parcours-title-competence title-seSituer">
-			<h4>se situer</h4>
-			<p>adopter un comportement</p>
-			<p>Sensibilité a la complexité de son environnement et  à la nature de la mission au service de la cité, alliant le sens et la force.</p>
-		</div>
-	</div>
-
-	<div class="container-fil-situer">
-	
-		<div class="box-fil">
-			<div class="line-container">
-				<div class="line line-situer"></div>
-			</div>
-			<div class="fil-competence">
-				<img src="ressources/images/logo-sit-propre-518x543.png" alt="badge situer" id="logoSituerParcours">
-				<div >
-					<p class="title-aptitude 
-					title-aptitude-situer color-situer">aptitude</p>
-				</div>
-			</div>
-		</div>
-		<div class="container-box-description-aptitude  aptitude-situer">
-				<div class="box-description-aptitude">
-					<img src="ressources/images/sit10-518x543.png" alt="logo sit10">
-					<p class="color-situer">se positionner <br> au sein de l'institution</p>
-				</div>	
-				<div class="box-description-aptitude">
-					<img src="ressources/images/sit20-518x543.png" alt="logo sit20">
-					<p class="color-situer">maîtriser  <br> les rouages de l'unité</p>
-				</div>
-	
-				<div class="box-description-aptitude">
-					<img src="ressources/images/sit30-518x543.png" alt="logo sit30">
-					<p class="color-situer">renouveller <br> sa réflexion éthique</p>
-				</div>
-				<div class="box-description-aptitude">
-					<img src="ressources/images/sit40-518x543.png" alt="logo sit40">
-					<p class="color-situer">comprendre <br> sa place et son rôle</p>
-				</div>
-				<div class="box-description-aptitude">
-					<img src="ressources/images/sit50-518x543.png" alt="logo sit50">
-					<p class="color-situer"> affirmer son éthique</p>
-				</div>
-		</div>
-	
-	</div> -->
+	</footer>
 
 
 
-	<!-- instruire -->
-
-
-	<!-- <div class="container  container-competence-instruire">
-		<div class="img-competence">
-			<img id="badgeInstruire" src="ressources/images/instruire-icone-518x543.png" alt="logo instruire" >
-		</div>
-
-		<div class="parcours-title-competence title-instruire">
-			<h4>instruire</h4>
-			<p>éveiller les savoirs</p>
-			<p>Transmettre et organiser efficacement l'instruction  </p>
-		</div>
-	</div>
-
-	<div class="container-fil-instruire">
-	
-		<div class="box-fil">
-			<div class="line-container">
-				<div class="line"></div>
-			</div>
-			<div class="fil-competence">
-				<img src="ressources/images/instruire-logo-518x543.png" alt="badge instruire" id="logoInstruireParcours">
-				<div >
-					<p class="title-aptitude color-instruire">aptitude</p>
-				</div>
-			</div>
-		</div>
-		<div class="container-box-description-aptitude">
-				<div class="box-description-aptitude box-cdt10">
-					<img src="ressources/images/ins10-518x543_b.png" alt="logo ins10">
-					<p class="color-instruire">apprendre à apprendre</p>
-				</div>	
-				<div class="box-description-aptitude">
-					<img src="ressources/images/ins10-518x543_b.png" alt="logo ins20">
-					<p class="color-instruire">organiser son instruction</p>
-				</div>
-	
-		</div>
-	
-	</div> -->
-
-	<!-- eduquer -->
-
-	<!-- <div class="container  container-competence-eduquer">
-		<div class="img-competence">
-			<img id="badgeEduquer" src="ressources/images/eduquer-518x543.png" alt="logo eduquer">
-		</div>
-
-		<div class="parcours-title-competence title-eduquer">
-			<h4>éduquer</h4>
-			<p>insuffler un esprit</p>
-			<p>édification et consolidation d'une personnalité autonome  dotée d'une solide culture pratique</p>
-		</div>
-	</div>
-
-	<div class="container-fil-eduquer">
-	
-		<div class="box-fil">
-			<div class="line-container">
-				<div class="line"></div>
-			</div>
-			<div class="fil-competence">
-				<img src="ressources/images/logo-eduquer-518x543.png" alt="badge eduquer" id="logoEduquerParcours">
-				<div >
-					<p class="title-aptitude color-eduquer">aptitude</p>
-				</div>
-			</div>
-		</div>
-		<div class="container-box-description-aptitude">
-				<div class="box-description-aptitude box-cdt10">
-					<img src="ressources/images/edq10-1-518x543.png" alt="logo cdt10">
-					<p class="color-eduquer">consolider ses valeurs</p>
-				</div>	
-				<div class="box-description-aptitude box-cdt20">
-					<img src="ressources/images/edq20-518x543.png" alt="logo cdt20">
-					<p class="color-eduquer">forger sa resilience</p>
-				</div>
-	
-				<div class="box-description-aptitude box-cdt30">
-					<img src="ressources/images/edq30-518x543.png" alt="logo cdt30">
-					<p class="color-eduquer">optimiser son potentiel</p>
-				</div>
-		</div>
-	
-	</div> -->
-
-
-	<!-- communiquer -->
-
-	<!-- <div class="container- container-competence-communiquer">
-		<div class="img-competence">
-			<img id="badgeCommuniquer" src="ressources/images/communiquer-518x543.png" alt="logo communiquer">
-		</div>
-
-		<div class="parcours-title-competence title-communiquer">
-			<h4>communiquer</h4>
-			<p>Gardez le contact</p>
-			<p>discourir efficacement pour appuyer l'action</p>
-		</div>
-	</div>
-
-	<div class="container-fil-communiquer">
-		
-		<div class="box-fil">
-			<div class="line-container">
-				<div class="line"></div>
-			</div>
-			<div class="fil-competence">
-				<img src="ressources/images/logo-com-propre-518x543.png" alt="badge communiquer" id="logoCommuniquerParcours">
-				<div >
-					<p class="title-aptitude color-communiquer">aptitude</p>
-				</div>
-			</div>
-		</div>
-		<div class="container-box-description-aptitude">
-				<div class="box-description-aptitude box-cdt10">
-					<img src="ressources/images/com10-518x543.png" alt="logo com10">
-					<p class="color-communiquer">apprivoiser <br> la communication militaire</p>
-				</div>	
-				<div class="box-description-aptitude box-cdt20">
-					<img src="ressources/images/com20-518x543.png" alt="logo com20">
-					<p class="color-communiquer">diffuser sa culture</p>
-				</div>
-
-				<div class="box-description-aptitude box-cdt30">
-					<img src="ressources/images/com30-518x543.png" alt="logo com30">
-					<p class="color-communiquer">maîtriser le média</p>
-				</div>
-		</div>
-
-	</div>
-
-
--->
-</div>
-
-<!-- </section> -->
 
 <!-- JQUERY -->
 
@@ -681,7 +359,8 @@ et sachant gérer les aléas de votre fonction tant dans <strong>l'incertitude</
 
 
 <!-- App JS -->
-<script src="app.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/app.js"></script>
 
 
 

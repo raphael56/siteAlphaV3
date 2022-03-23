@@ -542,21 +542,20 @@ const iconeCommuniquer = document.getElementById("iconeCommuniquer");
 const soft = document.getElementById("soft");
 const acquisition = document.getElementById("acquisition");
 
-const btnCompetence = document.querySelectorAll('.btnBoxCompetence')
-const boxAffichage = document.querySelectorAll('.boxAffichage')
+const btnCompetence1 = document.querySelectorAll('.btnBoxCompetence.box-1')
+const btnCompetence2 = document.querySelectorAll('.box-2')
+const btnCompetence3 = document.querySelectorAll('.box-3')
+const btnCompetence4 = document.querySelectorAll('.box-4')
+const btnCompetence5 = document.querySelectorAll('.box-5')
+
+const boxAffichage1 = document.getElementById('.box-1-affichage')
+
+// btnCompetence1.addEventListener('click', () => {
+//   boxAffichage1.classList.add('is-visible');
+//   console.log(boxAffichage1.classList.add('is-visible'));
+// })
 
 
-btnCompetence.forEach(item => {
-  item.addEventListener('click', ()=> {
-    boxAffichage.forEach(i => {
-      if (i.style.display == "block") {
-        i.style.display= "none"
-      } else {
-        i.style.display= "block"
-      }
-      })
-  })
-})
 
 
 

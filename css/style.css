@@ -32,7 +32,7 @@ html {
 
 body {
   width: 100vw;
-  height: 20000px;
+  /* height: 20000px; */
   font-family: roboto, sans-serif;
  }
 /* ---------------------------------------------------------- */
@@ -374,6 +374,29 @@ margin-top: 30px;
   width: 70%;
   height: 70%;
   border:none;
+  transform:translate(0.5px, -1px);
+}
+.btn-bas {
+  opacity: 1;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border:none;
+  box-shadow: none;
+  border-radius:50%;
+  background: rgba(41, 64, 98, 0.5);
+  animation: pulse 2s infinite;
+}
+.btn-bas img{
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  border:none;
+  transform: rotate(-180deg) translate(-0.5px, 1px);
+  animation: pulse 2s infinite;
 }
 /* ---------------------------------------------------------- */
 /*----------------- section mission----------------------------------- */
@@ -543,7 +566,10 @@ margin-top: 30px;
 }   
 
 .boxAffichage  {
-  display: none;
+  display: block;
+}
+.is-visible  {
+  display: block;
 }
 .title-competences h3 {
   color: #f1f1f1;
@@ -572,8 +598,6 @@ margin-top: 30px;
    text-align: center;
    font-size: 2rem;
    height: 80vh;
-
-   
   }  
   
   .box2-5competences.color-commander {
@@ -596,13 +620,7 @@ margin-top: 30px;
     /* overflow:hidden;  */
 } 
 
-.box-commander, 
-.box-situer,
-.box-communiquer, 
-.box-eduquer, 
-.box-instruire{
-  display:block;
-}
+
 
  .box-competence{
    position: relative;
@@ -673,7 +691,7 @@ background: #734693;
 /*----------------- section doctrine------------------ */
 /* ---------------------------------------------------------- */
 .section-doctrine {
-  background: linear-gradient(to bottom, #1a4a28, #294062, #d37014);
+  background: linear-gradient(to bottom, #734693 10%,#1a4a28, #294062, #d37014);
   height: 200vh;
   display: flex;
   flex-direction: column;
@@ -735,277 +753,12 @@ background: #734693;
 
 .transition{
   width: 100%;
-  height: 100vh;
+  height: 10vh;
   background: linear-gradient(to bottom, #d37014,#294062)
 }
 
-
-
-
-
-
-/* ---------------------------------------------------------- */
-/*----------------- section parcours------------------ */
-/* ---------------------------------------------------------- */
-.section-parcours {
- background: rgba(41, 64, 98, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  /* height: 12000px;  */
-
-}
-.title-parcours {
-  position: relative;
-  text-transform: uppercase;
-  color: #f1f1f1;
-  padding: 50px 0;
-  font-size: 1.5rem;
-}
-.btn-parcours{
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(180deg);
-  width: 60px;
-  height: 60px;
-  background-color: #294062;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  
-}
-.btn-parcours img{
-  width: 100%;
-  height: 100%;
-}
-
-.container-parcours-competences { /* contient les 5 competences*/
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  padding-right: 22px;
-}
-
-.img-competence img { /* img rondes des  5competences*/
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  
-}
-
-.parcours-title-competence { /*texte sous le badge */
-  margin-top: 50px;
+.footer{
   text-align: center;
-  text-transform: uppercase;
+  background: #2a4161;
+  color: #f1f1f1;
 }
-
-.container-fil-commander,
-.container-fil-situer,
-.container-fil-instruire,
-.container-fil-eduquer,
-.container-fil-communiquer { /* container de chaque competences*/
-  display: flex;
-  flex-direction: row;
-  margin: 150px 0;
-  height: 2500px; /*hauteur du container moyen*/
-}
-
-
-
-
-
-/*partie gauche avec logo + aptitude + fil */
-.box-fil { 
-  display: flex;
-  position: relative;
-}
-
-        .line-container { 
-          position: relative;
-          background: red;
-        }
-        
-        .line { /* c'est la ligne blanche sous le logo */
-          height: 2500px;
-          width: 5px;
-          border-left: 5px solid rgba(255, 255, 255, 0.3);
-          position: absolute;
-          border-radius: 9999px;
-          left: 45px;
-        }
-        
-        .fil-competence{
-          display: flex;
-          flex-direction: row;
-        }
-        .fil-competence img {
-          width: 100px;
-          height: 100px;
-          position: relative;
-          z-index: 10;
-        }
-
-
-/*partie droite avec les modules (3 normalement sauf se situer) */
-.container-box-description-aptitude {
-    display: flex;
-    flex-direction: column;
-    height:2000px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-  .box-description-aptitude { /* contenant des modules*/
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    color: #2a4161;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: center;
-    text-transform: uppercase;
-    padding: 100px 0;
-  }
-  
-      .box-description-aptitude img {
-      width: 50%;
-      border-radius: 50%;
-    }
-
-    /* module */
-    .module{
-      margin: 10px;
-      padding: 10px;
-      border: 2px solid #294062;
-      border-radius: 10px;
-      background: rgba(41, 64, 98, 0.3);
-    }
-
-/* commander */
-.container-competence-commander {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
- 
-  margin-bottom: 50px;
-}
-
-.title-commander {
-  color: #294062;
-}
-.title-commander p:nth-child(2) {
-  font-size: 0.7rem;
-}
-.title-commander p:nth-child(3) {
-  font-size: 0.7rem;
-  text-transform: none;
-  font-weight: 100;
-}
-.conclusionCdt{
-  margin: 10px;
-  text-align: justify;
-  line-height: 2rem;
-}
-
-
-/* modification de Situer*/
- /* .aptitude-situer {
-}
-
-#logoSituerParcours{
-    left: -3px;
-    top: -10px;
-}
-.line-situer{
-    height: 2000px;
-}
-
-.title-aptitude-situer{
-} 
-
-
-.container-competence-seSituer {
-  display: flex;
-  width: 100%;
-  flex-direction: row-reverse;
-}
-.title-seSituer {
-  color: #1a4a28;
-}
-.title-seSituer p:nth-child(2) {
-  font-size: 0.7rem;
-}
-.title-seSituer p:nth-child(3) {
-  font-size: 0.7rem;
-  text-transform: none;
-  font-weight: 100;
-} */
-
-
-/* modification INSTRUIRE */
-/* .container-competence-instruire {
-  display: flex;
-  width: 100%;
-
-}
-.title-instruire {
-  color: #891b0b;
-}
-.title-instruire p:nth-child(2) {
-  font-size: 0.7rem;
-}
-.title-instruire p:nth-child(3) {
-  font-size: 0.7rem;
-  text-transform: none;
-  font-weight: 100;
-} */
-
-
-/* modification EDUQUER */
-
-
-/* .container-competence-eduquer {
-  display: flex;
-  width: 100%;
-  flex-direction: row-reverse;
-}
-.title-eduquer {
-  color: #8d943f;
-}
-.title-eduquer p:nth-child(2) {
-  font-size: 0.7rem;
-}
-.title-eduquer p:nth-child(3) {
-  font-size: 0.7rem;
-  text-transform: none;
-  font-weight: 100;
-} */
-
-
-/* modification COMMUNIQUER */
-
-/* .container-competence-communiquer {
-  display: flex;
-  width: 100%;
-}
-.title-communiquer {
-  color: #734693;
-}
-.title-communiquer p:nth-child(2) {
-  font-size: 0.7rem;
-}
-.title-communiquer p:nth-child(3) {
-  font-size: 0.7rem;
-  text-transform: none;
-  font-weight: 100;
-} */
-
-

@@ -4,9 +4,9 @@ let tableauResultats = [];
 const reponses = [];
 reponses[0] = "c";
 reponses[1] = 'c';
-reponses[2] = 'c';
+reponses[2] = 'b';
 reponses[3] = 'c';
-reponses[4] = 'c';
+reponses[4] = 'b';
 // console.log(reponses);
 
 const emoji = ['✅','🌟','👀','🥺','👎'];
@@ -45,8 +45,8 @@ function afficherResultats(tabCheck) {
     const nbDeFautes = tabCheck.filter(el => el !== true).length
     switch (nbDeFautes) {
         case 0:
-            titreResultats.innerText = " ✅ Bravo, c'est un sans faute ✅"
-            aideResultats.innerText = '';
+            titreResultats.innerText = " ✅ Bravo, c'est un sans faute ✅,  accès accordé à la partie suivante : "
+            aideResultats.innerHTML = "<button class='btnNext'><a id='partie_suivante' href='../parcours.html'>Partie suivante</a></button>";
             noteResultats.innerText = '5/5';
             break
         case 1:
