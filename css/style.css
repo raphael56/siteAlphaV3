@@ -424,12 +424,34 @@ margin-top: 30px;
   font-style: italic;
   font-size: 1rem;
 }
+/* ---------------------------------------------------------- */
+/*------------------------ section parcours------------------------------- */
+/* ---------------------------------------------------------- */
+.section-parcoursLien {
+  background: linear-gradient(to bottom, #f1f1f1, #294062);
+  height: 100vh;
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.title-parcoursLien{
+margin-bottom: 50px;
+}
+#road{
+height: 50%;
+}
+.parcours-man{
+position:relative;
+width: 30px;
+}
 
 /* ---------------------------------------------------------- */
 /*------------------------ section formation------------------------------- */
 /* ---------------------------------------------------------- */
 .section-formation {
-  background-color: #f1f1f1;;
+  background-color: #294062;;
   width: 100vw;
   height: 200vh;
   color: #f1f1f1;
@@ -444,7 +466,7 @@ margin-top: 30px;
   text-align: center;
   padding: 3rem 0;
   font-size: 2rem;
-  color: #294062;
+  color: #f1f1f1;
 }
 
 .box-formation-droite {

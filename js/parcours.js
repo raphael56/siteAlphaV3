@@ -11,48 +11,7 @@ window.addEventListener("load", function () {
 });
 
 
-// ----------------------------------------------------------------------------
-//--------------------navbar vertical----------------------------------
-// ----------------------------------------------------------------------------
-
-function activateNavigation() {
-  const sections = document.querySelectorAll(".section");
-  const navContainer = document.createElement("Nav");
-  const navItems = Array.from(sections).map((section) => {
-    return `
-    <div class="Nav-item" data-for-section="${section.id}">
-    <a href="#${section.id}" class="Nav-link"></a>
-    <span class="Nav-label">${section.dataset.label}</span>
-    </div>
-    `;
-  });
-  
-  navContainer.classList.add("Nav");
-  navContainer.innerHTML = navItems.join("");
-  
-  const observer = new IntersectionObserver(
-    (entries) => {
-      document.querySelectorAll(".Nav-link").forEach((navLink) => {
-        navLink.classList.remove("Nav-link-selected");
-      });
-      
-      const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
-      
-      document
-      .querySelector(
-        `.Nav-item[data-for-section="${visibleSection.target.id}"] .Nav-link`
-        ).classList.add("Nav-link-selected");
-      },
-      { threshold: 0.5 }
-      );
-      
-      sections.forEach((section) => observer.observe(section));
-      
-      document.body.appendChild(navContainer);
-      
-    }
-    activateNavigation();
-    
+// 
     
 
 
@@ -139,9 +98,10 @@ tlcommander
     scrollTrigger: {
       trigger: logoCommanderParcours,
       start: "top 40%",
-    endTrigger: conclusionCdt,
-      end: "180px bottom",
+    endTrigger: ".moduleCdt30",
+      end: "top bottom",
       scrub: true,
+      yoyo: true,
       pin: logoCommanderParcours,
       toggleActions: " reverse ",
     }, scale:1.5          })

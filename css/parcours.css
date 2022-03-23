@@ -34,6 +34,7 @@ body {
   width: 100vw;
   height: 20000px;
   font-family: roboto, sans-serif;
+  background: #333;
  }
 /* ---------------------------------------------------------- */
 /* -----------------------navbar----------------------- */
@@ -54,72 +55,16 @@ body {
   width: 100%;
   text-align: center;
 }
-/* ---------------------------------------------------------- */
-/* -----------------------navbar de côté----------------------- */
-/* ---------------------------------------------------------- */
-.section {
-  min-height: 100vh;
-  padding-top: 70px;
-}
-
-.Nav {
-  all: unset;
-  --nav-gap: 15px;
-  padding: var(--nav-gap);
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.Nav-item {
-  all: unset;
-  align-items: center;
-  display: flex;
-  flex-direction: row-reverse;
-  margin-bottom: var(--nav-gap);
-}
-
-.Nav-link:hover ~ .Nav-label {
-  opacity: 1;
-}
-
-.Nav-label {
-  all: unset;
-  color: #f1f1f1;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.1s;
-  text-shadow: 1px 1px 1px #333;
-}
-
-.Nav-link {
-  all: unset;
-  background: rgba(41, 64, 98, 0.3);
-  border-radius: 50%;
-  height: var(--nav-gap);
-  margin-left: var(--nav-gap);
-  transition: transform 0.1s;
-  width: var(--nav-gap);
-  border:1px solid #f1f1f1f1;
-}
-
-.Nav-link-selected {
-  
-  background: #294062;
-  transform: scale(1.4);
-  border:1px solid #f1f1f1f1;
-}
-
-
 
 
 /* ---------------------------------------------------------- */
 /*----------------- section parcours------------------ */
 /* ---------------------------------------------------------- */
 .section-parcours {
- background: rgba(41, 64, 98, 0.4);
+ background-image:  linear-gradient(rgba(244, 244, 247, 0.5), rgba(0, 0, 0, 0.5)), url(/ressources/images/bg_parcours.jpg);
+ background-position: 40% 70px;
+ background-size: cover;
+ background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,19 +75,20 @@ body {
 }
 .title-parcours {
   position: relative;
+  top: -40%;
   text-transform: uppercase;
-  color: #f1f1f1;
+  color: #294062;
   padding: 50px 0;
   font-size: 1.5rem;
 }
 .btn-parcours{
   position: absolute;
-  top: 70%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(180deg);
-  width: 60px;
-  height: 60px;
-  background-color: #294062;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(41, 64, 98, 0.4);
   border: none;
   cursor: pointer;
   border-radius: 50%;
@@ -161,7 +107,6 @@ body {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  padding-right: 22px;
 }
 
 .img-competence img { /* img rondes des  5competences*/
@@ -185,11 +130,10 @@ body {
   display: flex;
   flex-direction: row;
   margin: 150px 0;
-  height: 2500px; /*hauteur du container moyen*/
+  height: auto; /*hauteur du container moyen*/
+  color: #f1f1f1;
+  
 }
-
-
-
 
 
 /*partie gauche avec logo + aptitude + fil */
@@ -204,7 +148,7 @@ body {
         }
         
         .line { /* c'est la ligne blanche sous le logo */
-          height: 2500px;
+          height: 2000px;
           width: 5px;
           border-left: 5px solid rgba(255, 255, 255, 0.3);
           position: absolute;
@@ -237,7 +181,7 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    color: #2a4161;
+    color: #f1f1f1;
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
@@ -269,8 +213,8 @@ body {
   /* margin-bottom: 50px; */
 }
 
-.title-commander {
-  color: #294062;
+.title-commander:nt {
+  color: #f1f1f1;
 }
 .title-commander p:nth-child(2) {
   font-size: 0.7rem;
