@@ -56,7 +56,19 @@ body {
   text-align: center;
 }
 
-
+.icone-accueil-competences{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  background: #294062;
+z-index: 10;}
+.icone-accueil-competences a img {
+margin: 0 10px;
+  border-radius: 50%;
+  width: 80%;
+  justify-content: center;
+}
 /* ---------------------------------------------------------- */
 /*----------------- section parcours------------------ */
 /* ---------------------------------------------------------- */
