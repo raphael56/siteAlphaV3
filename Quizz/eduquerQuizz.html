@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Quizz</title>
+    <script
+    defer
+    src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+  ></script>
+</head>
+<body>
+
+<h1>Quizz Compétence Commander !</h1>
+<div class="container-global">
+<form class="form-quizz"> 
+    <div class="question-block">
+        <h4>Quelle est le titre du livre bleu ?</h4>
+        <div>
+            <input type="radio" id="Clovis" name="q1" value="a" checked>
+            <label for="autorité">L'exercice de l'autorité dans les armées</label>
+        </div>
+        <div>
+            <input type="radio" id="Lincoln" name="q1" value="b" >
+            <label for="institution">Exercer son autorité au sein de l'institution</label>
+        </div>
+        <div>
+            <input type="radio" id="Bonaparte" name="q1" value="c" >
+            <label for="Bleu">L'exercice du commandement dans l'armée de terre</label>
+        </div>
+
+    </div>
+
+    <div class="question-block">
+        <h4>Quelle qualités ne fait pas partie des 20 qualités au contact ?</h4>
+        <div>
+            <input type="radio" id="date1" name="q2" value="a" checked>
+            <label for="qualité"> loyauté</label>
+        </div>
+        <div>
+            <input type="radio" id="date2" name="q2" value="b" >
+            <label for="qualité2">fermeté</label>
+        </div>
+        <div>
+            <input type="radio" id="date3" name="q2" value="c" >
+            <label for="qualité3">rigueur</label>
+        </div>
+
+    </div>
+
+    <div class="question-block">
+        <h4>Les 6 principes du commandement?</h4>
+        <div>
+            <input type="radio" id="date4" name="q3" value="a" checked>
+            <label for="accronyme1">ECHARP</label>
+        </div>
+        <div>
+            <input type="radio" id="date5" name="q3" value="b" >
+            <label for="accronyme2">JECHEC</label>
+        </div>
+        <div>
+            <input type="radio" id="date6" name="q3" value="c" >
+            <label for="accronyme2">JECHOU</label>
+        </div>
+
+    </div>
+
+    <div class="question-block">
+        <h4>Combien de dimensions pour le chef</h4>
+        <div>
+            <input type="radio" id="six" name="q4" value="a" checked>
+            <label for="R1">6</label>
+        </div>
+        <div>
+            <input type="radio" id="quatre" name="q4" value="b" >
+            <label for="R2">4</label>
+        </div>
+        <div>
+            <input type="radio" id="trois" name="q4" value="c" >
+            <label for="R3">3</label>
+        </div>
+
+    </div>
+
+    <div class="question-block">
+        <h4>DLC?</h4>
+        <div>
+            <input type="radio" id="m1" name="q5" value="a" checked>
+            <label for="DLC1">Date limite de consommation</label>
+        </div>
+        <div>
+            <input type="radio" id="m2" name="q5" value="b" >
+            <label for="DLC2">Discipline librement consentie</label>
+        </div>
+        <div>
+            <input type="radio" id="m3" name="q5" value="c" >
+            <label for="DLC3">Déploiement de la ligne de contact</label>
+        </div>
+
+    </div>
+    
+<button type="submit">Validez vos choix !</button>    
+</form>
+<div class="resultats">
+    <h2> cliquez sur validez pour voir les résultats</h2>
+    <p class="aide"></p>
+    <p class="note"></p>
+</div>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
