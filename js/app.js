@@ -339,6 +339,15 @@ const svgRoad = document.getElementById("road")
 const parcoursMan = document.getElementById("parcoursMan")
 const btnParcourslien = document.querySelector('.btn_parcoursLien')
 
+var t7 = gsap.timeline({});
+
+t7.to(parcoursMan, {motionPath:{
+  path:".theLine",
+  align:".theLine",
+  alignOrigin:[0.5, 0.5],
+}, duration:4}, 0)
+
+
 // ----------------------------------------------------------------------------
 // ------------------------------------section formation-----------------------
 // ----------------------------------------------------------------------------
