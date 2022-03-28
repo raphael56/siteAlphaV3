@@ -386,6 +386,17 @@ t7
     opacity: 1, 
     fill: "#294062",
   })
+  .fromTo("#commanderParcours", {opacity:0},{
+    scrollTrigger: {
+      trigger: parcoursMan,
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 0.3,
+  })
   .fromTo("#parcoursCommanderLogo", {opacity:0},{
     scrollTrigger: {
       trigger: parcoursMan,
@@ -419,6 +430,17 @@ t7
     },
     opacity: 1, 
     fill: "#1a4a28",
+  })
+  .fromTo("#situerParcours", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball01",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 0.3,
   })
   .fromTo("#parcoursSituerLogo", {opacity:0},{
     scrollTrigger: {
@@ -454,6 +476,17 @@ t7
     opacity: 1, 
     fill: "#8d943f",
   })
+  .fromTo("#eduquerParcours", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball02",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 0.3, 
+  })
   .fromTo("#parcoursEduquerLogo", {opacity:0},{
     scrollTrigger: {
       trigger: ".ball02",
@@ -487,6 +520,17 @@ t7
     },
     opacity: 1, 
     fill: "#891b0b",
+  })
+  .fromTo("#instruireParcours", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball03",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 0.3,
   })
   .fromTo("#parcoursInstruireLogo", {opacity:0},{
     scrollTrigger: {
@@ -522,6 +566,17 @@ t7
     opacity: 1, 
     fill: "#734693",
   })
+  .fromTo("#communiquerParcours", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball04",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 0.3,
+  })
   .fromTo("#parcoursCommuniquerLogo", {opacity:0},{
     scrollTrigger: {
       trigger: ".ball04",
@@ -544,41 +599,18 @@ t7
     },
     stroke:"#734693"
   })
-  // .fromTo(".theLine", {stroke:"1a4a28"},{
-  //   scrollTrigger: {
-  //     trigger: ".ball03",
-  //     start: "-=200px 50%",
-  //     end: "+=100px 50%",
-  //     scrub: true,
-  //     toggleActions: "restart pause reverse resume",
-  //     immediateRender: false,
-  //   },
-  //   stroke:"#8d943f"
-  // })
-  // .fromTo(".theLine", {stroke:"8d943f"},{
-  //   scrollTrigger: {
-  //     trigger: ".ball04",
-  //     start: "-=200px 50%",
-  //     end: "+=100px 50%",
-  //     scrub: true,
-  //     toggleActions: "restart pause reverse resume",
-  //     immediateRender: false,
-  //   },
-  //   stroke:"#891b0b"
-  // })
-  // .fromTo(".theLine", {stroke:"891b0b"},{
-  //   scrollTrigger: {
-  //     trigger: ".ball05",
-  //     start: "-=200px 50%",
-  //     end: "+=100px 50%",
-  //     scrub: true,
-
-  //     toggleActions: "restart pause reverse resume",
-  //     immediateRender: false,
-  //   },
-  //   stroke:"#734693"
-  // })
-
+  .fromTo(".btn-parcoursLien", {opacity: 0},{
+    scrollTrigger: {
+      trigger: ".ball05",
+      start: "top 15%",
+      end: "500px 70%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },delay:10, 
+    opacity: 1
+  })
+  
 // ----------------------------------------------------------------------------
 // ------------------------------------section formation-----------------------
 // ----------------------------------------------------------------------------
@@ -743,106 +775,20 @@ const boxCommuniquer = document.querySelector(".box-communiquer")
 
 var tcompetence = gsap.timeline({ paused: true });
 
-tcompetence
-  .fromTo(boxTitle, {display:"none" }, {
-     scrollTrigger: {
-      trigger: pedagogie,
-      start: "top top",
-      end: "300px",
-      scrub: true,
-      // toggleActions: "restart pause reverse resume",
-      // markers:true,
-    },
-    display:"block",
-  }
-  )
-  .fromTo(boxCommander, {display:"none" }, {
-     scrollTrigger: {
-      trigger: pedagogie,
-      start: "top top",
-      end: "300px",
-      scrub: true,
-      // toggleActions: "restart pause reverse resume",
-      // markers:true,
-    },
-    display:"block",
-  }
-  )
-  .fromTo(boxCommander, {display:"block" }, {
-    scrollTrigger: {
-      trigger: pedagogie,
-      start: "-10% 30%",
-      scrub: true,
-      // toggleActions: "restart pause reverse resume",
-      // markers:true,
-    },
-    display:"block",
-  }
-  )
-  .fromTo(boxSituer, {display:"none" }, {
-     scrollTrigger: {
-      trigger: competences,
-      start: "-10% 30%",
-      end: "30px",
-      scrub: true,
-      // toggleActions: "restart pause reverse resume",
-      // markers:true,
-    },
-    display:"block",
-  }
-  )
-  .fromTo(boxEduquer, {display:"none" }, {
-     scrollTrigger: {
-      trigger: competences,
-      start: "-10% 30%",
-      end: "30px",
-      scrub: true,
-      // toggleActions: "restart pause reverse resume",
-      // markers:true,
-    },
-    display:"block",
-  }
-  )
-  .fromTo(boxInstruire, {display:"none" }, {
-     scrollTrigger: {
-      trigger: competences,
-      start: "-10% 30%",
-      end: "30px",
-      scrub: true,
-      // toggleActions: "restart pause reverse resume",
-      // markers:true,
-    },
-    display:"block",
-  }
-  )
-  .fromTo(boxCommuniquer, {display:"none" }, {
-     scrollTrigger: {
-      trigger: competences,
-      start: "-10% 30%",
-      end: "30px",
-      scrub: true,
-      // toggleActions: "restart pause reverse resume",
-      // markers:true,
-    },
-    display:"block",
-  }
-  )
-  
-
 
 
 var t6 = gsap.timeline({ paused: true });
 
 t6
-.fromTo(competences,{background: "#5c7590"}, {
+.fromTo(competences,{ backgroundColor: "#5c7590",}, {
     scrollTrigger: {
       trigger: competences,
-    start: "10% 10%",
-      end: "+=500px",
+      start: "top 10%",
+      end: "bottom 50%",
     scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    background: "#5c7590",
+    backgroundColor: "#294062",
   })
     .fromTo(
   acquisition,
@@ -853,6 +799,7 @@ t6
       start: "30% 60%",
       end: "+=30%",
       scrub: true,
+    
       toggleActions: "restart pause reverse resume",
     },
     opacity: 1,
@@ -874,28 +821,21 @@ t6
     
     }
 )
-.to(competences, {
+//commander
+.fromTo(
+  iconeCommander,
+  { x: 50, opacity: 0 },
+  {
     scrollTrigger: {
-      trigger: competences,
-      start: "top center",
-        scrub: true,
+      trigger: iconeCommander,
+      start: "top 60%",
+      end: "+=200",
+      scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    backgroundColor: "#294062",})
-  .fromTo(
-    iconeCommander,
-    { x: -100, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: acquisition,
-        start: "top 60%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
+    x: 0,
+    opacity: 1,
+  }
 )
   .fromTo(
     competenceCommander,
@@ -912,167 +852,280 @@ t6
       opacity: 1,
     }
 )
-.to(competences, {
+  .fromTo(
+    "#box-1-affichage",
+    { x: -100, opacity: 0 },
+    {
+      scrollTrigger: {
+        trigger: iconeCommander,
+        start: "top 60%",
+        end: "+=200",
+            scrub: true,
+        toggleActions: "restart pause reverse resume",
+      },
+      x: 0,
+      opacity: 1,
+    }
+)
+  .fromTo(
+    ".box-1",
+    { x: -100, opacity: 0 },
+    {
+      scrollTrigger: {
+        trigger: iconeCommander,
+        start: "top 60%",
+        end: "+=200",
+            scrub: true,
+        toggleActions: "restart pause reverse resume",
+      },
+      x: 0,
+      opacity: 1,
+    }
+)
+//situer
+.fromTo(
+  iconeSituer,
+  { x: 50, opacity: 0 },
+  {
     scrollTrigger: {
-      trigger: competenceCommander,
-      start: "-100px top",
-      end: "+=500",
+      trigger: iconeSituer,
+      start: "top 60%",
+      end: "+=200",
       scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    backgroundColor: "#1a4a28",
-  })
-  .fromTo(
-    iconeSituer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceCommander,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
+    x: 0,
+    opacity: 1,
+  }
 )
-  .fromTo(
-    competenceSituer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeSituer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-.to(competences, {
+.fromTo(
+  competenceSituer,
+  { x: -100, opacity: 0 },
+  {
     scrollTrigger: {
-      trigger: competenceSituer,
-      start: "-100px top",
-      end: "+=500",
+      trigger: iconeSituer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+.fromTo(
+  "#box-2-affichage",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeSituer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+.fromTo(
+  ".box-2",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeSituer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+//eduquer
+.fromTo(
+  iconeEduquer,
+  { x: 50, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeEduquer,
+      start: "top 60%",
+      end: "+=200",
       scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    backgroundColor: "#8d943f",
-  })
-  .fromTo(
-    iconeEduquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceSituer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
+    x: 0,
+    opacity: 1,
+  }
 )
-  .fromTo(
-    competenceEduquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeEduquer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-.to(competences, {
+.fromTo(
+  competenceEduquer,
+  { x: -100, opacity: 0 },
+  {
     scrollTrigger: {
-      trigger: competenceEduquer,
-      start: "-100px top",
-      end: "+=500",
+      trigger: iconeEduquer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+.fromTo(
+  "#box-3-affichage",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeEduquer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+.fromTo(
+  ".box-3",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeEduquer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+//instruire
+.fromTo(
+  iconeInstruire,
+  { x: 50, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeInstruire,
+      start: "top 60%",
+      end: "+=200",
       scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    backgroundColor: "#891b0b",
-  })
-  .fromTo(
-    iconeInstruire,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceEduquer,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
+    x: 0,
+    opacity: 1,
+  }
 )
-  .fromTo(
-    competenceInstruire,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeInstruire,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
-)
-.to(competences, {
+.fromTo(
+  competenceInstruire,
+  { x: -100, opacity: 0 },
+  {
     scrollTrigger: {
-      trigger: competenceInstruire,
-      start: "-100px top",
-      end: "+=1000",
-    scrub: true,
+      trigger: iconeInstruire,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    backgroundColor: "#734693",
-  })
-  .fromTo(
-    iconeCommuniquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: competenceInstruire,
-        start: "top 50%",
-        end: "+=200",
-            scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
+    x: 0,
+    opacity: 1,
+  }
 )
-  .fromTo(
-    competenceCommuniquer,
-    { x: -50, opacity: 0 },
-    {
-      scrollTrigger: {
-        trigger: iconeCommuniquer,
-        start: "top 50%",
-        end: "+=500",
-        scrub: true,
-        toggleActions: "restart pause reverse resume",
-      },
-      x: 0,
-      opacity: 1,
-    }
+.fromTo(
+  "#box-4-affichage",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeInstruire,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
 )
-    
+.fromTo(
+  ".box-4",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeInstruire,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+//communiquer
+.fromTo(
+  iconeCommuniquer,
+  { x: 50, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeCommuniquer,
+      start: "top 60%",
+      end: "+=200",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+.fromTo(
+  competenceCommuniquer,
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeCommuniquer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+.fromTo(
+  "#box-5-affichage",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeCommuniquer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
+.fromTo(
+  ".box-5",
+  { x: -100, opacity: 0 },
+  {
+    scrollTrigger: {
+      trigger: iconeCommuniquer,
+      start: "top 60%",
+      end: "+=200",
+          scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    x: 0,
+    opacity: 1,
+  }
+)
     
     
     

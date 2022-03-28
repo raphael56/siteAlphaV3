@@ -445,9 +445,45 @@ margin-bottom: 50px;
   border-radius: 9999px;
   padding:10px 20px;
   margin-top: 100px;
+  animation: pulsate 3s infinite ease-in-out;
+}
+.btn-parcoursLien:hover{
+  font-size: 1.1rem;
+  background: #290624;
 }
 
+/* @-webkit-keyframes pulsate {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(75, 112, 235, 0.4);
+    
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+} */
 
+@keyframes pulsate {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(52, 135, 184, 0.4);
+    box-shadow: 0 0 0 0 rgba(63, 121, 209, 0.4);
+    color: #f1f1f1;
+  }
+  50% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      color: #294062;
+     
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      color: #f1f1f1;
+     
+  }
+}
 
 svg {
   /* background: #000; */
@@ -479,6 +515,7 @@ top: 7%;
 .parcoursLogo{
   height: 50px;
   position: relative;
+  z-index: 10;;
 }
 #parcoursCommanderLogo{
   position:absolute;
@@ -513,6 +550,14 @@ top: 7%;
   left: 65%;
   border-radius: 50%;
   
+}
+.container-competences-parcours{
+  position: absolute;
+  top: 20.5%;
+  font-size: 3rem;
+}
+.container-competences-parcours p{
+  margin-bottom: 50px
 }
 /* ---------------------------------------------------------- */
 /*------------------------ section formation------------------------------- */
