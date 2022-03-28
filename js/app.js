@@ -341,12 +341,243 @@ const btnParcourslien = document.querySelector('.btn_parcoursLien')
 
 var t7 = gsap.timeline({});
 
-t7.to(parcoursMan, {motionPath:{
-  path:".theLine",
-  align:".theLine",
-  alignOrigin:[0.5, 0.5],
-}, duration:4}, 0)
 
+t7
+.fromTo("#parcoursTitle", {opacity:0},{
+  scrollTrigger: {
+    trigger: "#parcoursTitle",
+    start: "-100px 90%",
+    end: "+=100px 50%",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+    immediateRender: false,
+  },
+  opacity: 1, 
+  color: "#294062",
+})
+  .to(parcoursMan, {
+    scrollTrigger: {
+  trigger: parcoursMan,
+  start: "200px 70%",
+  end: "+=700px 50%",
+  scrub: true,
+  toggleActions: "restart pause reverse resume",
+  immediateRender: false,
+},
+  duration: 5, 
+  paused: true,
+  ease: "none",
+  motionPath: {
+    path: ".theLine",
+    align: ".theLine",
+    // autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  }    
+}).pause(0.001)
+  .fromTo(".ball01", {opacity:0, fill:"white"},{
+    scrollTrigger: {
+      trigger: parcoursMan,
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+    fill: "#294062",
+  })
+  .fromTo("#parcoursCommanderLogo", {opacity:0},{
+    scrollTrigger: {
+      trigger: parcoursMan,
+      start: "top 45%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+  })
+  .fromTo(".theLine", {stroke:"white"},{
+    scrollTrigger: {
+      trigger: ".ball01",
+      start: "-=200px 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    stroke:"#294062"
+  })
+  .fromTo(".ball02", {opacity:0, fill:"white"},{
+    scrollTrigger: {
+      trigger: ".ball01",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+    fill: "#1a4a28",
+  })
+  .fromTo("#parcoursSituerLogo", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball01",
+      start: "top 45%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+  })
+  .fromTo(".theLine", {stroke:"#294062"},{
+    scrollTrigger: {
+      trigger: ".ball01",
+      start: "top 40%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    stroke:"#1a4a28"
+  })
+  .fromTo(".ball03", {opacity:0, fill:"white"},{
+    scrollTrigger: {
+      trigger: ".ball02",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+    fill: "#8d943f",
+  })
+  .fromTo("#parcoursEduquerLogo", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball02",
+      start: "top 45%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+  })
+  .fromTo(".theLine", {stroke:"#1a4a28"},{
+    scrollTrigger: {
+      trigger: ".ball02",
+      start: "top 40%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    stroke:"#8d943f"
+  })
+  .fromTo(".ball04", {opacity:0, fill:"white"},{
+    scrollTrigger: {
+      trigger: ".ball03",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+    fill: "#891b0b",
+  })
+  .fromTo("#parcoursInstruireLogo", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball03",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+  })
+  .fromTo(".theLine", {stroke:"#8d943f"},{
+    scrollTrigger: {
+      trigger: ".ball03",
+      start: "top 40%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    stroke:"#891b0b"
+  })
+  .fromTo(".ball05", {opacity:0, fill:"white"},{
+    scrollTrigger: {
+      trigger: ".ball04",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+    fill: "#734693",
+  })
+  .fromTo("#parcoursCommuniquerLogo", {opacity:0},{
+    scrollTrigger: {
+      trigger: ".ball04",
+      start: "top 50%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    opacity: 1, 
+  })
+  .fromTo(".theLine", {stroke:"#891b0b"},{
+    scrollTrigger: {
+      trigger: ".ball04",
+      start: "top 40%",
+      end: "+=100px 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender: false,
+    },
+    stroke:"#734693"
+  })
+  // .fromTo(".theLine", {stroke:"1a4a28"},{
+  //   scrollTrigger: {
+  //     trigger: ".ball03",
+  //     start: "-=200px 50%",
+  //     end: "+=100px 50%",
+  //     scrub: true,
+  //     toggleActions: "restart pause reverse resume",
+  //     immediateRender: false,
+  //   },
+  //   stroke:"#8d943f"
+  // })
+  // .fromTo(".theLine", {stroke:"8d943f"},{
+  //   scrollTrigger: {
+  //     trigger: ".ball04",
+  //     start: "-=200px 50%",
+  //     end: "+=100px 50%",
+  //     scrub: true,
+  //     toggleActions: "restart pause reverse resume",
+  //     immediateRender: false,
+  //   },
+  //   stroke:"#891b0b"
+  // })
+  // .fromTo(".theLine", {stroke:"891b0b"},{
+  //   scrollTrigger: {
+  //     trigger: ".ball05",
+  //     start: "-=200px 50%",
+  //     end: "+=100px 50%",
+  //     scrub: true,
+
+  //     toggleActions: "restart pause reverse resume",
+  //     immediateRender: false,
+  //   },
+  //   stroke:"#734693"
+  // })
 
 // ----------------------------------------------------------------------------
 // ------------------------------------section formation-----------------------
