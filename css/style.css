@@ -444,11 +444,10 @@ margin-bottom: 50px;
 .btn-parcoursLien{
   border-radius: 9999px;
   padding:10px 20px;
+  margin-top: 100px;
 }
 
-.header-section {
-  /* margin: 10px auto 0; */
-}
+
 
 svg {
   /* background: #000; */
@@ -459,7 +458,7 @@ svg {
 
 .ball {
   fill: white;
-  visibility: hidden;
+  /* visibility:hidden; */
 }
 
 .line {
@@ -467,22 +466,54 @@ svg {
   stroke: white;
   stroke-width: 2px;
 }
-text {
-  fill: white;
-  font-size: 15px;
-  font-family: "Signika Negative", sans-serif; 
-  visibility: hidden;
-}
+
 
 
 .parcours-man{
 position:absolute;
-width: 50px;
-left: 0%;
-top: 0%;
+width: 70px;
+left: -6%;
+top: 7%;
 
 }
-
+.parcoursLogo{
+  height: 50px;
+  position: relative;
+}
+#parcoursCommanderLogo{
+  position:absolute;
+  top:15%;
+  left: 65%;
+  border-radius: 50%;
+  
+}
+#parcoursSituerLogo{
+  position:absolute;
+  top:23.7%;
+  left: 65%;
+  border-radius: 50%;
+}
+#parcoursEduquerLogo{
+  position:absolute;
+  top:32.6%;
+  left: 65%;
+  border-radius: 50%;
+  
+}
+#parcoursInstruireLogo{
+  position:absolute;
+  top:41.2%;
+  left: 65%;
+  border-radius: 50%;
+  
+}
+#parcoursCommuniquerLogo{
+  position:absolute;
+  top:50%;
+  left: 65%;
+  border-radius: 50%;
+  
+}
 /* ---------------------------------------------------------- */
 /*------------------------ section formation------------------------------- */
 /* ---------------------------------------------------------- */
@@ -646,8 +677,6 @@ top: 0%;
 }
 
  .box2-5competences {
-   /* margin-top: 20px;
-   padding: 10px; */
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -655,23 +684,23 @@ top: 0%;
    margin: 0 auto;
    text-align: center;
    font-size: 2rem;
-   height: 80vh;
+   height: 100vh;
   }  
-  
+
   .box2-5competences.color-commander {
-    background: linear-gradient(to bottom, #294062, #5c82b6);
+    background: linear-gradient(to bottom ,#294062, #5c82b6 , #1a4a28);
   }
   .box2-5competences.color-situer {
-    background: linear-gradient(to bottom , #5c82b6 10%, #1a4a28);
+    background: linear-gradient(to bottom , #1a4a28 5%, #8d943f);
   }
   .box2-5competences.color-eduquer {
-    background: linear-gradient(to bottom , #1a4a28 10%, #8d943f);
+    background: linear-gradient(to bottom , #8d943f 5%, #891b0b);
   }
   .box2-5competences.color-instruire {
-    background: linear-gradient(to bottom , #8d943f 10%, #891b0b);
+    background: linear-gradient(to bottom , #891b0b 5%, #c97365, #734693);
   }
   .box2-5competences.color-communiquer {
-    background: linear-gradient(to bottom , #891b0b 10%, #734693);
+    background: linear-gradient(to bottom , #734693, #c1a9d3, #734693);
   }
   .box2-5competences div img {
     width: 30%;
@@ -730,6 +759,32 @@ background: #8d943f;
 .box-communiquer .btnBoxCompetence {
 background: #734693;
 }
+/* gestion des 5 icones servant de menu */
+.menu-5competences{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+}
+.menu-5competences a img{
+  height: 100%;
+
+}
+
+
+
+/* permet d'afficher correctement dans l'écran au clic des a */
+#box-commander ,
+#box-commniquer ,
+#box-instruire ,
+#box-eduquer ,
+#box-situer
+{
+  padding-top: 100px;
+}
+
+
+
 .commander,
 .situer,
 .eduquer, 

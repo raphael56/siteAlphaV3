@@ -143,6 +143,21 @@
 
 <section class=" section container-fluid section-parcoursLien" id="parcoursLien" data-label="Parcours">
 	<div class=" title-parcoursLien"><h3 id="parcoursTitle">Suivez le parcours</h3></div>
+	<a href="/parcours.html#situer">
+		<img id="parcoursSituerLogo" src="./ressources/images/se_situer_br.png" alt="icone-situer" class="parcoursLogo">
+	</a>
+	<a href="/parcours.html#communiquer">
+		<img id="parcoursCommuniquerLogo" src="./ressources/images/communiquer-518x543.png" alt="icone-communiquer" class=" parcoursLogo">
+	</a>
+	<a href="/parcours.html#commander">
+		<img id="parcoursCommanderLogo" src="./ressources/images/commander-518x543.png" alt="icone-commander" class="parcoursLogo ">
+	</a>
+	<a href="/parcours.html#eduquer">
+		<img id="parcoursEduquerLogo" src="./ressources/images/eduquer-518x543.png" alt="icone-éduquer" class=" parcoursLogo">
+	</a>
+	<a href="/parcours.html#instruire">
+		<img id="parcoursInstruireLogo" src="./ressources/images/instruire-icone-518x543.png" alt="icone-instruire" class=" parcoursLogo">
+	</a>
 	<svg id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
 		<path class="line01 line" d="M 10 200  600 200" ></path>
 		<path class="line02 line" d="M 10 400  600 400" ></path>
@@ -161,28 +176,32 @@
 		
 		
 		
-		<circle class="ball ball01" r="20" cx="50" cy="100"></circle>
-		<circle class="ball ball02" r="20" cx="278" cy="201"></circle>
-		<circle class="ball ball03" r="20" cx="327" cy="401"></circle>
-		<circle class="ball ball04" r="20" cx="203" cy="601"></circle>
-	  
+		<circle class="ball ball01" r="20" cx="278" cy="201"></circle>
+		<circle class="ball ball02" r="20" cx="327" cy="401"></circle>
+		<circle class="ball ball03" r="20" cx="203" cy="601"></circle>
+		<circle class="ball ball04" r="20" cx="130" cy="801"></circle>
+		<circle class="ball ball05" r="20" cx="300" cy="1001"></circle>
+			  
 	  </svg>
 	  
 	<img src="./ressources/images/logo-cdt-propre-518x543.png" alt="personnage commander" class="parcours-man" id="parcoursMan">
 	<a href="/parcours.html">
-		<button class="btn-parcoursLien">Parcours</button>
+		<button class="btn-parcoursLien"> Voir le Parcours</button>
 	</a>
+
+
+
 </section>
 <!------------------------------------------------------------------------------>
 <!--------------------------------- section formation ---------------------------->
 <!------------------------------------------------------------------------------>
 
 <section class=" section container-fluid section-formation" id="formation" data-label="Formation">
-	<div class="row title-formation"><h3 id="appuis">vos appuis</h3></div>
+	<div class="row title-formation"><h3 id="appuis">incarnez à travers</h3></div>
 
 <div class="col box-formation-gauche">
-<div class=" line-formation" id="phi"><img src="ressources/images/phi.png" alt="phi grec"><p>une philosophie de pensée</p></div>
-<div class=" line-formation" id="roue"><img src="ressources/images/expert.png" alt="roue crantée" ><p>une expertise éprouvée</p></div>
+<div class=" line-formation" id="phi"><img src="ressources/images/phi.png" alt="phi grec"><p class="text-center" >une philosophie <br> de pensée</p></div>
+<div class=" line-formation" id="roue"><img src="ressources/images/expert.png" alt="roue crantée" ><p class="text-center"> un apprentissage <br> itératif</p></div>
 <div class=" line-formation" id="peda"><img src="ressources/images/peda.png" alt="icone étudiant" ><p>une pédagogie active</p></div>
 </div>
 
@@ -248,13 +267,31 @@
 			5 compétences à acquérir
 		</p>
 	</div>
+	<div class="menu-5competences">
+		<a href="#box-commander">
+			<img src="./ressources/images/logo-cdt-propre-518x543.png" alt="icone-commander" class="img-fluid " id="menuCommander">
+		</a>
+		<a href="#box-situer">
+			<img src="./ressources/images/logo-sit-propre-518x543.png" alt="icone-situer" class="img-fluid " id="menuSituer">
+		</a>
+		<a href="#box-eduquer">
+			<img src="./ressources/images/logo-eduquer-518x543.png" alt="icone-commander" class="img-fluid " id="menuEduquer">
+		</a>
+		<a href="#box-instruire">
+			<img src="./ressources/images/instruire-logo-518x543.png" alt="icone-commander" class="img-fluid " id="menuInstre">
+		</a>
+		<a href="#box-communiquer">
+			<img src="./ressources/images/logo-com-propre-518x543.png" alt="icone-commander" class="img-fluid " id="menuCommniquer">
+		</a>
+		
+	</div>
 	
 	
 </section>
 <!------------------------------------------------------------------------------>
 <!--------------------------------- commander------ ---------------------------->
 <!------------------------------------------------------------------------------>
-<div class="box-commander justify-content-center align-items-center text-uppercase box2-5competences color-commander">
+<div class="box-commander justify-content-center align-items-center text-uppercase box2-5competences color-commander" id="box-commander">
 	<div>
 		<img src="./ressources/images/logo-cdt-propre-518x543.png" alt="icone-commander" class="img-fluid " id="iconeCommander">
 		<p class="icone-txt" id="competence-commander">commander</p>
@@ -274,7 +311,7 @@
 <!------------------------------------------------------------------------------>
 <!--------------------------------- se situer------ ---------------------------->
 <!------------------------------------------------------------------------------>
-<div class="box-situer justify-content-center align-items-center text-uppercase box2-5competences color-situer">
+<div class="box-situer justify-content-center align-items-center text-uppercase box2-5competences color-situer" id="box-situer">
 	<div>
 		<img src="./ressources/images/logo-sit-propre-518x543_gc.png" alt="icone-situer" class="img-fluid " id="iconeSituer">
 		<p class="icone-txt" id="competence-situer">se situer</p>
@@ -291,7 +328,7 @@
 <!------------------------------------------------------------------------------>
 <!--------------------------------- eduquer------ ---------------------------->
 <!------------------------------------------------------------------------------>
-<div class="box-eduquer justify-content-center align-items-center text-uppercase box2-5competences color-eduquer">
+<div class="box-eduquer justify-content-center align-items-center text-uppercase box2-5competences color-eduquer" id="box-eduquer">
 	<div>
 		<img src="./ressources/images/logo-eduquer-518x543_gd@2x.png" alt="icone-eduquer" class="img-fluid " id="iconeEduquer">
 		<p class="icone-txt" id="competence-eduquer">eduquer</p>
@@ -310,7 +347,7 @@
 <!------------------------------------------------------------------------------>
 <!--------------------------------- instruire------ ---------------------------->
 <!------------------------------------------------------------------------------>
-<div class="box-instruire justify-content-center align-items-center text-uppercase box2-5competences color-instruire">
+<div class="box-instruire justify-content-center align-items-center text-uppercase box2-5competences color-instruire" id="box-instruire">
 	<div>
 		<img src="./ressources/images/instruire-logo-518x543.png" alt="icone-instruire" class="img-fluid " id="iconeInstruire">
 		<p class="icone-txt" id="competence-instruire">instruire</p>
@@ -329,7 +366,7 @@
 <!--------------------------------- communiquer------ ---------------------------->
 <!------------------------------------------------------------------------------>
 
-<div class="box-communiquer justify-content-center align-items-center text-uppercase box2-5competences color-communiquer">
+<div class="box-communiquer justify-content-center align-items-center text-uppercase box2-5competences color-communiquer" id="box-communiquer">
 	<div>
 		<img src="./ressources/images/logo-com-propre-518x543.png" alt="icone-communiquer" class="img-fluid " id="iconeCommuniquer">
 		<p class="icone-txt" id="competence-communiquer">communiquer</p>
@@ -357,12 +394,20 @@
 	<div class=" container-doctrine-droite">
 		<h3 id="culture">une culture forte en couleurs</h3>
 		<div class="container-imgs-doctrine">
-			<div class="container-img-doctrine livreBleu"><img src="ressources/images/img-livreBleu.png" alt="" class="img-fluid"></div>
-		<div class="container-img-doctrine livreKaki"><img src="ressources/images/img-livreKaki.png" alt="" class="img-fluid"></div>
-		<div class="container-img-doctrine livreVert"><img src="ressources/images/img-livreVert.png" alt="" class="img-fluid"></div>
-		<div class="container-img-doctrine livreOrange"><img src="ressources/images/img-livreOrange.png" alt="" class="img-fluid"></div>
+			<a href="/ressources/fichier/Exercice_commandement_dans_larmee_de_terre.pdf" download="ExerciceDucommandementDansL_ArmeeDeTerre.pdf">
+				<div class="container-img-doctrine livreBleu"><img src="ressources/images/img-livreBleu.png" alt="" class="img-fluid"></div>
+			</a>
+			<a href="/ressources/fichier/Aux-sourcesdelespritguerrier.pdf" download="AuxSourcesDeL_EspritGuerrier.pdf">
+				<div class="container-img-doctrine livreKaki"><img src="ressources/images/img-livreKaki.png" alt="" class="img-fluid"></div>
+			</a>
+			<a href="/ressources/fichier/Lalliance-dusensetdelaforce.pdf" download="AllianceDuSensEtDeLaForce.pdf">
+				<div class="container-img-doctrine livreVert"><img src="ressources/images/img-livreVert.png" alt="" class="img-fluid"></div>
+			</a>
+			<a href="/ressources/fichier/Honneur-courageetdignite.pdf" download="HonneurCourageEtDignite.pdf">
+				<div class="container-img-doctrine livreOrange"><img src="ressources/images/img-livreOrange.png" alt="" class="img-fluid"></div>
+			</a>
 		</div>
-		
+
 	</div>
 
 </section>
