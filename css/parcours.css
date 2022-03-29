@@ -75,7 +75,7 @@ margin: 0 10px;
 
 /* général */
 .section-parcours {
- background-image:  linear-gradient(rgba(244, 244, 247, 0.5), rgba(0, 0, 0, 0.5)), url(/ressources/images/bg_parcours.jpg);
+ background-image:  linear-gradient(rgba(244, 244, 247, 0.5), rgba(0, 0, 0, 0.5)), url(../ressources/images/bg_parcours.jpg);
  background-position: 40% 70px;
  background-size: cover;
  background-repeat: no-repeat;

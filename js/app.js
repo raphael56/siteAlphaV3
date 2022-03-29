@@ -65,19 +65,20 @@ window.addEventListener("load", () => {
   t1.play();
 });
 
-t0
-.to(iconeCommanderAccueil, {
-  scrollTrigger: {
-    trigger: incarnation,
-    start: "top top",
-    end: "500",
-    scrub: true,
+// t0
+// .to(iconeCommanderAccueil, {
+//   scrollTrigger: {
+//     trigger: incarnation,
+//     start: "top top",
+//     end: "500",
+//     scrub: true,
   
-    toggleActions: "restart pause reverse resume",
-  },
-  y: 350,
-  scale: 0.7,
-})
+//     toggleActions: "restart pause reverse resume",
+//   },
+//   y: 350,
+//   scale: 0.7,
+//   zIndex:999,
+// })
 
 t1
 .from(titre1, { y: -400, ease: "bounce", duration: 2, scale: 2 })
@@ -606,9 +607,10 @@ t7
       end: "500px 70%",
       scrub: true,
       toggleActions: "restart pause reverse resume",
-      immediateRender: false,
+      immediateRender: true,
     },delay:10, 
-    opacity: 1
+    opacity: 1, 
+    backgroundColor:"#294062"
   })
   
 // ----------------------------------------------------------------------------
@@ -632,19 +634,6 @@ t4.to(formation, {
   },
   background: "linear-gradient(to bottom, #294062, #5c7590 )",
 })
-  .to(appuis, {
-    scrollTrigger: {
-      trigger: formation,
-      start: "1200 30%",
-      end: "+=300",
-      scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    color: "#f1f1f1",
-    fontWeight: "900",
-    y: 50,
-    opacity: 0.8,
-  })
   .fromTo(
     phi,
     { x: -50, y: 200, color: "#294062", scale: 0.5  },
@@ -772,7 +761,7 @@ const boxSituer = document.querySelector(".box-situer")
 const boxEduquer = document.querySelector(".box-eduquer")
 const boxInstruire = document.querySelector(".box-instruire")
 const boxCommuniquer = document.querySelector(".box-communiquer")
-
+const menu5Competences = document.querySelector(".menu-5competences")
 var tcompetence = gsap.timeline({ paused: true });
 
 
@@ -780,6 +769,45 @@ var tcompetence = gsap.timeline({ paused: true });
 var t6 = gsap.timeline({ paused: true });
 
 t6
+  .to(menu5Competences, {
+    scrollTrigger: {
+      trigger: menu5Competences,
+      start: "top 10%",
+      end: "bottom 50%",
+      scrub: true,
+      toggleActions: "restart pause reverse resume",
+  },
+    position:"fixed",
+    marginTop: 70,
+    zIndex: 100,
+    top: 0,
+    backgroundColor:"rgba(41, 64, 98, 0.4)",
+  })
+  .to(menu5Competences, {
+    scrollTrigger: {
+      trigger: ".box-5",
+      start: "top 10%",
+      end: "top 20%",
+      scrub: true,
+      markers:true,
+      toggleActions: "restart pause reverse resume",
+      immediateRender:true,
+  },
+    position:"relative",
+    // visibility: "hidden",
+    zIndex: 1,
+    backgroundColor:"none",
+  })
+.fromTo(competences,{ backgroundColor: "#5c7590"}, {
+    scrollTrigger: {
+      trigger: competences,
+      start: "top 10%",
+      end: "bottom 50%",
+    scrub: true,
+      toggleActions: "restart pause reverse resume",
+    },
+    backgroundColor: "#294062",
+  })
 .fromTo(competences,{ backgroundColor: "#5c7590",}, {
     scrollTrigger: {
       trigger: competences,
