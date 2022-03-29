@@ -32,19 +32,40 @@ const titleExercerAutorite = document.getElementById('titleExercerAutorite')
 var tlSectionParcours = gsap.timeline({ paused: true });
 var tlcommander = gsap.timeline({ paused: true });
 
+window.addEventListener("load", () => {
+  tlSectionParcours.play();
+});
 
 tlSectionParcours
-.fromTo(titleParcours,{x:-50, opacity:0},
+
+.fromTo(titleParcours,{ y:0, opacity:0},
   {
-    scrollTrigger: {
-      trigger: sectionParcours,
-      start: "top 10%",
-      end: "15%",
-      scrub: true,
-      toggleActions: "restart pause reverse resume",
-    },
-    x:0, opacity: 1
+   y:50, opacity: 1, scale: 1.15, duration:1
   })
+  .fromTo(".btn-parcours",{ y:0, opacity:0},
+  {
+    y:-10, opacity: 1, scale: 1.15, duration:1
+  })
+  .fromTo("#iconeCommanderNav",{ y:0, opacity:0},
+    {
+     opacity: 1, duration:0.5
+    })
+.fromTo("#iconeSituerNav",{ y:0, opacity:0},
+  {
+   opacity: 1, duration:1
+  })
+  .fromTo("#iconeInstruireNav",{ y:0, opacity:0},
+  {
+    opacity: 1, duration:0.5
+  })
+.fromTo("#iconeCommuniquerNav",{ y:0, opacity:0},
+  {
+   opacity: 1, duration:0.5
+  })
+  .fromTo("#iconeEduquerNav",{ y:0, opacity:0},
+    {
+     opacity: 1, duration:0.5
+    })
 
 tlcommander
 .fromTo(badgeCommander,{y:-50, opacity:0}, {
@@ -55,7 +76,7 @@ tlcommander
     scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-    y: 0,
+    y: 35,
     opacity:1, 
 })
 .fromTo(commanderTitle,{opacity:0}, {
@@ -78,8 +99,7 @@ tlcommander
     scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-
-  opacity: 1, 
+    opacity: 1, 
     scale:1.8
 })
 .fromTo(incarnerLeChef,{opacity:1, scale:2}, {
@@ -90,106 +110,111 @@ tlcommander
     scrub: true,
       toggleActions: "restart pause reverse resume",
     },
-
-  opacity: 0, 
+    opacity: 0, 
     scale:0.8
 })
-  .to(logoCommanderParcours, {
-    motionPath: [{ x: 0, y: 0 }, { x: 0, y: 610 }], duration: 5,
+  //animation pin du bonhomme Commander
+  .to(logoCommanderParcours,{
     scrollTrigger: {
-      trigger: logoCommanderParcours,
-      start: "top 20%",
-      end: "+=500 30%",
+      trigger: ".moduleCdt10",
+      start: "top 50%",
+      pin:logoCommanderParcours, 
+      end: "+=2000",
       scrub: true,
-      // yoyo: true,
-      ease: "power1.inOut",
-    
+      yoyo: true,
       toggleActions: "restart pause reverse resume",
-    }})
-  .to(logoCommanderParcours, {
-    motionPath: [ { x: 0, y: 1200 }],
-    scrollTrigger: {
-      trigger: ".moduleCdt20",
-      start: "top 40%",
-      end: "+=500 40%",
-      markers:true,
-      scrub: true,
-      // yoyo: true,
-      ease: "power1.inOut",
-    
+    }
+  })
+  //module10
+.fromTo("#imgCdt10",{x:50, opacity:0, scale:1}, {
+  scrollTrigger: {
+    trigger: commanderTitle,
+    start: "top 40%",
+    end: "-=20px 10%",
+    scrub: true,
+  }, 
+  x:0,
+  opacity: 1,
+  scale:1,
+          })
+.fromTo("#imgCdt10",{x:0, y:-50,scale:1}, {
+  scrollTrigger: {
+    trigger: logoCommanderParcours,
+    start: "top 40%",
+    end: "-=20px 20%",
+    scrub: true,
+  }, 
+  x: -150,
+  y:-125,
+  scale:0.3,
+          })
+.fromTo("#imgCdt10",{x:-150, y:-50, scale:0.3}, {
+  scrollTrigger: {
+    trigger: logoCommanderParcours,
+    start: "top 40%",
+    endTrigger:".moduleCdt10",
+    end: "10%",
+    scrub: true,
+    pin:"#imgCdt10",
+  }, 
+ 
+  scale:0.3,
+          })
+.fromTo(".moduleCdt10",{x:-50, opacity:0}, {
+  scrollTrigger: {
+    trigger: logoCommanderParcours,
+    start: "top 40%",
+    end: "-=20px 10%",
+    scrub: true,
       toggleActions: "restart pause reverse resume",
-    }})
-// .fromTo("#imgCdt10",{x:50, opacity:0}, {
-//     scrollTrigger: {
-//       trigger: logoCommanderParcours,
-//       start: "top 40%",
-//       end: "-=20px 10%",
-//     scrub: true,
-//   }, 
-//   x:0,
-//   opacity:1,
-//           })
-// .fromTo(".moduleCdt10",{x:-50, opacity:0}, {
-//     scrollTrigger: {
-//       trigger: "#imgCdt10",
-//       start: "top 40%",
-//       end: "-=20px 10%",
-//     scrub: true,
-//       toggleActions: "restart pause reverse resume",
-//   }, x: 0,
-//   opacity:1,
-//           })
-// .fromTo("#cdt10alpha",{x:-50, opacity:0}, {
-//     scrollTrigger: {
-//       trigger: "#imgCdt10",
-//       start: "top 40%",
-//       end: "-=20px 10%",
-//     scrub: true,
-//       toggleActions: "restart pause reverse resume",
-//   }, x: 0,
-//   opacity:1,
-//           })
-// .fromTo("#imgCdt20",{x:-50, opacity:0}, {
-//     scrollTrigger: {
-//       trigger: "#imgCdt20",
-//       start: "top 40%",
-//       end: "-=20px 10%",
-//     scrub: true,
-//   }, x: 0,
-//   opacity:1,
-//           })
-// .fromTo(".moduleCdt20",{ opacity:0}, {
-//     scrollTrigger: {
-//       trigger: "#imgCdt20",
-//       start: "top 40%",
-//       end: "-=20px 10%",
-//     scrub: true,
-//       toggleActions: "restart pause reverse resume",
-//   },
-//   opacity:1,
-//           })
-// .fromTo("#imgCdt30",{ x:50,  opacity:0}, {
-//     scrollTrigger: {
-//       trigger: "#imgCdt30",
-//       start: "top 40%",
-//       end: "-=20px 10%",
-//     scrub: true,
-//   },
-//   x:0,
-//   opacity:1,
-//           })
-// .fromTo(".moduleCdt30",{x:-50, opacity:0}, {
-//     scrollTrigger: {
-//       trigger: "#imgCdt30",
-//       start: "top 40%",
-//       end: "-=20px 10%",
-//     scrub: true,
-//       toggleActions: "restart pause reverse resume",
-//   }, x: 0,
-//   opacity:1,
-//           })
-          
-            
+  }, x: 0,
+  opacity:1,
+})
+  //module20
+.fromTo("#imgCdt20",{x:50, opacity:0, scale:1}, {
+  scrollTrigger: {
+    trigger: "#imgCdt20",
+    start: "top 60%",
+    end: "-=20px 20%",
+    scrub: true,
+  }, 
+  x:0,
+  opacity: 1,
+  scale:1,
+          })
+.fromTo("#imgCdt20",{x:0, y:0,scale:1}, {
+  scrollTrigger: {
+    trigger: "#imgCdt20",
+    start: "+=75px 40%",
+    end: "-=20px 20%",
+    scrub: true,
+  }, 
+  x: -150,
+  y:25,
+  scale:0.3,
+          })
+.fromTo("#imgCdt20",{x:-150, y:25, scale:0.3}, {
+  scrollTrigger: {
+    trigger: "#imgCdt20",
+    start: "+=100px 40%",
+    endTrigger:".moduleCdt20",
+    end: "70%",
+    scrub: true,
+    pin: "#imgCdt20",
+  }, 
+ 
+  scale:0.3,
+          })
+.fromTo(".moduleCdt20",{x:-50, opacity:0}, {
+  scrollTrigger: {
+    trigger: "#imgCdt20",
+    start: "top 40%",
+    end: "-=20px 10%",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  }, x: 0,
+  opacity:1,
+})
 
 
 

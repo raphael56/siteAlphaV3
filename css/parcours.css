@@ -72,6 +72,8 @@ margin: 0 10px;
 /* ---------------------------------------------------------- */
 /*----------------- section parcours------------------ */
 /* ---------------------------------------------------------- */
+
+/* général */
 .section-parcours {
  background-image:  linear-gradient(rgba(244, 244, 247, 0.5), rgba(0, 0, 0, 0.5)), url(/ressources/images/bg_parcours.jpg);
  background-position: 40% 70px;
@@ -171,6 +173,7 @@ margin: 0 10px;
         .fil-competence{
           display: flex;
           flex-direction: row;
+          z-index:0;
         }
         .fil-competence img {
           width: 100px;
@@ -198,7 +201,7 @@ margin: 0 10px;
     justify-content: space-evenly;
     align-items: center;
     text-transform: uppercase;
-    /* padding: 100px 0; */
+font-size: 0.8rem;
   }
   
       .box-description-aptitude img {
@@ -208,6 +211,7 @@ margin: 0 10px;
 
     /* module */
     .module{
+      min-width: 250px;
       margin: 10px;
       padding: 10px;
       border: 2px solid #294062;
