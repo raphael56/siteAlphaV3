@@ -789,7 +789,6 @@ t6
       start: "top 10%",
       end: "top 20%",
       scrub: true,
-      markers:true,
       toggleActions: "restart pause reverse resume",
       immediateRender:true,
   },
