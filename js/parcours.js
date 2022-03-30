@@ -25,7 +25,7 @@ const sectionParcours = document.querySelector(".section-parcours");
 const titleParcours = document.querySelector(".title-parcours")
 //commander
 const logoCommanderParcours = document.getElementById("logoCommanderParcours");
-const conclusionCdt = document.querySelector('.conclusionCdt')
+const conclusionCDT = document.querySelector('#ConclusionCDT')
 const commanderTitle = document.getElementById('commanderTitle')
 const incarnerLeChef = document.getElementById('incarnerLeChef')
 const titleExercerAutorite = document.getElementById('titleExercerAutorite')
@@ -119,7 +119,7 @@ tlcommander
       trigger: ".moduleCdt10",
       start: "top 50%",
       pin:logoCommanderParcours, 
-      end: "+=2000",
+      end: "+=2200",
       scrub: true,
       yoyo: true,
       toggleActions: "restart pause reverse resume",
@@ -162,6 +162,50 @@ tlcommander
 .fromTo(".moduleCdt20",{x:-50, opacity:0}, {
   scrollTrigger: {
     trigger: "#imgCdt20",
+    start: "top 40%",
+    end: "-=20px 10%",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  }, x: 0,
+  opacity:1,
+})
+  //module30
+.fromTo("#imgCdt30",{x:50, opacity:0, scale:1}, {
+  scrollTrigger: {
+    trigger: "#imgCdt30",
+    start: "top 60%",
+    end: "-=20px 20%",
+    scrub: true,
+  }, 
+  x:0,
+  opacity: 1,
+  scale:1,
+          })
+.fromTo(".moduleCdt30",{x:-50, opacity:0}, {
+  scrollTrigger: {
+    trigger: "#imgCdt30",
+    start: "top 40%",
+    end: "-=20px 10%",
+    scrub: true,
+    toggleActions: "restart pause reverse resume",
+  }, x: 0,
+  opacity:1,
+})
+  //Ccl CDT
+.fromTo(conclusionCDT,{x:50, opacity:0, scale:1}, {
+  scrollTrigger: {
+    trigger: conclusionCDT,
+    start: "top 60%",
+    end: "-=20px 20%",
+    scrub: true,
+  }, 
+  x:0,
+  opacity: 1,
+  scale:1,
+          })
+.fromTo(".moduleCdt30",{x:-50, opacity:0}, {
+  scrollTrigger: {
+    trigger: "#imgCdt30",
     start: "top 40%",
     end: "-=20px 10%",
     scrub: true,
