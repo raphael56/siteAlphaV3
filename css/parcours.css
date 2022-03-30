@@ -34,7 +34,7 @@ body {
   width: 100vw;
   height: 20000px;
   font-family: roboto, sans-serif;
-  background: #333;
+  background: linear-gradient(#294062 20%, #1a4a28, #891b0b,#8d943f , #734693, #f1f1f1);
  }
 /* ---------------------------------------------------------- */
 /* -----------------------navbar----------------------- */
@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  background: #294062;
+  background: rgba(41, 64, 98, 0.5);
 z-index: 10;}
 .icone-accueil-competences a img {
 margin: 0 10px;
