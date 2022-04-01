@@ -60,16 +60,17 @@ body {
   position: fixed;
   display: flex;
   justify-content: center;
-  /* margin-top: 70px; */
+  margin-top: 90vh;
   background: rgba(41, 64, 98, 0.5);
   z-index: 10;
 }
 .icone-accueil-competences a img {
-margin: 0 10px;
+  margin: 0 10px;
   border-radius: 50%;
   width: 80%;
   justify-content: center;
 }
+
 /* ---------------------------------------------------------- */
 /*----------------- section parcours------------------ */
 /* ---------------------------------------------------------- */
@@ -98,7 +99,7 @@ margin: 0 10px;
 }
 .btn-parcours{
   position: absolute;
-  top: 90%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(180deg);
   width: 40px;
@@ -124,6 +125,9 @@ margin: 0 10px;
   position: relative;
 }
 
+.img-competence{
+  margin-top: 70px;
+}
 .img-competence img { /* img rondes des  5competences*/
   border-radius: 50%;
   height: 100px;

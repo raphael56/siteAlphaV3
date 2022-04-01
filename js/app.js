@@ -3,6 +3,7 @@ gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(MotionPathPlugin);
 
+
 // ----------------------------------------------------------------------------
 //--------------------navbar vertical----------------------------------
 // ----------------------------------------------------------------------------
@@ -57,28 +58,12 @@ const incarnation = document.querySelector(".title-incarner");
 const modjo = document.querySelector(".title-modjo");
 const badgeCommander = document.getElementById('badgeCommander')
 
-var t0 = gsap.timeline({ paused: true });
 var t1 = gsap.timeline({ paused: true});
 var t2 = gsap.timeline({ paused: true });
 
 window.addEventListener("load", () => {
   t1.play();
 });
-
-// t0
-// .to(iconeCommanderAccueil, {
-//   scrollTrigger: {
-//     trigger: incarnation,
-//     start: "top top",
-//     end: "500",
-//     scrub: true,
-  
-//     toggleActions: "restart pause reverse resume",
-//   },
-//   y: 350,
-//   scale: 0.7,
-//   zIndex:999,
-// })
 
 t1
 .from(titre1, { y: -400, ease: "bounce", duration: 2, scale: 2 })

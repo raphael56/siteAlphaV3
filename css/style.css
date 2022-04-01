@@ -35,6 +35,15 @@ body {
   /* height: 20000px; */
   font-family: roboto, sans-serif;
  }
+
+/* ---------------------------------------------------------- */
+/* -----------------------avertissement résolution écran----------------------- */
+/* ---------------------------------------------------------- */
+ .avertissementTailleEcran{
+   display:none;
+ }
+
+
 /* ---------------------------------------------------------- */
 /* -----------------------navbar----------------------- */
 /* ---------------------------------------------------------- */
@@ -376,10 +385,11 @@ margin-top: 30px;
   border:none;
   transform:translate(0.5px, -1px);
 }
+
 .btn-bas {
   opacity: 1;
   position: absolute;
-  top: 43%;
+  top: 300px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30px;
@@ -387,8 +397,9 @@ margin-top: 30px;
   border:none;
   box-shadow: none;
   border-radius:50%;
-  background: rgba(41, 64, 98, 0.5);
+  background: rgba(41, 64, 98, 0.3);
   animation: pulse 2s infinite;
+  z-index: 10;
 }
 .btn-bas img{
   border-radius: 50%;
@@ -811,6 +822,7 @@ background: #734693;
   flex-direction: row;
   width: 100%;
   height: auto;
+  justify-content: space-evenly;
 }
 .menu-5competences a img{
   height: 100px;

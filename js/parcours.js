@@ -572,7 +572,7 @@ tleduquer
   opacity: 0, 
   scale:1
 })
-.to(logoEduquerParcours, {
+.fromTo(logoEduquerParcours, {x:-3}, {
   scrollTrigger: {
     trigger: ".moduleEdq10",
     start: "top 70%",
@@ -581,7 +581,8 @@ tleduquer
     scrub: true,
     yoyo: true,
     toggleActions: "restart pause reverse resume",
-  }
+  },
+  x:-3
 })
 // //moduleEDQ10------------------------------------------------------------
 .fromTo("#imgEdq10",{x:50, opacity:0, scale:1}, {
@@ -722,7 +723,7 @@ tlcommuniquer
   opacity: 0, 
   scale:1
 })
-.to(logoCommuniquerParcours, {
+.fromTo(logoCommuniquerParcours,{x:7}, {
     scrollTrigger: {
         trigger: ".moduleCom10",
         start: "top 70%",
@@ -731,7 +732,8 @@ tlcommuniquer
         scrub: true,
         yoyo: true,
         toggleActions: "restart pause reverse resume",
-      }
+  },
+  x:7
     })
 
     // //moduleCOM10------------------------------------------------------------
@@ -802,14 +804,14 @@ tlcommuniquer
     })
       
     //   //Ccl Com
-    .fromTo(conclusionCOM,{x:-50, opacity:0, scale:1}, {
-      scrollTrigger: {
-        trigger: conclusionCOM,
-        start: "top 60%",
-        end: "-=20px 20%",
-        scrub: true,
-      }, 
-      x:0,
-      opacity: 1,
-      scale:1,
-              })
+  .fromTo(conclusionCOM, { x: -50, opacity: 0, scale: 1 }, {
+    scrollTrigger: {
+          trigger: conclusionCOM,
+          start: "top 70%",
+          end: "-40px 20%",
+          scrub: true,
+        }, 
+        x:0,
+        opacity: 1,
+      scale: 1,
+                })
