@@ -822,10 +822,10 @@ background: #734693;
   flex-direction: row;
   width: 100%;
   height: auto;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .menu-5competences a img{
-  height: 100px;
+  height: 80px;
   width: 100%;
 
 }

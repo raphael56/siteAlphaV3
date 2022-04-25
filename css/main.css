@@ -59,7 +59,7 @@ body {
     align-items: center;
     height: 70px;
     width: 100vw;
-    background: rgb(241, 241, 241, 0.3);
+    background: rgb(241, 241, 241, 0.7);
     position: fixed;
     top: 85vh;
     z-index: 10;
