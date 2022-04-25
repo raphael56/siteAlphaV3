@@ -27,6 +27,17 @@ switch (nomDePage.length) {
         break;
         case 5:
             var cheminRelatif = "..../"
+        case 8:
+            var cheminRelatif = "./"
+        break;
+        case 9:
+            var cheminRelatif = "../"
+        break;
+        case 10:
+            var cheminRelatif = ".../"
+        break;
+        case 11:
+            var cheminRelatif = "..../"
         break;
         default:
           console.log(`Sorry, default`);
