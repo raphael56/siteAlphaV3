@@ -9,8 +9,27 @@ nomDePage = nomDePage.split("/");
 // nomDePage = nomDePage.substr(0, nomDePage.lastIndexOf("."));
 // nomDePage = nomDePage.replace(new RegExp("(%20|_|-)", "g"), "");
 
-
-  console.log(nomDePage.length)
+//  console.log(nomDePage.length)
+//   console.log(nomDePage[1])
+// if (nomDePage[1] == "commander") {
+//     console.log(true);
+//     document.querySelector('body').style.backgroundColor = "#294062";
+//   }else if (nomDePage[1] == "eduquer") {
+//     console.log(true);
+//     document.querySelector('body').style.backgroundColor = "#8d943f";
+      
+//   }else if (nomDePage[1] == "communiquer") {
+//     console.log(true);
+//     document.querySelector('body').style.backgroundColor = "#734693";
+      
+//   }else if (nomDePage[1] == "situer") {
+//     console.log(true);
+//     document.querySelector('body').style.backgroundColor = "#1a4a28";
+      
+//   }else if (nomDePage[1] == "instruire") {
+//     console.log(true);
+//     document.querySelector('body').style.backgroundColor = "#891b0b";
+//   }
 
 switch (nomDePage.length) {
         case 1:

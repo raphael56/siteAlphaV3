@@ -685,36 +685,36 @@ t4.to(formation, {
 // --------------------------------------section pedagogie---------------------
 // ----------------------------------------------------------------------------
 
-const pedagogie = document.getElementById("pedagogie");
-const titlePedagogie = document.querySelector(".title-pedagogie")
-var t5 = gsap.timeline({ paused: true });
+// const pedagogie = document.getElementById("pedagogie");
+// const titlePedagogie = document.querySelector(".title-pedagogie")
+// var t5 = gsap.timeline({ paused: true });
 
-t5
-  .fromTo(titlePedagogie, { y:-600}, {
-  scrollTrigger: {
-    trigger: pedagogie,
-  start: "top 10%",
-      end: "+=200px",
-  scrub: true,
-    toggleActions: "restart pause reverse resume",
-  },
-    y: -400,
-  })
+// t5
+//   .fromTo(titlePedagogie, { y:-600}, {
+//   scrollTrigger: {
+//     trigger: pedagogie,
+//   start: "top 10%",
+//       end: "+=200px",
+//   scrub: true,
+//     toggleActions: "restart pause reverse resume",
+//   },
+//     y: -400,
+//   })
 
-const panels = document.querySelectorAll(".panel")
+// const panels = document.querySelectorAll(".panel")
 
-panels.forEach((panel) => {
-    panel.addEventListener('click', () => {
-        removeActiveClasses()
-        panel.classList.add('active')
-    })
-})
+// panels.forEach((panel) => {
+//     panel.addEventListener('click', () => {
+//         removeActiveClasses()
+//         panel.classList.add('active')
+//     })
+// })
 
-function removeActiveClasses() {
-    panels.forEach(panel => {
-        panel.classList.remove('active')
-    })
-}
+// function removeActiveClasses() {
+//     panels.forEach(panel => {
+//         panel.classList.remove('active')
+//     })
+// }
 
 // ----------------------------------------------------------------------------
 // --------------------------------------section competences--------------------------------------

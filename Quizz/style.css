@@ -11,13 +11,25 @@ body {
   background: #6987b4;
 }
 h1 {
-  font-family: "Russo one", Arial;
+  font-family: Arial;
   font-weight: lighter;
   letter-spacing: 2px;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 5px;
   font-size: 40px;
 }
+.quizz_competence{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.quizz_competence_img{
+  border-radius: 50%;
+  width: 30%;
+}
+
 .container-global {
   width: 70%;
   max-width: 800px;
