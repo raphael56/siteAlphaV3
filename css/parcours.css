@@ -31,7 +31,8 @@ html {
 }
 
 body {
-  width: 100vw;
+  margin:0;
+  /* min-width: 350px;  */
   /* height: 20000px; */
   font-family: roboto, sans-serif;
   background: linear-gradient(#294062 20%, #1a4a28 45%, #891b0b 55%,#8d943f 70%, #734693 100%);
@@ -44,7 +45,8 @@ body {
   height: 70px;
   background: #294062;
   text-transform: uppercase;
-  width: 100vw;
+  width: 100%;
+  padding-right: 30px;
 }
 
 .navbar-brand img {
@@ -87,7 +89,6 @@ body {
   justify-content: center;
   position: relative;
  height: 100vh;
-
 }
 .title-parcours {
   position: relative;
@@ -124,7 +125,6 @@ body {
   justify-content: flex-start;
   position: relative;
 }
-
 .img-competence{
   margin-top: 70px;
 }
@@ -132,15 +132,12 @@ body {
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  
 }
-
 .parcours-title-competence { /*texte sous le badge */
   margin-top: 50px;
   text-align: center;
   text-transform: uppercase;
 }
-
 .container-fil-commander,
 .container-fil-situer,
 .container-fil-instruire,
@@ -151,51 +148,48 @@ body {
   margin: 150px 50px 0;
   height: auto + 100px;/*hauteur du container moyen*/
   color: #f1f1f1;
-  
 }
-
 /*partie gauche avec logo + aptitude + fil */
 .box-fil { 
   display: flex;
   position: relative;
 }
+.line-container { 
+  position: relative;
+  background: red;
+}
 
-        .line-container { 
-          position: relative;
-          background: red;
-        }
-        
-        .line { /* c'est la ligne blanche sous le logo */
-          height: 2280px;
-          width: 5px;
-          border-left: 5px solid rgba(255, 255, 255, 0.3);
-          position: absolute;
-          border-radius: 9999px;
-          left: 45px;
-        }
-        .line-situer{
-          height: 2360px;
-        }
-        .line-instruire{
-          height: 500px;
-        }
-        .line-eduquer{
-          height: 1550px;
-        }
-        .line-communiquer{
-          height: 1280px;
-        }
-        .fil-competence{
-          display: flex;
-          flex-direction: row;
-          z-index:0;
-        }
-        .fil-competence img {
-          width: 100px;
-          height: 100px;
-          position: relative;
-          z-index: 10;
-        }
+.line { /* c'est la ligne blanche sous le logo */
+  height: 2280px;
+  width: 5px;
+  border-left: 5px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  border-radius: 9999px;
+  left: 45px;
+}
+.line-situer{
+  height: 2360px;
+}
+.line-instruire{
+  height: 500px;
+}
+.line-eduquer{
+  height: 1550px;
+}
+.line-communiquer{
+  height: 1280px;
+}
+.fil-competence{
+  display: flex;
+  flex-direction: row;
+  z-index:0;
+}
+.fil-competence img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 10;
+}
 
 
 /*partie droite avec les modules (3 normalement sauf se situer) */

@@ -26,44 +26,34 @@
 }
 
 html {
+  /* width: 100%; */
   scroll-behavior: smooth; 
   /* fonction qui permet d'adoucir la transition smooth */
 }
-
+@media screen and (min-width:760px) {
+  .section{
+      padding: 0 250px;
+  }
+  .btn-parcoursLien {
+   padding-bottom: -100px;
+  }
+}
 body {
-  /* width: 100vw; */
-  min-width: 320px;
-  max-width: 768px;
+
   /* height: 20000px; */
   font-family: roboto, sans-serif;
  }
 
-/* ---------------------------------------------------------- */
-/* -----------------------avertissement résolution écran----------------------- */
-/* ---------------------------------------------------------- */
- /* .avertissementTailleEcran{
-   display:none;
- } */
-
-/* .badResolution{
-  display:block;
-  background: rgba(0, 0, 0,0.9);
-  position: fixed;
-  z-index: 10000;
-  width: 100%;
-  height: 200%;
-} */
-
+/*
 /* ---------------------------------------------------------- */
 /* -----------------------navbar----------------------- */
 /* ---------------------------------------------------------- */
 
 .navbar {
-  /* position:absolute; */
   height: 70px;
   background: #294062;
   text-transform: uppercase;
-  width: 115%;
+  width: 100vw;
 }
 
 .navbar-brand img {
@@ -126,10 +116,13 @@ body {
 }
 
 .Nav-link-selected {
+  
   background: #294062;
   transform: scale(1.4);
   border:1px solid #f1f1f1f1;
 }
+
+
 
 /* ---------------------------------------------------------- */
 /* ----------------------- section accueil----------------------- */
@@ -421,7 +414,7 @@ margin-top: 30px;
 /*----------------- section mission----------------------------------- */
 /* ---------------------------------------------------------- */
 .section-mission {
-    width: 100vw;
+    /* width: 100vw; */
   background-color: #294062;
   height: 150vh;
   color: #294062;
@@ -584,7 +577,7 @@ top: 7%;
 /* ---------------------------------------------------------- */
 .section-formation {
   background-color: #294062;;
-  width: 100vw;
+  /* width: 100vw; */
   height: 200vh;
   color: #f1f1f1;
   display: flex;
@@ -696,7 +689,7 @@ top: 7%;
       transition: opacity 0.3s ease-in 0.4s;
   }
   
-  @media screen and (max-width:480px) {
+  /* @media screen and (max-width:480px) {
       .container{
           width: 100vw;
       }
@@ -704,7 +697,7 @@ top: 7%;
           display: none;
       }
       
-  }
+  } */
 /* ---------------------------------------------------------- */
 /*----------------- section compétences------------------ */
 /* ---------------------------------------------------------- */
@@ -776,7 +769,7 @@ top: 7%;
 
  .box-competence{
    position: relative;
-   width: 95;
+   /* width: 95; */
    min-height: 50px;
    height: auto;
    background: none;
